@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#14233f">
+  <meta name="description" content="Review year-by-year high stake examination results at Arekha Middle Secondary School.">
+  <title>High Stake Results | Arekha Middle Secondary School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+  <script src="examination.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Learning today. Leading tomorrow.</span>
+      <div class="topbar-links">
+        <a href="resources.html">Parent &amp; student resources</a>
+        <span aria-hidden="true">·</span>
+        <a href="contact.html">Get in touch</a>
+      </div>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Arekha Middle Secondary School home">
+        <img class="brand-logo" src="assets/images/brand/school%20logo.jpg" alt="Arekha Middle Secondary School logo">
+        <span class="brand-copy"><strong>Arekha</strong><small>Middle Secondary School</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primary-navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="academics.html">Academics</a>
+        <div class="nav-dropdown">
+          <a href="spms.html#spms-score" aria-haspopup="true" aria-expanded="false" aria-controls="spms-global-subnav">SPMS <span aria-hidden="true">▾</span></a>
+          <div class="spms-nav-menu" id="spms-global-subnav" role="group" aria-label="SPMS pages">
+            <a href="spms.html#spms-als">Academic Learning Score</a>
+            <a href="spms.html#spms-non-academic">Non-Academic Score</a>
+            <a href="spms.html#spms-score">SPMS Score</a>
+          </div>
+        </div>
+        <div class="nav-dropdown is-current">
+          <a href="examination-toppers.html" aria-haspopup="true" aria-expanded="false" aria-controls="examination-global-subnav" aria-current="page">Examination <span aria-hidden="true">▾</span></a>
+          <div class="spms-nav-menu" id="examination-global-subnav" role="group" aria-label="Examination pages">
+            <a href="examination-toppers.html">Subject Toppers</a>
+            <a href="examination-results.html" aria-current="page">High Stake Results</a>
+          </div>
+        </div>
+        <a href="staff.html">Organogram</a>
+        <a href="school-life.html">School Life</a>
+        <a href="news.html">News &amp; Events</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="resources.html">Resources</a>
+        <a class="nav-contact" href="contact.html">Contact <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content" class="exam-page section-pad">
+    <div class="container">
+      <header class="exam-heading">
+        <p class="eyebrow">Learning outcomes</p>
+        <h1>High Stake Results</h1>
+        <p>Explore examination outcomes over time, with source-recorded targets and year-by-year subject results.</p>
+      </header>
+      <section class="exam-panel" aria-labelledby="exam-results-title">
+        <div class="exam-panel-heading">
+          <div>
+            <p class="eyebrow">Examination</p>
+            <h2 id="exam-results-title">Results dashboard</h2>
+          </div>
+          <p class="exam-source-note">Blank source values are shown as unavailable, never as zero.</p>
+        </div>
+        <div id="exam-results-app" class="exam-loading" role="status" aria-live="polite">Loading examination results…</div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a class="brand brand-footer" href="index.html" aria-label="Arekha Middle Secondary School home">
+          <span class="brand-mark" aria-hidden="true"><span>A</span></span>
+          <span class="brand-copy"><strong>Arekha</strong><small>Middle Secondary School</small></span>
+        </a>
+        <p>Arekha Middle Secondary School<br>Arekha, Bongo, Chhukha, Bhutan</p>
+      </div>
+      <div class="footer-column"><strong>Explore</strong><a href="about.html">About us</a><a href="academics.html">Academics</a><a href="staff.html">Organogram</a><a href="school-life.html">School life</a><a href="gallery.html">Gallery</a></div>
+      <div class="footer-column"><strong>Stay connected</strong><a href="news.html">News &amp; events</a><a href="resources.html">Resources</a><a href="examination-toppers.html">Subject Toppers</a><a href="examination-results.html">High Stake Results</a><a href="contact.html">Contact us</a></div>
+      <a href="#top" class="back-top">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="current-year">2026</span> Arekha Middle Secondary School</span><span>Made with care in Bhutan <span aria-hidden="true">✳</span></span></div>
+  </footer>
+</body>
+</html>

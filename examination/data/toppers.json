@@ -1,0 +1,266 @@
+{
+  "source": "Examination /Subject Toppers.xlsx",
+  "classes": [
+    {
+      "sheet": "CE VI",
+      "label": "Class VI",
+      "records": [
+        {
+          "name": "Tenzin Tshoki Wangmo",
+          "subject": "English",
+          "score": 95,
+          "year": 2025,
+          "photo": "Examination /subject toppers Photo/Tenzin Tshokey Wangmo.jpg",
+          "photoMatch": "unambiguous spelling variant",
+          "sourceRow": 3
+        },
+        {
+          "name": "Anuska Mongar",
+          "subject": "Dzongkha",
+          "score": 93,
+          "year": 2025,
+          "photo": "Examination /subject toppers Photo/Anuska Monger.jpg",
+          "photoMatch": "unambiguous spelling variant",
+          "sourceRow": 4
+        },
+        {
+          "name": "Tshering Samdrup",
+          "subject": "Mathematics",
+          "score": 91.38,
+          "year": 2023,
+          "photo": "Examination /subject toppers Photo/Tshering Samdrup.jpg",
+          "photoMatch": "normalized filename",
+          "sourceRow": 5
+        },
+        {
+          "name": "Kabita Ghalley",
+          "subject": "Science",
+          "score": 98,
+          "year": 2025,
+          "photo": "Examination /subject toppers Photo/kabita ghalley.jpg",
+          "photoMatch": "normalized filename",
+          "sourceRow": 6
+        },
+        {
+          "name": "Kabita Ghalley",
+          "subject": "ICT",
+          "score": 97,
+          "year": 2025,
+          "photo": "Examination /subject toppers Photo/kabita ghalley.jpg",
+          "photoMatch": "normalized filename",
+          "sourceRow": 7
+        },
+        {
+          "name": "Dodrup Yangchen Dorji",
+          "subject": "Social Studies",
+          "score": 99,
+          "year": 2025,
+          "photo": "Examination /subject toppers Photo/Dodrup Yangchen Dorji.jpg",
+          "photoMatch": "normalized filename",
+          "sourceRow": 8
+        }
+      ]
+    },
+    {
+      "sheet": "CE VIII",
+      "label": "Class VIII",
+      "records": [
+        {
+          "name": "Priya Chhetri",
+          "subject": "English",
+          "score": 91,
+          "year": 2024,
+          "photo": "Examination /subject toppers Photo/Priya Chhetri.jpg",
+          "photoMatch": "normalized filename",
+          "sourceRow": 3
+        },
+        {
+          "name": "Priya Chhetri",
+          "subject": "Dzongkha",
+          "score": 88,
+          "year": 2024,
+          "photo": "Examination /subject toppers Photo/Priya Chhetri.jpg",
+          "photoMatch": "normalized filename",
+          "sourceRow": 4
+        },
+        {
+          "name": "Kezang Dendup",
+          "subject": "Mathematics",
+          "score": 92.13,
+          "year": 2023,
+          "photo": null,
+          "photoMatch": null,
+          "sourceRow": 5
+        },
+        {
+          "name": "Priya Chhetri",
+          "subject": "Science",
+          "score": 94,
+          "year": 2024,
+          "photo": "Examination /subject toppers Photo/Priya Chhetri.jpg",
+          "photoMatch": "normalized filename",
+          "sourceRow": 6
+        },
+        {
+          "name": "Ugyen Wangchuk",
+          "subject": "History",
+          "score": 88,
+          "year": 2025,
+          "photo": "Examination /subject toppers Photo/Ugyen Wangchuk.jpg",
+          "photoMatch": "normalized filename",
+          "sourceRow": 7
+        },
+        {
+          "name": "Karma Tenzin",
+          "subject": "Geography",
+          "score": 91,
+          "year": 2024,
+          "photo": "Examination /subject toppers Photo/karma_tenzin-removebg-preview.png",
+          "photoMatch": "normalized filename",
+          "sourceRow": 8
+        },
+        {
+          "name": "Karma Tenzin",
+          "subject": "ICT",
+          "score": 95,
+          "year": 2024,
+          "photo": "Examination /subject toppers Photo/karma_tenzin-removebg-preview.png",
+          "photoMatch": "normalized filename",
+          "sourceRow": 9
+        }
+      ]
+    },
+    {
+      "sheet": "BCSE",
+      "label": "Class X",
+      "records": [
+        {
+          "name": "Tenzin Tshomo Thinley",
+          "subject": "English",
+          "score": 90,
+          "year": 2022,
+          "photo": null,
+          "photoMatch": null,
+          "sourceRow": 3
+        },
+        {
+          "name": "Yangzom",
+          "subject": "Dzongkha",
+          "score": 84,
+          "year": 2021,
+          "photo": null,
+          "photoMatch": null,
+          "sourceRow": 4
+        },
+        {
+          "name": "Rinzin Wangmo",
+          "subject": "Dzongkha",
+          "score": 84,
+          "year": 2024,
+          "photo": null,
+          "photoMatch": null,
+          "sourceRow": 5
+        },
+        {
+          "name": "Bishnu Hari Powdel",
+          "subject": "Mathematics",
+          "score": 90,
+          "year": 2022,
+          "photo": null,
+          "photoMatch": null,
+          "sourceRow": 6
+        },
+        {
+          "name": "Tenzin Tshomo Thinley",
+          "subject": "Geography",
+          "score": 89,
+          "year": 2022,
+          "photo": null,
+          "photoMatch": null,
+          "sourceRow": 7
+        },
+        {
+          "name": "Tshering Pem",
+          "subject": "Geography",
+          "score": 89,
+          "year": 2022,
+          "photo": null,
+          "photoMatch": null,
+          "sourceRow": 8
+        },
+        {
+          "name": "Dechen Wangmo",
+          "subject": "History",
+          "score": 85,
+          "year": 2025,
+          "photo": "Examination /subject toppers Photo/Dechen Wangmo.png",
+          "photoMatch": "normalized filename",
+          "sourceRow": 9
+        },
+        {
+          "name": "Tenzin Tshomo Thinley",
+          "subject": "Physics",
+          "score": 87,
+          "year": 2022,
+          "photo": null,
+          "photoMatch": null,
+          "sourceRow": 10
+        },
+        {
+          "name": "Tenzin Tshomo Thinley",
+          "subject": "Chemistry",
+          "score": 88,
+          "year": 2022,
+          "photo": null,
+          "photoMatch": null,
+          "sourceRow": 11
+        },
+        {
+          "name": "Tenzin Tshomo Thinley",
+          "subject": "Biology",
+          "score": 90,
+          "year": 2022,
+          "photo": null,
+          "photoMatch": null,
+          "sourceRow": 12
+        },
+        {
+          "name": "Kelden Om Tamang",
+          "subject": "Economics",
+          "score": 87,
+          "year": 2023,
+          "photo": null,
+          "photoMatch": null,
+          "sourceRow": 13
+        },
+        {
+          "name": "Bishnu Hari Powdel",
+          "subject": "Economics",
+          "score": 87,
+          "year": 2022,
+          "photo": null,
+          "photoMatch": null,
+          "sourceRow": 14
+        },
+        {
+          "name": "Tenzin Tshomo Thinley",
+          "subject": "Economics",
+          "score": 87,
+          "year": 2022,
+          "photo": null,
+          "photoMatch": null,
+          "sourceRow": 15
+        },
+        {
+          "name": "Sailensfer Pokwal",
+          "subject": "ICT",
+          "score": 79,
+          "year": 2024,
+          "photo": null,
+          "photoMatch": null,
+          "sourceRow": 16
+        }
+      ]
+    }
+  ]
+}

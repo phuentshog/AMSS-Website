@@ -1,0 +1,327 @@
+{
+  "source": "Examination /high stake results.xlsx",
+  "classes": [
+    {
+      "sheet": "CE VI",
+      "label": "CE VI",
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "targetAvailable": true,
+      "subjects": [
+        {
+          "subject": "English",
+          "scores": {
+            "2023": 60.6,
+            "2024": 61.6,
+            "2025": 67.9
+          },
+          "target": 70,
+          "sourceRow": 2
+        },
+        {
+          "subject": "Dzongkha",
+          "scores": {
+            "2023": 66.7,
+            "2024": 55.2,
+            "2025": 58.7
+          },
+          "target": 69,
+          "sourceRow": 3
+        },
+        {
+          "subject": "Maths",
+          "scores": {
+            "2023": 53,
+            "2024": 47.1,
+            "2025": 52.1
+          },
+          "target": 56,
+          "sourceRow": 4
+        },
+        {
+          "subject": "Sci",
+          "scores": {
+            "2023": 44.8,
+            "2024": 48.7,
+            "2025": 60.4
+          },
+          "target": 63,
+          "sourceRow": 5
+        },
+        {
+          "subject": "ICT",
+          "scores": {
+            "2023": 48.4,
+            "2024": 50.9,
+            "2025": 54.8
+          },
+          "target": 57,
+          "sourceRow": 6
+        },
+        {
+          "subject": "Overall",
+          "scores": {
+            "2023": 54.7,
+            "2024": 52.7,
+            "2025": 58.8
+          },
+          "target": 63,
+          "sourceRow": 7
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "sheet": "CE VIII",
+      "label": "CE VIII",
+      "years": [
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "targetAvailable": true,
+      "subjects": [
+        {
+          "subject": "English",
+          "scores": {
+            "2022": 61.5,
+            "2023": 74.3,
+            "2024": 64.2,
+            "2025": 60.9
+          },
+          "target": 77.3,
+          "sourceRow": 2
+        },
+        {
+          "subject": "Dzongkha",
+          "scores": {
+            "2022": 59.7,
+            "2023": 64.2,
+            "2024": 66,
+            "2025": 59.5
+          },
+          "target": 69,
+          "sourceRow": 3
+        },
+        {
+          "subject": "Maths",
+          "scores": {
+            "2022": 45.4,
+            "2023": 53.5,
+            "2024": 45.7,
+            "2025": 44
+          },
+          "target": 56.5,
+          "sourceRow": 4
+        },
+        {
+          "subject": "Sci",
+          "scores": {
+            "2022": 51,
+            "2023": 44.4,
+            "2024": 54.8,
+            "2025": 49.9
+          },
+          "target": 57.8,
+          "sourceRow": 5
+        },
+        {
+          "subject": "His",
+          "scores": {
+            "2022": 55.9,
+            "2023": 65,
+            "2024": 51,
+            "2025": 56.2
+          },
+          "target": 68,
+          "sourceRow": 6
+        },
+        {
+          "subject": "Geo",
+          "scores": {
+            "2022": 46.4,
+            "2023": 63.8,
+            "2024": 61.1,
+            "2025": 52.3
+          },
+          "target": 66.8,
+          "sourceRow": 7
+        },
+        {
+          "subject": "ICT",
+          "scores": {
+            "2022": null,
+            "2023": 46.1,
+            "2024": 56.5,
+            "2025": 47.8
+          },
+          "target": 59.5,
+          "sourceRow": 8
+        },
+        {
+          "subject": "Overall",
+          "scores": {
+            "2022": 53.3,
+            "2023": 59,
+            "2024": 57,
+            "2025": 53
+          },
+          "target": 65,
+          "sourceRow": 9
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "sheet": "BCSE X",
+      "label": "BCSE X",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "targetAvailable": true,
+      "subjects": [
+        {
+          "subject": "English",
+          "scores": {
+            "2021": 56.3,
+            "2022": 54.3,
+            "2023": 62.3,
+            "2024": 55,
+            "2025": 62.7
+          },
+          "target": 65.7,
+          "sourceRow": 2
+        },
+        {
+          "subject": "Dzongkha",
+          "scores": {
+            "2021": 53,
+            "2022": 57.5,
+            "2023": 54.8,
+            "2024": 57,
+            "2025": 62.8
+          },
+          "target": 65.8,
+          "sourceRow": 3
+        },
+        {
+          "subject": "History",
+          "scores": {
+            "2021": 42.4,
+            "2022": 33.8,
+            "2023": 55.3,
+            "2024": 43.8,
+            "2025": 58.7
+          },
+          "target": 61.7,
+          "sourceRow": 4
+        },
+        {
+          "subject": "Geography",
+          "scores": {
+            "2021": 34.1,
+            "2022": 42.7,
+            "2023": 51.4,
+            "2024": 52.4,
+            "2025": 57.2
+          },
+          "target": 60.2,
+          "sourceRow": 5
+        },
+        {
+          "subject": "Economics",
+          "scores": {
+            "2021": 42.1,
+            "2022": 47.3,
+            "2023": 66.4,
+            "2024": null,
+            "2025": 56.3
+          },
+          "target": 69.4,
+          "sourceRow": 6
+        },
+        {
+          "subject": "ICT",
+          "scores": {
+            "2021": null,
+            "2022": null,
+            "2023": 48,
+            "2024": 48.4,
+            "2025": 43.1
+          },
+          "target": 51.4,
+          "sourceRow": 7
+        },
+        {
+          "subject": "Maths",
+          "scores": {
+            "2021": 34.1,
+            "2022": 33.3,
+            "2023": 36.8,
+            "2024": 39.2,
+            "2025": 55.7
+          },
+          "target": 58.7,
+          "sourceRow": 8
+        },
+        {
+          "subject": "Physics",
+          "scores": {
+            "2021": 38.3,
+            "2022": 43.8,
+            "2023": 52.4,
+            "2024": 48.6,
+            "2025": 48.8
+          },
+          "target": 55.4,
+          "sourceRow": 9
+        },
+        {
+          "subject": "Chemistry",
+          "scores": {
+            "2021": 39.2,
+            "2022": 42,
+            "2023": 50.1,
+            "2024": 37.9,
+            "2025": 49.4
+          },
+          "target": 53.1,
+          "sourceRow": 10
+        },
+        {
+          "subject": "Biology",
+          "scores": {
+            "2021": 42.1,
+            "2022": 44.8,
+            "2023": 49.6,
+            "2024": 49.4,
+            "2025": 59.1
+          },
+          "target": 62.1,
+          "sourceRow": 11
+        },
+        {
+          "subject": "Overall",
+          "scores": {
+            "2021": 42,
+            "2022": 44,
+            "2023": 53,
+            "2024": 49,
+            "2025": 55
+          },
+          "target": 59.9,
+          "sourceRow": 12
+        }
+      ],
+      "warnings": []
+    }
+  ]
+}
