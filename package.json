@@ -1,0 +1,11 @@
+{
+  "name": "amss-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "convert:examination": "node tools/convert-examination.js"
+  },
+  "devDependencies": {
+    "xlsx": "^0.18.5"
+  }
+}
