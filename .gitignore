@@ -1,2 +1,11 @@
 .DS_Store
 node_modules/
+Log in /Log in_.xlsx
+__pycache__/
+*.py[cod]
+.env
+service-account*.json
+*service-account*.json
+*firebase-adminsdk*.json
+.firebase/
+firebase-debug.log

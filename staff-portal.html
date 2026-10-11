@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#14233f">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Staff Login | Arekha Middle Secondary School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="module" src="assets/js/portal/login-page.js"></script>
+</head>
+<body class="portal-page" id="top">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="portal-header">
+    <a class="brand" href="index.html" aria-label="Arekha Middle Secondary School home">
+      <img class="brand-logo" src="assets/images/brand/school%20logo.jpg" alt="">
+      <span class="brand-copy"><strong>Arekha</strong><small>Middle Secondary School</small></span>
+    </a>
+    <a class="portal-back-link" href="index.html">← Public website</a>
+  </header>
+  <main class="portal-auth-main" id="main-content">
+    <section class="portal-auth-card" aria-labelledby="portal-title">
+      <p class="eyebrow">For school staff</p>
+      <h1 id="portal-title">Staff Portal</h1>
+      <p class="portal-lead">Sign in with your authorised school Google account to continue to staff services.</p>
+      <p class="portal-status" id="portal-status" role="status" aria-live="polite">Checking portal setup…</p>
+      <form id="portal-login-form" class="portal-login-form" hidden>
+        <label class="portal-session-choice">
+          <input id="remember-device" type="checkbox">
+          <span>Keep me signed in on this device <small>Leave unchecked on a shared computer.</small></span>
+        </label>
+        <button class="button button-green portal-google-button" type="submit">
+          <span class="google-g" aria-hidden="true">G</span> Log In with Google Account
+        </button>
+      </form>
+      <a class="portal-button-secondary" id="portal-home-link" href="index.html" hidden>Return to the school website</a>
+      <p class="portal-help">Access is limited to staff records authorised by the school.</p>
+    </section>
+  </main>
+  <footer class="portal-footer"><span>© <span id="current-year">2026</span> Arekha Middle Secondary School</span></footer>
+</body>
+</html>
