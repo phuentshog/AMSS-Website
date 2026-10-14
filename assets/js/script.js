@@ -3,6 +3,8 @@
 // Source: SPMS Excel workbooks, Sheet1
 // Update this object only when official results are added.
 // ============================================================
+document.documentElement.classList.add("js");
+
 const SPMS_DATA = {
   sources: ["SPMS Score.xlsx", "Academic Learning Score.xlsx", "Non Academic Score.xlsx"],
   years: [
@@ -29,7 +31,7 @@ menuToggle?.addEventListener("click", () => {
 
 primaryNavigation?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", (event) => {
-    if (link.hasAttribute("aria-haspopup") && window.matchMedia("(max-width: 760px)").matches) {
+    if (link.hasAttribute("aria-haspopup") && window.matchMedia("(max-width: 1279px)").matches) {
       event.preventDefault();
       return;
     }
@@ -545,9 +547,11 @@ const initSPMS = () => {
       link.classList.toggle('is-active', active);
       link.tabIndex = active ? 0 : -1;
     });
-    const navLink = document.querySelector('.nav-dropdown > a[aria-haspopup="true"]');
-    if (navLink) {
-      navLink.setAttribute('aria-current', 'page');
+    const navGroup = document.querySelector('.nav-dropdown[data-nav-group="spms"]');
+    if (navGroup) {
+      navGroup.classList.add('is-current');
+      const navLink = navGroup.querySelector(':scope > a[aria-haspopup="true"]');
+      navLink?.removeAttribute('aria-current');
       const submenuLink = document.querySelector(`.spms-nav-menu a[href$="#${route}"]`);
       document.querySelectorAll('.spms-nav-menu a').forEach((link) => {
         if (link === submenuLink) link.setAttribute('aria-current', 'page');
@@ -637,7 +641,7 @@ const setupSPMSNavigation = () => {
     const trigger = dropdown.querySelector(':scope > a[aria-haspopup="true"]');
     if (!trigger) return;
     trigger.addEventListener('click', (event) => {
-      if (!window.matchMedia('(max-width: 760px)').matches) return;
+      if (!window.matchMedia('(max-width: 1279px)').matches) return;
       event.preventDefault();
       const willOpen = !dropdown.classList.contains('is-open');
       dropdowns.forEach(closeDropdown);
@@ -680,13 +684,11 @@ initSPMS();
   const header = document.querySelector(".site-header");
   if (!header) return;
 
-  const topbar = document.querySelector(".topbar");
   let framePending = false;
 
   const updateHeader = () => {
-    const isScrolled = window.scrollY > 40;
+    const isScrolled = window.scrollY > 80;
     header.classList.toggle("is-scrolled", isScrolled);
-    topbar?.classList.toggle("is-collapsed", isScrolled);
     framePending = false;
   };
 
