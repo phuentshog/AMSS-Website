@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "convert:examination": "node tools/convert-examination.js"
+    "convert:examination": "node tools/convert-examination.js",
+    "test:apps-script-gateway": "node --test tests/apps-script-gateway.test.mjs"
   },
   "devDependencies": {
     "xlsx": "^0.18.5"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }

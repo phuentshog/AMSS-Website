@@ -6,6 +6,7 @@ __pycache__/
 .env
 service-account*.json
 *service-account*.json
-*firebase-adminsdk*.json
-.firebase/
-firebase-debug.log
+*adminsdk*.json
+.clasp.json
+.claspignore
+apps-script-gateway/appsscript.json
