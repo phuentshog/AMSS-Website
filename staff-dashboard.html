@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
-  <script type="module" src="assets/js/portal/dashboard-page.js"></script>
 </head>
 <body class="portal-page" id="top">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -19,36 +18,15 @@
       <img class="brand-logo" src="assets/images/brand/school%20logo.jpg" alt="">
       <span class="brand-copy"><strong>Arekha</strong><small>Middle Secondary School</small></span>
     </a>
-    <div class="portal-header-actions">
-      <a class="portal-back-link" href="index.html">Public website</a>
-      <button class="portal-logout" id="portal-logout" type="button" hidden>Log out</button>
-    </div>
+    <a class="portal-back-link" href="index.html">Public website</a>
   </header>
-  <main class="portal-dashboard-main" id="main-content">
-    <p class="portal-status portal-dashboard-status" id="dashboard-status" role="status" aria-live="polite">Checking your staff access…</p>
-    <div class="portal-dashboard-content" id="dashboard-content" hidden>
-      <section class="portal-welcome-card" aria-labelledby="welcome-heading">
-        <p class="eyebrow">Arekha Middle Secondary School</p>
-        <h1 id="welcome-heading">Welcome back<span id="welcome-name"></span>.</h1>
-        <p>Your Staff Dashboard is ready.</p>
-      </section>
-      <div class="portal-profile-layout">
-        <section class="portal-panel portal-profile-panel" aria-labelledby="profile-heading">
-          <div class="portal-panel-heading"><span class="portal-profile-mark" aria-hidden="true">A</span><div><p class="eyebrow">Your account</p><h2 id="profile-heading">Staff profile</h2></div></div>
-          <dl class="portal-profile-details">
-            <div><dt>Name</dt><dd id="profile-name"></dd></div>
-            <div><dt>Designation</dt><dd id="profile-designation"></dd></div>
-            <div id="profile-department-row" hidden><dt>Department</dt><dd id="profile-department"></dd></div>
-          </dl>
-        </section>
-        <section class="portal-panel portal-services-panel" aria-labelledby="services-heading">
-          <p class="eyebrow">Staff workspace</p>
-          <h2 id="services-heading">Staff services</h2>
-          <p>School-approved staff tools will be added here as they are prepared.</p>
-          <div class="portal-empty-state"><span aria-hidden="true">✳</span><p>This space is ready for future staff services.</p></div>
-        </section>
-      </div>
-    </div>
+  <main class="portal-notice-main" id="main-content">
+    <section class="portal-notice-card" aria-labelledby="dashboard-title">
+      <p class="eyebrow">For school staff</p>
+      <h1 id="dashboard-title">Staff Dashboard</h1>
+      <p class="portal-notice-lead">This dashboard is a prototype and is unavailable until secure staff access is implemented. No staff data is displayed here.</p>
+      <a class="portal-notice-link" href="index.html">Return to the school website</a>
+    </section>
   </main>
   <footer class="portal-footer"><span>© <span id="current-year">2026</span> Arekha Middle Secondary School</span><a href="index.html">Return to the public website</a></footer>
 </body>
