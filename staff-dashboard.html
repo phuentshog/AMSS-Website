@@ -9,25 +9,108 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/staff-dashboard.css">
+  <script type="module" src="assets/js/portal/dashboard-page.js"></script>
 </head>
-<body class="portal-page" id="top">
+<body class="portal-page staff-dashboard-page" id="top">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="portal-header">
     <a class="brand" href="index.html" aria-label="Arekha Middle Secondary School home">
       <img class="brand-logo" src="assets/images/brand/school%20logo.jpg" alt="">
-      <span class="brand-copy"><strong>Arekha</strong><small>Middle Secondary School</small></span>
+      <span class="brand-copy"><strong>Arekha Middle Secondary School</strong><small>AMSS STAFF PORTAL</small></span>
     </a>
-    <a class="portal-back-link" href="index.html">Public website</a>
+    <div class="portal-header-actions">
+      <div class="portal-notification" role="group" aria-label="Notifications are not connected yet">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>
+        <span>Notifications</span><small>Coming soon</small>
+      </div>
+      <div class="portal-profile" aria-live="polite">
+        <span class="portal-profile-mark" aria-hidden="true">AM</span>
+        <span><strong id="profile-name">Staff profile</strong><small id="profile-status">Identity not connected</small></span>
+      </div>
+      <button class="dashboard-menu-toggle" type="button" aria-label="Open dashboard navigation" aria-expanded="false" aria-controls="dashboard-navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
-  <main class="portal-notice-main" id="main-content">
-    <section class="portal-notice-card" aria-labelledby="dashboard-title">
-      <p class="eyebrow">For school staff</p>
-      <h1 id="dashboard-title">Staff Dashboard</h1>
-      <p class="portal-notice-lead">This dashboard is a prototype and is unavailable until secure staff access is implemented. No staff data is displayed here.</p>
-      <a class="portal-notice-link" href="index.html">Return to the school website</a>
-    </section>
+  <main class="portal-dashboard-main" id="main-content">
+    <div class="dashboard-layout">
+      <aside class="dashboard-sidebar" aria-label="Dashboard navigation">
+        <nav class="dashboard-nav" id="dashboard-navigation" aria-label="Staff dashboard sections">
+          <p class="dashboard-nav-label">WORKSPACE</p>
+          <a href="#announcements"><span class="nav-icon" aria-hidden="true">▤</span> Announcements</a>
+          <a href="#teaching-resources"><span class="nav-icon" aria-hidden="true">▧</span> Teaching Resources</a>
+          <a href="#examination-information"><span class="nav-icon" aria-hidden="true">▦</span> Examination Information</a>
+          <a href="#staff-services"><span class="nav-icon" aria-hidden="true">✳</span> Staff Services</a>
+          <a href="#staff-directory"><span class="nav-icon" aria-hidden="true">◎</span> Staff Directory</a>
+        </nav>
+        <p class="dashboard-sidebar-note">Public dashboard shell. Protected staff data is not connected.</p>
+      </aside>
+
+      <div class="dashboard-content">
+        <section class="portal-welcome-card" aria-labelledby="welcome-heading">
+          <p class="eyebrow">AREKHA MIDDLE SECONDARY SCHOOL</p>
+          <h1 id="welcome-heading">Welcome to the AMSS Staff Portal</h1>
+          <p>Welcome to the AMSS Staff Portal. Access school announcements, teaching resources, examination information and staff services from one place.</p>
+          <p class="welcome-security-note">This is a reusable public dashboard shell. Future staff tools must validate access on the server for every request.</p>
+        </section>
+
+        <div class="dashboard-section-list">
+          <section class="portal-panel" id="announcements" aria-labelledby="announcements-heading">
+            <div class="section-heading-row">
+              <div><p class="eyebrow">SCHOOL NOTICES</p><h2 id="announcements-heading">Announcements</h2></div>
+              <a class="text-link" href="news.html">Public News &amp; Events <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="section-description">Official school notices and staff announcements will appear here when an authorised source is connected.</p>
+            <div class="dashboard-entry-list" id="announcement-list"></div>
+            <div class="empty-state" id="announcements-empty"><span class="empty-state-icon" aria-hidden="true">▤</span><div><strong>No announcements available yet.</strong><p>New notices can be added here without changing the dashboard layout.</p></div></div>
+          </section>
+
+          <section class="portal-panel" id="teaching-resources" aria-labelledby="resources-heading">
+            <div class="section-heading-row">
+              <div><p class="eyebrow">TEACHING &amp; LEARNING</p><h2 id="resources-heading">Teaching Resources</h2></div>
+            </div>
+            <p class="section-description">Teaching documents, lesson plans, worksheets, curriculum and subject resources can be organised here.</p>
+            <div class="dashboard-entry-list" id="resource-list"></div>
+            <div class="empty-state" id="resources-empty"><span class="empty-state-icon" aria-hidden="true">▧</span><div><strong>No teaching resources connected yet.</strong><p>Authorised resource links will appear here when a protected source is available.</p></div></div>
+          </section>
+
+          <section class="portal-panel" id="examination-information" aria-labelledby="examination-heading">
+            <div class="section-heading-row">
+              <div><p class="eyebrow">ASSESSMENT</p><h2 id="examination-heading">Examination Information</h2></div>
+              <a class="text-link" href="examination-results.html">Public examination results <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="section-description">Staff examination notices, schedules, preparation guidance and authorised documents can be listed here.</p>
+            <div class="dashboard-entry-list" id="examination-list"></div>
+            <div class="empty-state" id="examinations-empty"><span class="empty-state-icon" aria-hidden="true">▦</span><div><strong>No staff examination resources available yet.</strong><p>Unpublished results and private examination materials are not stored on this public page.</p></div></div>
+          </section>
+
+          <section class="portal-panel" id="staff-services" aria-labelledby="services-heading">
+            <div class="section-heading-row">
+              <div><p class="eyebrow">SCHOOL SYSTEMS</p><h2 id="services-heading">Staff Services</h2></div>
+            </div>
+            <p class="section-description">A starting point for authorised staff tools and school administration services.</p>
+            <div class="service-grid">
+              <article class="service-card"><span class="service-icon" aria-hidden="true">▱</span><div><h3>Staff forms &amp; documents</h3><p>Authorised forms and administrative documents.</p></div><span class="coming-soon">Coming soon</span></article>
+              <article class="service-card"><span class="service-icon" aria-hidden="true">◷</span><div><h3>Meeting information</h3><p>Staff meeting notices and shared information.</p></div><span class="coming-soon">Coming soon</span></article>
+              <article class="service-card"><span class="service-icon" aria-hidden="true">✓</span><div><h3>Staff attendance</h3><p>Attendance tools, when an authorised service is available.</p></div><span class="coming-soon">Coming soon</span></article>
+            </div>
+          </section>
+
+          <section class="portal-panel" id="staff-directory" aria-labelledby="directory-heading">
+            <div class="section-heading-row">
+              <div><p class="eyebrow">COLLEAGUES</p><h2 id="directory-heading">Staff Directory</h2></div>
+            </div>
+            <p class="section-description">Search authorised staff profiles by name, subject or department.</p>
+            <label class="directory-search-label" for="directory-search">Search the staff directory</label>
+            <div class="directory-search-wrap"><span aria-hidden="true">⌕</span><input id="directory-search" type="search" placeholder="Search name or department" autocomplete="off"><button id="directory-clear" type="button" hidden>Clear</button></div>
+            <p class="directory-status" id="directory-status" role="status" aria-live="polite">The directory is empty until an authorised data source is connected.</p>
+            <div class="directory-results" id="directory-results"></div>
+          </section>
+        </div>
+      </div>
+    </div>
   </main>
-  <footer class="portal-footer"><span>© <span id="current-year">2026</span> Arekha Middle Secondary School</span><a href="index.html">Return to the public website</a></footer>
+  <footer class="portal-footer"><span>© <span id="current-year">2026</span> Arekha Middle Secondary School</span><span>Public static dashboard · Protected data is not connected</span><a href="index.html">Return to the public website</a></footer>
 </body>
 </html>
