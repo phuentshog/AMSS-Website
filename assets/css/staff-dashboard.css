@@ -93,6 +93,33 @@ body.staff-dashboard-page :focus-visible { outline: 3px solid #8a671f; outline-o
   align-items: center;
   gap: 22px;
 }
+.staff-dashboard-page .portal-school-link {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--dashboard-line);
+  border-radius: 7px;
+  color: var(--dashboard-navy);
+  background: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.3;
+  transition: background-color .15s ease, border-color .15s ease;
+}
+.staff-dashboard-page .portal-school-link:hover { border-color: #bdcbd9; background: #f5f8fb; }
+.staff-dashboard-page .portal-school-link svg {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
 .staff-dashboard-page .portal-notification,
 .staff-dashboard-page .portal-profile {
   min-height: 44px;
@@ -429,12 +456,14 @@ body.staff-dashboard-page :focus-visible { outline: 3px solid #8a671f; outline-o
   .staff-dashboard-page .portal-header-actions { gap: 14px; }
 }
 @media (max-width: 760px) {
-  .staff-dashboard-page .portal-header { min-height: 72px; padding-inline: 16px; gap: 12px; }
+  .staff-dashboard-page .portal-header { min-height: 72px; flex-wrap: wrap; padding-inline: 16px; gap: 12px; }
   .staff-dashboard-page .brand { gap: 9px; }
   .staff-dashboard-page .brand-logo { width: 44px; height: 44px; }
   .staff-dashboard-page .brand-copy strong { max-width: 220px; font-size: 12px; }
   .staff-dashboard-page .brand-copy small { font-size: 9px; }
   .staff-dashboard-page .portal-header-actions { gap: 10px; }
+  .staff-dashboard-page .portal-header-actions { flex-wrap: wrap; justify-content: flex-end; }
+  .staff-dashboard-page .portal-school-link { gap: 6px; padding: 7px 9px; font-size: 10px; }
   .staff-dashboard-page .portal-notification { display: none; }
   .staff-dashboard-page .portal-profile { gap: 7px; padding-left: 11px; }
   .staff-dashboard-page .portal-profile-mark { width: 34px; height: 34px; }
@@ -459,6 +488,9 @@ body.staff-dashboard-page :focus-visible { outline: 3px solid #8a671f; outline-o
 }
 @media (max-width: 480px) {
   .staff-dashboard-page .portal-header { padding-inline: 12px; }
+  .staff-dashboard-page .brand { flex: 1 1 100%; }
+  .staff-dashboard-page .portal-header-actions { width: 100%; justify-content: flex-end; gap: 8px; }
+  .staff-dashboard-page .portal-school-link { margin-right: auto; }
   .staff-dashboard-page .brand-copy strong { max-width: 155px; font-size: 11px; }
   .staff-dashboard-page .portal-profile { gap: 0; padding-left: 0; border-left: 0; }
   .staff-dashboard-page .portal-profile-mark,
