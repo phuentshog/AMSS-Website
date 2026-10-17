@@ -10,3 +10,5 @@ service-account*.json
 .clasp.json
 .claspignore
 apps-script-gateway/appsscript.json
+/PLC.xlsx
+/AMSS_Past_Question_Papers.xlsx
