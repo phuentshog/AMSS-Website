@@ -700,3 +700,155 @@ initSPMS();
 
   updateHeader();
 })();
+
+(() => {
+  const form = document.querySelector("#site-search-form");
+  const input = document.querySelector("#site-search-input");
+  const results = document.querySelector("#site-search-results");
+  if (!form || !input || !results) return;
+
+  const pages = [
+    "index.html", "about.html", "academics.html", "resources.html", "staff.html",
+    "examination-results.html", "examination-toppers.html", "spms.html",
+    "school-life.html", "news.html", "gallery.html", "contact.html",
+  ];
+  const pageCache = new Map();
+  let searchIndexPromise;
+  const tidy = (value) => String(value || "").replace(/\s+/g, " ").trim();
+  const pageName = (path) => ({
+    "index.html": "Home", "about.html": "About Us", "academics.html": "Academics",
+    "resources.html": "Resources", "staff.html": "Organogram",
+    "examination-results.html": "High Stake Results", "examination-toppers.html": "Subject Toppers",
+    "spms.html": "SPMS", "school-life.html": "School Life", "news.html": "News & Events",
+    "gallery.html": "Gallery", "contact.html": "Contact",
+  }[path] || path);
+
+  const loadPage = async (path) => {
+    if (!pageCache.has(path)) {
+      pageCache.set(path, (async () => {
+        try {
+          const url = new URL(path, window.location.href);
+          const response = url.pathname === window.location.pathname
+            ? null
+            : await fetch(url.href, { cache: "force-cache" });
+          if (response && !response.ok) return [];
+          const documentPage = response
+            ? new DOMParser().parseFromString(await response.text(), "text/html")
+            : document;
+          const main = documentPage.querySelector("main") || documentPage.body;
+          const blocks = [...main.querySelectorAll("h1, h2, h3, h4, p, li, td, th")]
+            .filter((block) => !block.closest(".contact-details, [hidden], [aria-hidden='true']"));
+          return blocks.map((block) => {
+            const text = tidy(block.textContent);
+            if (text.length < 3) return null;
+            const target = block.id ? `${path}#${encodeURIComponent(block.id)}` : path;
+            return { title: pageName(path), text, href: target, weight: /^H[1-4]$/.test(block.tagName) ? 4 : 1 };
+          }).filter(Boolean);
+        } catch {
+          return [];
+        }
+      })());
+    }
+    return pageCache.get(path);
+  };
+
+  const loadStructuredEntries = async () => {
+    const entries = [];
+    try {
+      const response = await fetch(new URL("assets/js/staff/staff-data.js", window.location.href), { cache: "force-cache" });
+      if (response.ok) {
+        const source = await response.text();
+        const assignment = source.slice(source.indexOf("=") + 1).trim().replace(/;\s*$/, "");
+        const data = JSON.parse(assignment);
+        const groups = new Map((data.groups || []).map((group) => [group.id, group.title]));
+        (data.staff || []).forEach((person) => entries.push({
+          title: person.name || "Staff profile",
+          text: [person.name, ...(person.designation || []), ...(person.subject || []), ...(person.responsibilities || []), ...(person.memberships || []).map((item) => groups.get(item.group)), ...(person.qualification || [])].filter(Boolean).join(" · "),
+          href: "staff.html#staff",
+          weight: 5,
+        }));
+      }
+    } catch { /* Keep search usable when optional profile data is unavailable. */ }
+
+    for (const [file, page, type] of [
+      ["examination/data/toppers.json", "examination-toppers.html#exam-toppers-app", "topper"],
+      ["examination/data/results.json", "examination-results.html", "result"],
+    ]) {
+      try {
+        const response = await fetch(new URL(file, window.location.href), { cache: "force-cache" });
+        if (!response.ok) continue;
+        const data = await response.json();
+        (data.classes || []).forEach((klass) => {
+          if (type === "topper") (klass.records || []).forEach((record) => entries.push({
+            title: record.name || "Subject topper",
+            text: [klass.label, record.name, record.subject, record.score, record.year].filter(Boolean).join(" · "),
+            href: page,
+            weight: 5,
+          }));
+          else (klass.subjects || []).forEach((subject) => entries.push({
+            title: `${klass.label || klass.sheet} · ${subject.subject}`,
+            text: [klass.label, klass.sheet, subject.subject, JSON.stringify(subject.scores || {}), subject.target].filter(Boolean).join(" · "),
+            href: page,
+            weight: 3,
+          }));
+        });
+      } catch { /* Keep other page and profile results available. */ }
+    }
+    return entries;
+  };
+
+  const buildIndex = () => {
+    if (!searchIndexPromise) {
+      searchIndexPromise = Promise.all([
+        Promise.all(pages.map(loadPage)),
+        loadStructuredEntries(),
+      ]).then(([pageEntries, structuredEntries]) => [...pageEntries.flat(), ...structuredEntries]);
+    }
+    return searchIndexPromise;
+  };
+
+  const appendMessage = (message) => {
+    const paragraph = document.createElement("p");
+    paragraph.textContent = message;
+    results.replaceChildren(paragraph);
+  };
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const query = tidy(input.value).toLocaleLowerCase();
+    if (!query) { results.hidden = true; return; }
+    results.hidden = false;
+    appendMessage("Searching the school website…");
+    const terms = query.split(/\s+/).filter(Boolean);
+    const matches = (await buildIndex()).map((entry) => {
+      const text = tidy(entry.text);
+      const searchable = `${entry.title} ${text}`.toLocaleLowerCase();
+      if (!terms.every((term) => searchable.includes(term))) return null;
+      const score = entry.weight + (entry.title.toLocaleLowerCase().includes(query) ? 8 : 0)
+        + terms.reduce((total, term) => total + (text.toLocaleLowerCase().includes(term) ? 1 : 0), 0);
+      return { ...entry, text, score };
+    }).filter(Boolean).sort((a, b) => b.score - a.score || a.title.localeCompare(b.title)).slice(0, 12);
+    if (!matches.length) { appendMessage(`No results found for “${tidy(input.value)}”.`); return; }
+    const fragment = document.createDocumentFragment();
+    matches.forEach((match) => {
+      const link = document.createElement("a");
+      link.className = "site-search-result";
+      link.href = match.href;
+      const title = document.createElement("strong");
+      title.textContent = match.title;
+      const snippet = document.createElement("span");
+      snippet.textContent = match.text.slice(0, 190);
+      link.append(title, snippet);
+      fragment.append(link);
+    });
+    results.replaceChildren(fragment);
+  });
+
+  input.addEventListener("input", () => { if (!input.value.trim()) results.hidden = true; });
+  input.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !results.hidden) { results.hidden = true; }
+  });
+  document.addEventListener("click", (event) => {
+    if (!form.contains(event.target)) results.hidden = true;
+  });
+})();
