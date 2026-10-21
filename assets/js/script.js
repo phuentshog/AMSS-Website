@@ -17,17 +17,29 @@ const SPMS_DATA = {
 
 const menuToggle = document.querySelector(".menu-toggle");
 const primaryNavigation = document.querySelector("#primary-navigation");
+const mobileNavigationMedia = window.matchMedia("(max-width: 1279px)");
 
 function setMenuOpen(isOpen) {
   if (!menuToggle || !primaryNavigation) return;
   menuToggle.setAttribute("aria-expanded", String(isOpen));
   menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
   primaryNavigation.classList.toggle("is-open", isOpen);
+  primaryNavigation.setAttribute("aria-hidden", String(mobileNavigationMedia.matches && !isOpen));
+  document.documentElement.classList.toggle("mobile-nav-open", mobileNavigationMedia.matches && isOpen);
 }
 
+setMenuOpen(false);
 menuToggle?.addEventListener("click", () => {
   setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
 });
+
+document.addEventListener("click", (event) => {
+  if (menuToggle?.getAttribute("aria-expanded") !== "true") return;
+  if (primaryNavigation?.contains(event.target) || menuToggle?.contains(event.target)) return;
+  setMenuOpen(false);
+});
+
+mobileNavigationMedia.addEventListener("change", () => setMenuOpen(false));
 
 primaryNavigation?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", (event) => {
@@ -685,10 +697,15 @@ initSPMS();
   if (!header) return;
 
   let framePending = false;
+  let previousScrolledState = null;
 
   const updateHeader = () => {
     const isScrolled = window.scrollY > 80;
     header.classList.toggle("is-scrolled", isScrolled);
+    if (isScrolled !== previousScrolledState) {
+      previousScrolledState = isScrolled;
+      document.dispatchEvent(new CustomEvent("siteheaderstatechange", { detail: { isScrolled } }));
+    }
     framePending = false;
   };
 
@@ -707,148 +724,301 @@ initSPMS();
   const results = document.querySelector("#site-search-results");
   if (!form || !input || !results) return;
 
-  const pages = [
-    "index.html", "about.html", "academics.html", "resources.html", "staff.html",
-    "examination-results.html", "examination-toppers.html", "spms.html",
-    "school-life.html", "news.html", "gallery.html", "contact.html",
+  // Add verified pages and sections here; confirm each URL or #section ID in its HTML first.
+  const SEARCH_INDEX = [
+    { title: "Home", description: "Visit the Arekha Middle Secondary School homepage and its main information sections.", url: "index.html#home", category: "School", keywords: "welcome school homepage AREKHA Bongo Chhukha Bhutan" },
+    { title: "School Overview", description: "Learn about the school community, location, school code and establishment.", url: "about.html#about", category: "School", keywords: "about overview school information established 2004 principal head teacher" },
+    { title: "Vision and Mission", description: "Read the school’s vision, mission and guiding principles.", url: "about.html#school-purpose-title", category: "School", keywords: "vision mission purpose values learning" },
+    { title: "School History and Leadership", description: "Explore the school’s history, development and principal leadership milestones.", url: "about.html#school-history-title", category: "School", keywords: "history principal head teacher leadership school established upgrade" },
+    { title: "Academics", description: "Visit the Academics page for curriculum and learning programme information.", url: "academics.html#academics", category: "Academics", keywords: "academic academics curriculum class classes subjects teachers teaching learning" },
+    { title: "Classes and Curriculum Information", description: "The school’s class, subject and curriculum details are pending confirmation; check the Academics page for updates.", url: "academics.html#academics", category: "Academics", keywords: "classes class levels subjects curriculum academic teacher" },
+    { title: "School Staff Directory", description: "Browse the public staff organogram by team, department or staff category.", url: "staff.html#staff", category: "School", keywords: "staff directory teacher teachers personnel principal head teacher department colleagues support staff" },
+    { title: "Support Staff", description: "Find support staff in the school’s public staff organogram.", url: "staff.html#staff", category: "School", keywords: "support staff administration library lab assistant personnel" },
+    { title: "Staff Login", description: "Open the existing staff sign-in service.", url: "https://script.google.com/macros/s/AKfycbyWT45vrEIq45Shr7ousl-aVrGkcAtdype_AmMBymubvLYVgZ74HlWOHGOYPUMm_52R8Q/exec", category: "Staff", keywords: "staff login sign in portal services" },
+    { title: "Teaching Resources", description: "Visit Resources for school and family information; official documents are not yet published.", url: "resources.html#resources", category: "Academics", keywords: "teaching resources learning materials lesson plans worksheets documents policies student family" },
+    { title: "Resources for Families", description: "Browse the Resources page for family guidance and student information updates.", url: "resources.html#resources", category: "School", keywords: "resources families information frequently asked questions FAQ" },
+    { title: "High Stake Examination Results", description: "View the school’s examination results dashboard and recorded class outcomes.", url: "examination-results.html#exam-results-app", category: "Examinations", keywords: "exam examination high stake result results score class classes CE BCSE" },
+    { title: "Class VI Examination Results", description: "Open the high stake results dashboard for the CE VI class results.", url: "examination-results.html#exam-results-app", category: "Examinations", keywords: "class vi six CE VI results result examination" },
+    { title: "Class VIII Examination Results", description: "Open the high stake results dashboard for the CE VIII class results.", url: "examination-results.html#exam-results-app", category: "Examinations", keywords: "class viii eight CE VIII results result examination" },
+    { title: "Class X Examination Results", description: "Open the high stake results dashboard for BCSE X class results.", url: "examination-results.html#exam-results-app", category: "Examinations", keywords: "class x ten BCSE X results result examination" },
+    { title: "Subject Toppers", description: "See the published subject topper records by class and year.", url: "examination-toppers.html#exam-toppers-app", category: "Examinations", keywords: "topper toppers achievement results subjects class" },
+    { title: "Class X Subject Toppers", description: "Browse the published Class X subject topper records.", url: "examination-toppers.html#exam-toppers-app", category: "Examinations", keywords: "class x ten subject toppers highest marks" },
+    { title: "Past Question Papers", description: "Search the question paper catalogue by class, subject, examination and year.", url: "past-question-papers.html#papers-app", category: "Examinations", keywords: "past question paper papers exam examination class subject year question bank" },
+    { title: "Class X Past Papers", description: "Find Class X papers in the question paper catalogue.", url: "past-question-papers.html#papers-filters", category: "Examinations", keywords: "class x ten past question paper papers exam" },
+    { title: "SPMS", description: "Review School Performance Management System results from 2022 to 2025.", url: "spms.html#spms", category: "Academics", keywords: "SPMS score school performance management system results" },
+    { title: "Academic Learning Score (ALS)", description: "Open the Academic Learning Score dashboard within SPMS.", url: "spms.html#spms-als", category: "Academics", keywords: "ALS academic learning score SPMS results" },
+    { title: "Non-Academic Score", description: "Open the Non-Academic Score dashboard within SPMS.", url: "spms.html#spms-non-academic", category: "Academics", keywords: "non academic score SPMS results" },
+    { title: "SPMS Score", description: "Open the overall SPMS score dashboard.", url: "spms.html#spms-score", category: "Academics", keywords: "SPMS overall score school performance results" },
+    { title: "News and Announcements", description: "Read published school news, announcements and updates.", url: "news.html#news", category: "Campus Life", keywords: "news announcement announcements updates notices" },
+    { title: "Events and Term Dates", description: "Visit News & Events for school activities and term-date updates.", url: "news.html#news", category: "Campus Life", keywords: "events activities calendar term dates schedule" },
+    { title: "School Life", description: "See learning, sports, culture and community life at Arekha.", url: "school-life.html#school-life", category: "Campus Life", keywords: "campus life activities sports culture community students" },
+    { title: "Gallery and Photos", description: "Browse photographs from school and community activities.", url: "gallery.html#gallery", category: "Campus Life", keywords: "gallery photos pictures images events school" },
+    { title: "Student Leader Organogram", description: "Meet the student leaders and browse their leadership groups.", url: "student-leader-organogram.html#student-leaders-title", category: "Campus Life", keywords: "student leadership leaders organogram captains captain house" },
+    { title: "School Captains", description: "View the School Captains in the student leadership organogram.", url: "student-leader-organogram.html#school-captains", category: "Campus Life", keywords: "school captain captains student leaders" },
+    { title: "House Captains", description: "Browse the house captain groups in the student leadership organogram.", url: "student-leader-organogram.html#bjinpa-house-captains", category: "Campus Life", keywords: "house captains captain Bjinpa Samten Sherab Tsondru Tshelthrim Zeba" },
+    { title: "Bjinpa House Captains", description: "View the Bjinpa House Captains.", url: "student-leader-organogram.html#bjinpa-house-captains", category: "Campus Life", keywords: "Bjinpa house captain captains student leaders" },
+    { title: "Samten House Captains", description: "View the Samten House Captains.", url: "student-leader-organogram.html#samten-house-captains", category: "Campus Life", keywords: "Samten house captain captains student leaders" },
+    { title: "Sherab House Captains", description: "View the Sherab House Captains.", url: "student-leader-organogram.html#sherab-house-captains", category: "Campus Life", keywords: "Sherab house captain captains student leaders" },
+    { title: "Tsondru House Captains", description: "View the Tsondru House Captains.", url: "student-leader-organogram.html#tsondru-house-captains", category: "Campus Life", keywords: "Tsondru house captain captains student leaders" },
+    { title: "Tshelthrim House Captains", description: "View the Tshelthrim House Captains.", url: "student-leader-organogram.html#tshelthrim-house-captains", category: "Campus Life", keywords: "Tshelthrim house captain captains student leaders" },
+    { title: "Zeba House Captains", description: "View the Zeba House Captains.", url: "student-leader-organogram.html#zeba-house-captains", category: "Campus Life", keywords: "Zeba house captain captains student leaders" },
+    { title: "Contact the School", description: "Find the school’s verified phone number, email address and location.", url: "contact.html#contact", category: "Contact", keywords: "contact phone telephone call 17160990 email location address Arekha Bongo Chhukha" },
+    { title: "Admissions and Fees Enquiries", description: "Contact the school about admissions or fees; those details are not published on this website.", url: "contact.html#contact", category: "Contact", keywords: "admission admissions fees fee enrol enrollment apply tuition contact" },
   ];
-  const pageCache = new Map();
-  let searchIndexPromise;
-  const tidy = (value) => String(value || "").replace(/\s+/g, " ").trim();
-  const pageName = (path) => ({
-    "index.html": "Home", "about.html": "About Us", "academics.html": "Academics",
-    "resources.html": "Resources", "staff.html": "Organogram",
-    "examination-results.html": "High Stake Results", "examination-toppers.html": "Subject Toppers",
-    "spms.html": "SPMS", "school-life.html": "School Life", "news.html": "News & Events",
-    "gallery.html": "Gallery", "contact.html": "Contact",
-  }[path] || path);
-
-  const loadPage = async (path) => {
-    if (!pageCache.has(path)) {
-      pageCache.set(path, (async () => {
-        try {
-          const url = new URL(path, window.location.href);
-          const response = url.pathname === window.location.pathname
-            ? null
-            : await fetch(url.href, { cache: "force-cache" });
-          if (response && !response.ok) return [];
-          const documentPage = response
-            ? new DOMParser().parseFromString(await response.text(), "text/html")
-            : document;
-          const main = documentPage.querySelector("main") || documentPage.body;
-          const blocks = [...main.querySelectorAll("h1, h2, h3, h4, p, li, td, th")]
-            .filter((block) => !block.closest(".contact-details, [hidden], [aria-hidden='true']"));
-          return blocks.map((block) => {
-            const text = tidy(block.textContent);
-            if (text.length < 3) return null;
-            const target = block.id ? `${path}#${encodeURIComponent(block.id)}` : path;
-            return { title: pageName(path), text, href: target, weight: /^H[1-4]$/.test(block.tagName) ? 4 : 1 };
-          }).filter(Boolean);
-        } catch {
-          return [];
-        }
-      })());
-    }
-    return pageCache.get(path);
-  };
-
-  const loadStructuredEntries = async () => {
-    const entries = [];
-    try {
-      const response = await fetch(new URL("assets/js/staff/staff-data.js", window.location.href), { cache: "force-cache" });
-      if (response.ok) {
-        const source = await response.text();
-        const assignment = source.slice(source.indexOf("=") + 1).trim().replace(/;\s*$/, "");
-        const data = JSON.parse(assignment);
-        const groups = new Map((data.groups || []).map((group) => [group.id, group.title]));
-        (data.staff || []).forEach((person) => entries.push({
-          title: person.name || "Staff profile",
-          text: [person.name, ...(person.designation || []), ...(person.subject || []), ...(person.responsibilities || []), ...(person.memberships || []).map((item) => groups.get(item.group)), ...(person.qualification || [])].filter(Boolean).join(" · "),
-          href: "staff.html#staff",
-          weight: 5,
-        }));
+  const POPULAR_SEARCHES = ["Academics", "Examination results", "Student leaders", "Contact and phone"];
+  const searchScript = document.currentScript || document.querySelector('script[src$="assets/js/script.js"]');
+  const pageRoot = new URL("../../", searchScript?.src || window.location.href);
+  const normalize = (value) => String(value || "")
+    .normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, " ").replace(/\s+/g, " ").trim();
+  const words = (value) => normalize(value).split(" ").filter(Boolean);
+  const editDistance = (a, b, limit = 2) => {
+    if (Math.abs(a.length - b.length) > limit) return limit + 1;
+    let previous = Array.from({ length: b.length + 1 }, (_, i) => i);
+    for (let i = 1; i <= a.length; i += 1) {
+      const current = [i];
+      let rowMinimum = i;
+      for (let j = 1; j <= b.length; j += 1) {
+        current[j] = Math.min(current[j - 1] + 1, previous[j] + 1, previous[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+        rowMinimum = Math.min(rowMinimum, current[j]);
       }
-    } catch { /* Keep search usable when optional profile data is unavailable. */ }
-
-    for (const [file, page, type] of [
-      ["examination/data/toppers.json", "examination-toppers.html#exam-toppers-app", "topper"],
-      ["examination/data/results.json", "examination-results.html", "result"],
-    ]) {
-      try {
-        const response = await fetch(new URL(file, window.location.href), { cache: "force-cache" });
-        if (!response.ok) continue;
-        const data = await response.json();
-        (data.classes || []).forEach((klass) => {
-          if (type === "topper") (klass.records || []).forEach((record) => entries.push({
-            title: record.name || "Subject topper",
-            text: [klass.label, record.name, record.subject, record.score, record.year].filter(Boolean).join(" · "),
-            href: page,
-            weight: 5,
-          }));
-          else (klass.subjects || []).forEach((subject) => entries.push({
-            title: `${klass.label || klass.sheet} · ${subject.subject}`,
-            text: [klass.label, klass.sheet, subject.subject, JSON.stringify(subject.scores || {}), subject.target].filter(Boolean).join(" · "),
-            href: page,
-            weight: 3,
-          }));
-        });
-      } catch { /* Keep other page and profile results available. */ }
+      if (rowMinimum > limit) return limit + 1;
+      previous = current;
     }
-    return entries;
+    return previous[b.length];
+  };
+  const matchStrength = (term, field) => {
+    const fieldWords = words(field);
+    if (fieldWords.includes(term)) return 3;
+    if (term.length === 1) return 0;
+    if (fieldWords.some((word) => word.startsWith(term))) return 2.5;
+    if (fieldWords.some((word) => word.includes(term))) return 2;
+    if (term.length >= 4 && fieldWords.some((word) => word.length >= 4 && Math.abs(word.length - term.length) <= 1 && editDistance(term, word, term.length >= 7 ? 2 : 1) <= (term.length >= 7 ? 2 : 1))) return 1;
+    return 0;
+  };
+  const rankEntries = (query) => {
+    const normalizedQuery = normalize(query);
+    const terms = words(normalizedQuery);
+    if (!normalizedQuery.replace(/\s/g, "") || normalizedQuery.replace(/\s/g, "").length < 2) return [];
+    const ranked = SEARCH_INDEX.map((entry, index) => {
+      const title = normalize(entry.title);
+      const description = normalize(entry.description);
+      const keywords = normalize(entry.keywords);
+      const titlePhrase = title === normalizedQuery ? 1000 : title.startsWith(normalizedQuery) ? 800 : title.includes(normalizedQuery) ? 700 : 0;
+      let score = titlePhrase;
+      let covered = 0;
+      terms.forEach((term) => {
+        const titleStrength = matchStrength(term, entry.title);
+        const keywordStrength = matchStrength(term, entry.keywords);
+        const descriptionStrength = matchStrength(term, entry.description);
+        const best = Math.max(titleStrength, keywordStrength, descriptionStrength);
+        if (best) covered += 1;
+        score += Math.max(titleStrength * 100, keywordStrength * 55, descriptionStrength * 20);
+      });
+      if (terms.length > 1) score += Math.round((covered / terms.length) * 80) - (terms.length - covered) * 18;
+      if (!covered) return null;
+      if (terms.length >= 3 && covered < Math.ceil(terms.length / 2)) return null;
+      if (titlePhrase) score += titlePhrase === 1000 ? 400 : 200;
+      return { ...entry, score, covered, index };
+    }).filter(Boolean);
+    const completeMatches = ranked.filter((entry) => entry.covered === terms.length);
+    return (completeMatches.length ? completeMatches : ranked)
+      .sort((a, b) => b.score - a.score || a.index - b.index).slice(0, 6);
   };
 
-  const buildIndex = () => {
-    if (!searchIndexPromise) {
-      searchIndexPromise = Promise.all([
-        Promise.all(pages.map(loadPage)),
-        loadStructuredEntries(),
-      ]).then(([pageEntries, structuredEntries]) => [...pageEntries.flat(), ...structuredEntries]);
-    }
-    return searchIndexPromise;
+  input.setAttribute("aria-label", "Search the Arekha Middle Secondary School website");
+  input.setAttribute("aria-controls", results.id);
+  input.setAttribute("aria-haspopup", "listbox");
+  input.setAttribute("aria-expanded", "false");
+  results.setAttribute("role", "listbox");
+  results.setAttribute("aria-label", "Website search results");
+  results.setAttribute("aria-live", "polite");
+
+  const header = form.closest(".site-header");
+  const actions = header?.querySelector(".header-actions");
+  const compactToggleMedia = window.matchMedia("(max-width: 760px)");
+  let compactToggle = null;
+  const makeToggle = (className) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = `site-search-toggle ${className}`;
+    button.setAttribute("aria-label", "Open website search");
+    button.setAttribute("aria-expanded", "false");
+    button.setAttribute("aria-controls", results.id);
+    button.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>';
+    return button;
   };
 
-  const appendMessage = (message) => {
-    const paragraph = document.createElement("p");
-    paragraph.textContent = message;
-    results.replaceChildren(paragraph);
-  };
-
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    const query = tidy(input.value).toLocaleLowerCase();
-    if (!query) { results.hidden = true; return; }
-    results.hidden = false;
-    appendMessage("Searching the school website…");
-    const terms = query.split(/\s+/).filter(Boolean);
-    const matches = (await buildIndex()).map((entry) => {
-      const text = tidy(entry.text);
-      const searchable = `${entry.title} ${text}`.toLocaleLowerCase();
-      if (!terms.every((term) => searchable.includes(term))) return null;
-      const score = entry.weight + (entry.title.toLocaleLowerCase().includes(query) ? 8 : 0)
-        + terms.reduce((total, term) => total + (text.toLocaleLowerCase().includes(term) ? 1 : 0), 0);
-      return { ...entry, text, score };
-    }).filter(Boolean).sort((a, b) => b.score - a.score || a.title.localeCompare(b.title)).slice(0, 12);
-    if (!matches.length) { appendMessage(`No results found for “${tidy(input.value)}”.`); return; }
-    const fragment = document.createDocumentFragment();
-    matches.forEach((match) => {
-      const link = document.createElement("a");
-      link.className = "site-search-result";
-      link.href = match.href;
-      const title = document.createElement("strong");
-      title.textContent = match.title;
-      const snippet = document.createElement("span");
-      snippet.textContent = match.text.slice(0, 190);
-      link.append(title, snippet);
-      fragment.append(link);
+  let activeIndex = -1;
+  let debounceTimer = 0;
+  let hasSearchMatches = false;
+  const options = () => [...results.querySelectorAll('[role="option"]:not([aria-disabled="true"])')];
+  const updateExpanded = (isOpen) => {
+    input.setAttribute("aria-expanded", String(isOpen));
+    [compactToggle].filter(Boolean).forEach((button) => {
+      button.setAttribute("aria-expanded", String(isOpen));
+      button.setAttribute("aria-label", isOpen ? "Close website search" : "Open website search");
     });
-    results.replaceChildren(fragment);
-  });
+  };
+  const closeResults = () => {
+    results.hidden = true;
+    activeIndex = -1;
+    hasSearchMatches = false;
+    input.removeAttribute("aria-activedescendant");
+    updateExpanded(false);
+  };
+  const closeCompactSearch = () => {
+    header?.classList.remove("search-open");
+    closeResults();
+  };
+  const makeOption = (entry, index, terms) => {
+    const link = document.createElement("a");
+    link.className = "site-search-result";
+    link.href = new URL(entry.url, pageRoot).href;
+    link.id = `${results.id}-option-${index}`;
+    link.setAttribute("role", "option");
+    link.setAttribute("aria-selected", "false");
+    link.tabIndex = -1;
+    const title = document.createElement("strong");
+    const titleWords = entry.title.split(/(\s+)/);
+    titleWords.forEach((part) => {
+      const normalizedPart = normalize(part);
+      const highlighted = terms.some((term) => normalizedPart && matchStrength(term, part) > 0);
+      if (highlighted) {
+        const mark = document.createElement("b");
+        mark.textContent = part;
+        title.append(mark);
+      } else title.append(document.createTextNode(part));
+    });
+    const description = document.createElement("span");
+    description.textContent = entry.description;
+    const category = document.createElement("small");
+    category.className = "site-search-category";
+    category.textContent = entry.category;
+    link.append(title, description, category);
+    return link;
+  };
+  const setActive = (index) => {
+    const items = options();
+    if (!items.length) return;
+    activeIndex = (index + items.length) % items.length;
+    items.forEach((item, itemIndex) => item.setAttribute("aria-selected", String(itemIndex === activeIndex)));
+    input.setAttribute("aria-activedescendant", items[activeIndex].id);
+    items[activeIndex].scrollIntoView({ block: "nearest" });
+  };
+  const renderEntries = (entries, query, label = "") => {
+    results.replaceChildren();
+    activeIndex = -1;
+    input.removeAttribute("aria-activedescendant");
+    if (label) {
+      const heading = document.createElement("p");
+      heading.className = "site-search-section-label";
+      heading.setAttribute("role", "presentation");
+      heading.textContent = label;
+      results.append(heading);
+    }
+    entries.forEach((entry, index) => results.append(makeOption(entry, index, words(query))));
+    results.hidden = false;
+    updateExpanded(true);
+  };
+  const showPopular = () => {
+    hasSearchMatches = false;
+    const entries = POPULAR_SEARCHES.map((phrase) => rankEntries(phrase)[0]).filter(Boolean);
+    const uniqueEntries = [...new Map(entries.map((entry) => [entry.url, entry])).values()];
+    renderEntries(uniqueEntries, "", "Popular searches");
+  };
+  const showNoResults = (query) => {
+    hasSearchMatches = false;
+    results.replaceChildren();
+    const message = document.createElement("p");
+    message.className = "site-search-empty-message";
+    message.setAttribute("role", "presentation");
+    message.textContent = "No results found. Try a different word.";
+    results.append(message);
+    const fallback = [
+      { title: "Home", description: "Visit the school homepage.", url: "index.html#home", category: "School" },
+      { title: "Academics", description: "Visit the Academics page.", url: "academics.html#academics", category: "Academics" },
+      { title: "Contact", description: "Find the school’s phone number and email.", url: "contact.html#contact", category: "Contact" },
+    ];
+    fallback.forEach((entry, index) => results.append(makeOption(entry, index, words(query))));
+    results.hidden = false;
+    updateExpanded(true);
+  };
+  const search = () => {
+    window.clearTimeout(debounceTimer);
+    hasSearchMatches = false;
+    const query = String(input.value || "").trim();
+    const normalized = normalize(query);
+    if (!normalized) { showPopular(); return; }
+    if (normalized.replace(/\s/g, "").length < 2) {
+      renderEntries([], "", "Type at least two characters to search");
+      return;
+    }
+    const entries = rankEntries(normalized);
+    if (!entries.length) { showNoResults(query); return; }
+    hasSearchMatches = true;
+    renderEntries(entries, normalized);
+  };
+  const toggleCompactSearch = () => {
+    const opening = !header?.classList.contains("search-open");
+    header?.classList.toggle("search-open", opening);
+    if (opening) { search(); input.focus(); }
+    else closeResults();
+  };
 
-  input.addEventListener("input", () => { if (!input.value.trim()) results.hidden = true; });
+  const syncCompactToggle = () => {
+    if (compactToggleMedia.matches && actions && !compactToggle) {
+      compactToggle = makeToggle("site-search-toggle--compact");
+      actions.insertBefore(compactToggle, actions.querySelector(".menu-toggle") || actions.firstChild);
+      compactToggle.addEventListener("click", toggleCompactSearch);
+    } else if (!compactToggleMedia.matches && compactToggle) {
+      compactToggle.remove();
+      compactToggle = null;
+      closeCompactSearch();
+    }
+  };
+  compactToggleMedia.addEventListener("change", syncCompactToggle);
+  syncCompactToggle();
+  input.addEventListener("focus", () => { if (!input.value.trim()) showPopular(); });
+  input.addEventListener("click", () => { if (!input.value.trim()) showPopular(); });
+  input.addEventListener("input", () => {
+    window.clearTimeout(debounceTimer);
+    debounceTimer = window.setTimeout(search, 200);
+  });
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    window.clearTimeout(debounceTimer);
+    search();
+    if (hasSearchMatches && options().length) window.location.href = options()[0].href;
+  });
   input.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !results.hidden) { results.hidden = true; }
+    if (event.key === "Escape") { closeCompactSearch(); return; }
+    if (event.key === "Enter") {
+      const queryLength = normalize(input.value).replace(/\s/g, "").length;
+      if (queryLength >= 2) {
+        event.preventDefault();
+        window.clearTimeout(debounceTimer);
+        search();
+        if (hasSearchMatches && options().length) window.location.href = options()[activeIndex < 0 ? 0 : activeIndex].href;
+      } else if (activeIndex >= 0 && options()[activeIndex]) {
+        event.preventDefault();
+        window.location.href = options()[activeIndex].href;
+      }
+      return;
+    }
+    if (results.hidden) return;
+    if (event.key === "ArrowDown") { event.preventDefault(); setActive(activeIndex + 1); }
+    if (event.key === "ArrowUp") { event.preventDefault(); setActive(activeIndex < 0 ? options().length - 1 : activeIndex - 1); }
+  });
+  results.addEventListener("click", (event) => {
+    if (event.target instanceof Element && event.target.closest('[role="option"]')) closeCompactSearch();
   });
   document.addEventListener("click", (event) => {
-    if (!form.contains(event.target)) results.hidden = true;
+    if (!form.contains(event.target) && !compactToggle?.contains(event.target)) closeCompactSearch();
   });
+  document.addEventListener("siteheaderstatechange", (event) => {
+    if (!event.detail?.isScrolled) closeCompactSearch();
+    else if (!header?.classList.contains("search-open")) closeResults();
+  });
+  if (header?.classList.contains("is-scrolled")) closeResults();
 })();

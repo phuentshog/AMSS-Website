@@ -247,10 +247,13 @@
     });
 
     const orderedGroups = [];
+    const matchedIds = new Set(matchedPeople.map((person) => person.id));
     for (const section of data.sections) {
       for (const groupId of section.groups) {
-        const members = groupsByPrimary.get(groupId);
         const group = groups.get(groupId);
+        const members = group?.section === "departments"
+          ? (group.members || []).map((id) => people.get(id)).filter((person) => person && matchedIds.has(person.id))
+          : groupsByPrimary.get(groupId);
         if (members?.length && group && !orderedGroups.includes(groupId)) {
           orderedGroups.push(groupId);
           root.append(renderCategoryGroup(group, members, groupId === "academic-board" ? "Academic Board" : group.title));

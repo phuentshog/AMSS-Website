@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#14233f">
+  <meta name="description" content="Search the AMSS past question paper bank by class, subject, examination and academic year.">
+  <title>Past Question Paper Bank | Arekha Middle Secondary School</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/past-question-papers.css">
+  <script src="assets/js/script.js" defer></script>
+  <script src="assets/js/past-question-papers.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="header-top-row">
+        <a class="brand" href="index.html" aria-label="Arekha Middle Secondary School home">
+          <img class="brand-logo" src="assets/images/brand/school%20logo.jpg" alt="Arekha Middle Secondary School Logo">
+          <span class="brand-copy"><strong>Arekha Middle Secondary School</strong><small>Arekha · Bongo · Chhukha · Bhutan</small></span>
+        </a>
+        <form class="site-search" id="site-search-form" role="search" aria-label="Search the school website">
+          <label class="visually-hidden" for="site-search-input">Search the school website</label>
+          <div class="site-search-control">
+            <input id="site-search-input" type="search" placeholder="Search the website" autocomplete="off">
+            <button type="submit" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg></button>
+          </div>
+          <div class="site-search-results" id="site-search-results" role="status" aria-live="polite" hidden></div>
+        </form>
+        <div class="header-actions">
+          <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span><span></span></button>
+          <a class="nav-login" href="https://script.google.com/macros/s/AKfycbyWT45vrEIq45Shr7ousl-aVrGkcAtdype_AmMBymubvLYVgZ74HlWOHGOYPUMm_52R8Q/exec"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/images/icons/navigation.svg#login"></use></svg><span>Staff Login</span></a>
+        </div>
+      </div>
+      <nav class="primary-nav" id="primary-navigation" aria-label="Main navigation">
+        <a href="index.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/images/icons/navigation.svg#home"></use></svg><span>Home</span></a>
+        <div class="nav-dropdown" data-nav-group="school"><a href="about.html" aria-haspopup="true" aria-expanded="false" aria-controls="school-global-subnav"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/images/icons/navigation.svg#school"></use></svg><span>School</span><span class="nav-chevron" aria-hidden="true">▾</span></a><div class="spms-nav-menu" id="school-global-subnav" role="group" aria-label="School pages"><a href="about.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/images/icons/navigation.svg#info"></use></svg><span>About Us</span></a><a href="staff.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/images/icons/navigation.svg#users"></use></svg><span>Organogram</span></a></div></div>
+        <div class="nav-dropdown" data-nav-group="academics"><a href="academics.html" aria-haspopup="true" aria-expanded="false" aria-controls="academics-global-subnav"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/images/icons/navigation.svg#book"></use></svg><span>Academics</span><span class="nav-chevron" aria-hidden="true">▾</span></a><div class="spms-nav-menu" id="academics-global-subnav" role="group" aria-label="Academic pages"><a href="academics.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/images/icons/navigation.svg#book"></use></svg><span>Academics</span></a><a href="resources.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/images/icons/navigation.svg#folder"></use></svg><span>Resources</span></a></div></div>
+        <div class="nav-dropdown is-current" data-nav-group="examinations"><a href="examination-results.html" aria-haspopup="true" aria-expanded="false" aria-controls="examinations-global-subnav"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/images/icons/navigation.svg#clipboard"></use></svg><span>Examinations</span><span class="nav-chevron" aria-hidden="true">▾</span></a><div class="spms-nav-menu" id="examinations-global-subnav" role="group" aria-label="Examination pages"><a href="examination-results.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/images/icons/navigation.svg#chart"></use></svg><span>High Stake Results</span></a><a href="examination-toppers.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/images/icons/navigation.svg#trophy"></use></svg><span>Subject Toppers</span></a><a href="past-question-papers.html" aria-current="page"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/images/icons/navigation.svg#book"></use></svg><span>Past Question Paper Bank</span></a></div></div>
+        <div class="nav-dropdown" data-nav-group="spms"><a href="spms.html#spms-score" aria-haspopup="true" aria-expanded="false" aria-controls="spms-global-subnav"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/images/icons/navigation.svg#trend"></use></svg><span>SPMS</span><span class="nav-chevron" aria-hidden="true">▾</span></a><div class="spms-nav-menu" id="spms-global-subnav" role="group" aria-label="SPMS pages"><a href="spms.html#spms-als"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/images/icons/navigation.svg#trend"></use></svg><span>Academic Learning Score</span></a><a href="spms.html#spms-non-academic"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/images/icons/navigation.svg#layers"></use></svg><span>Non-Academic Score</span></a><a href="spms.html#spms-score"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/images/icons/navigation.svg#chart"></use></svg><span>SPMS Score</span></a></div></div>
+        <div class="nav-dropdown" data-nav-group="campus"><a href="school-life.html" aria-haspopup="true" aria-expanded="false" aria-controls="campus-global-subnav"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/images/icons/navigation.svg#users"></use></svg><span>Campus Life</span><span class="nav-chevron" aria-hidden="true">▾</span></a><div class="spms-nav-menu" id="campus-global-subnav" role="group" aria-label="Campus Life pages"><a href="news.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/images/icons/navigation.svg#news"></use></svg><span>News &amp; Events</span></a><a href="gallery.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/images/icons/navigation.svg#images"></use></svg><span>Gallery</span></a><a href="school-life.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/images/icons/navigation.svg#calendar"></use></svg><span>School Life</span></a><a href="student-leader-organogram.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/images/icons/navigation.svg#users"></use></svg><span>Student Leader Organogram</span></a></div></div>
+        <a class="nav-contact" href="contact.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="assets/images/icons/navigation.svg#mail"></use></svg><span>Contact</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content" class="exam-page section-pad papers-page">
+    <div class="container">
+      <header class="exam-heading">
+        <p class="eyebrow">EXAMINATION RESOURCES</p>
+        <h1>Past Question Papers</h1>
+        <p>Find past papers by class, subject, examination, and year.</p>
+      </header>
+      <section class="exam-panel papers-panel" aria-labelledby="papers-list-title">
+        <div class="exam-panel-heading papers-panel-heading">
+          <div><p class="eyebrow">AREKHA MSS QUESTION BANK</p><h2 id="papers-list-title">Find a Paper</h2></div>
+          <p class="exam-source-note">Filter the catalogue to find the papers you need.</p>
+        </div>
+        <div id="papers-access-notice" class="papers-access-notice" role="status" aria-live="polite">
+          <strong>Paper Access</strong>
+          <span>Only papers accessible to students have an active Open Paper link.</span>
+        </div>
+        <div id="papers-app" class="papers-app" aria-busy="true">
+          <form id="papers-filters" class="papers-filters" aria-label="Filter past question papers">
+            <div class="papers-filter-field"><label for="papers-class">Class</label><select id="papers-class" name="class"><option value="">All classes</option></select></div>
+            <div class="papers-filter-field"><label for="papers-subject">Subject</label><select id="papers-subject" name="subject"><option value="">All subjects</option></select></div>
+            <div class="papers-filter-field"><label for="papers-examination">Examination</label><select id="papers-examination" name="examination"><option value="">All examinations</option></select></div>
+            <div class="papers-filter-field"><label for="papers-year">Academic year</label><select id="papers-year" name="year"><option value="">All years</option></select></div>
+            <div class="papers-filter-actions"><button class="button button-green" type="submit">Search Papers</button><button class="button papers-clear-button" type="button" data-papers-clear>Clear Filters</button></div>
+          </form>
+          <p id="papers-result-count" class="papers-result-count" role="status" aria-live="polite">Choose one or more filters and click Search Papers. Entries without confirmed access remain listed with a status message.</p>
+          <div id="papers-results" class="papers-results" aria-live="polite" aria-relevant="additions text"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand"><a class="brand brand-footer" href="index.html" aria-label="Arekha Middle Secondary School home"><span class="brand-mark" aria-hidden="true"><span>A</span></span><span class="brand-copy"><strong>Arekha</strong><small>Middle Secondary School</small></span></a><p>Arekha Middle Secondary School<br>Arekha, Bongo, Chhukha, Bhutan</p></div>
+      <div class="footer-column"><strong>Explore</strong><a href="about.html">About us</a><a href="academics.html">Academics</a><a href="staff.html">Organogram</a><a href="school-life.html">School life</a><a href="gallery.html">Gallery</a></div>
+      <div class="footer-column"><strong>Stay connected</strong><a href="news.html">News &amp; events</a><a href="resources.html">Resources</a><a href="examination-toppers.html">Subject Toppers</a><a href="examination-results.html">High Stake Results</a><a href="contact.html">Contact us</a></div>
+      <a href="#top" class="back-top">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="current-year">2026</span> Arekha Middle Secondary School</span><div class="footer-contact-links"><a href="mailto:ch.arekhamss@education.gov.bt">ch.arekhamss@education.gov.bt</a><a href="tel:17160990">17160990</a><a href="https://www.facebook.com/ArekhaMSS/" target="_blank" rel="noopener noreferrer">Facebook</a></div></div>
+  </footer>
+</body>
+</html>
