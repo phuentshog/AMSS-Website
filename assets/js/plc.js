@@ -165,29 +165,39 @@
       const card = makeElement("article", "plc-teacher-card plc-public-resource-card");
       const text = makeElement("span", "plc-card-copy");
       text.append(makeElement("strong", "", resource.title));
-      text.append(makeElement("span", "plc-card-department", department.name));
-      const link = makeElement("a", "plc-folder-note", "Open public resource ↗");
+      text.append(makeElement("span", "plc-card-department", resource.role || department.name));
+      const link = makeElement("a", "plc-folder-note", "Open folder ↗");
       link.href = resource.url;
       link.target = "_blank";
       link.rel = "noopener noreferrer";
       text.append(link);
-      card.append(makeIcon(department.name), text);
+      if (resource.photoUrl) {
+        const photo = makeElement("img", "plc-resource-photo");
+        photo.src = resource.photoUrl;
+        photo.alt = resource.title;
+        photo.loading = "lazy";
+        card.append(photo);
+      } else card.append(makeIcon(department.name));
+      card.append(text);
       resourcesHost.append(card);
     }
     departmentEmpty.hidden = resources.length > 0;
     departmentEmpty.querySelector("strong").textContent = resources.length
-      ? "Approved public resources"
-      : "No approved public resources are available yet.";
+      ? "Teacher folders"
+      : "No teacher folders are available yet.";
     departmentEmpty.querySelector("span").textContent = resources.length
-      ? "Only resources cleared for public access appear here."
-      : "Department totals are available; private PLC folders and staff records are not published.";
+      ? "Folder contents remain governed by their existing Google Drive permissions."
+      : "Department totals are available; no teacher folder shortcuts are listed.";
   }
 
   function isApprovedResource(resource) {
     if (!resource || typeof resource.title !== "string" || typeof resource.url !== "string") return false;
     try {
       const url = new URL(resource.url);
-      return url.protocol === "https:" && !/^(drive\.google\.com|docs\.google\.com)$/i.test(url.hostname);
+      const driveFolder = url.hostname === "drive.google.com" && /^\/drive\/folders\/[A-Za-z0-9_-]+\/?$/.test(url.pathname);
+      const publicResource = !/^(drive\.google\.com|docs\.google\.com)$/i.test(url.hostname);
+      const photoUrl = resource.photoUrl == null || (typeof resource.photoUrl === "string" && /^https:\/\/lh3\.googleusercontent\.com\/d\/[A-Za-z0-9_-]+(?:=w800)?$/.test(resource.photoUrl));
+      return url.protocol === "https:" && photoUrl && (driveFolder || publicResource);
     } catch {
       return false;
     }

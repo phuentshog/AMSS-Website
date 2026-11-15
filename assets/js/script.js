@@ -142,7 +142,7 @@ contactForm?.addEventListener("submit", (event) => {
 const initSPMS = () => {
   const root = document.querySelector('#spms-dashboard-root');
   const routeTabs = document.querySelector('#spms-route-tabs');
-  if (!root || !routeTabs) return;
+  if (!root) return;
 
   const classNames = ['VI', 'VIII', 'X', 'Overall'];
   const seriesColors = {
@@ -158,19 +158,19 @@ const initSPMS = () => {
     'spms-als': {
       title: 'Academic Learning Score',
       icon: 'A',
-      subtitle: 'Academic Learning Scores across classes VI, VIII and X.',
+      subtitle: 'Performance across Classes VI, VIII and X | 2022–2025',
       tabs: ['Overview', 'By Class', 'Data Table'],
     },
     'spms-non-academic': {
       title: 'Non-Academic Score',
       icon: 'N',
-      subtitle: 'Whole-school non-academic results across recorded years.',
+      subtitle: 'School-wide performance | 2022–2025',
       tabs: ['Overview', 'Data Table'],
     },
     'spms-score': {
-      title: 'School Performance Management System (SPMS) Score',
+      title: 'Overall SPMS Score',
       icon: 'S',
-      subtitle: 'Academic and non-academic contributions to the official SPMS total.',
+      subtitle: 'Academic Learning and Non-Academic results | 2022–2025',
       tabs: ['Overview', 'Composition', 'Data Table'],
     },
   };
@@ -584,8 +584,8 @@ const initSPMS = () => {
     const tab = definition.tabs.includes(state.tab) ? state.tab : definition.tabs[0];
     state.tab = tab;
     const tabMarkup = definition.tabs.map((name) => `<button type="button" role="tab" id="spms-inner-tab-${name.toLowerCase().replace(/\s+/g, '-')}" aria-selected="${name === tab}" aria-controls="spms-panel" class="spms-inner-tab${name === tab ? ' is-active' : ''}" data-inner-tab="${escapeHTML(name)}">${escapeHTML(name)}</button>`).join('');
-    root.innerHTML = `<header class="spms-dashboard-banner"><span class="spms-dashboard-icon" aria-hidden="true">${escapeHTML(definition.icon)}</span><div><p class="eyebrow">School performance</p><h2>${escapeHTML(definition.title)}</h2><p>${escapeHTML(definition.subtitle)}</p></div><span class="spms-data-range">Data: ${SPMS_DATA.years[0].year}–${latest().year}</span></header><div class="spms-dashboard-tools"><div class="spms-inner-tabs" role="tablist" aria-label="${escapeHTML(definition.title)} sections">${tabMarkup}</div><button type="button" class="button button-green spms-print">Print</button></div><section id="spms-panel" class="spms-dashboard-panel" role="tabpanel" aria-labelledby="spms-inner-tab-${tab.toLowerCase().replace(/\s+/g, '-')}">${buildDashboardContent(route, tab)}</section>`;
-    routeTabs.querySelectorAll('[data-spms-route]').forEach((link) => {
+    root.innerHTML = `<header class="spms-dashboard-banner"><span class="spms-dashboard-icon" aria-hidden="true">${escapeHTML(definition.icon)}</span><div><h2>${escapeHTML(definition.title)}</h2><p>${escapeHTML(definition.subtitle)}</p></div></header><div class="spms-dashboard-tools"><div class="spms-inner-tabs" role="tablist" aria-label="${escapeHTML(definition.title)} sections">${tabMarkup}</div><button type="button" class="button button-green spms-print">Print</button></div><section id="spms-panel" class="spms-dashboard-panel" role="tabpanel" aria-labelledby="spms-inner-tab-${tab.toLowerCase().replace(/\s+/g, '-')}">${buildDashboardContent(route, tab)}</section>`;
+    routeTabs?.querySelectorAll('[data-spms-route]').forEach((link) => {
       const active = link.dataset.spmsRoute === route;
       link.setAttribute('aria-selected', String(active));
       link.setAttribute('aria-current', active ? 'page' : 'false');
@@ -650,7 +650,7 @@ const initSPMS = () => {
       tabs[next].focus();
       tabs[next].click();
     });
-    routeTabs.addEventListener('click', (event) => {
+    routeTabs?.addEventListener('click', (event) => {
       const routeLink = event.target.closest('[data-spms-route]');
       if (!routeLink) return;
       if (routeLink.dataset.spmsRoute === currentRoute()) {
@@ -658,7 +658,7 @@ const initSPMS = () => {
         routeTabs.querySelectorAll('[data-spms-route]').forEach((link) => { link.tabIndex = link === routeLink ? 0 : -1; });
       }
     });
-    routeTabs.addEventListener('keydown', (event) => {
+    routeTabs?.addEventListener('keydown', (event) => {
       if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
       const tabs = [...routeTabs.querySelectorAll('[data-spms-route]')];
       const currentIndex = tabs.indexOf(document.activeElement);

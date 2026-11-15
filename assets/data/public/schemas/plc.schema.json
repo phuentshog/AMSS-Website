@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://phuentshog.github.io/AMSS-Website/assets/data/public/schemas/plc.schema.json",
   "title": "Public PLC directory summary",
-  "description": "Department labels and approved public resources; no private Drive folders or unapproved staff profiles.",
+  "description": "Department summaries and approved teacher folder shortcuts. Folder contents remain governed by their existing Google Drive permissions.",
   "type": "object",
   "additionalProperties": false,
   "required": ["departments"],
@@ -21,7 +21,12 @@
             "items": {
               "type": "object", "additionalProperties": false,
               "required": ["title", "url"],
-              "properties": { "title": { "type": "string" }, "url": { "type": "string", "format": "uri", "pattern": "^https://" } }
+              "properties": {
+                "title": { "type": "string" },
+                "url": { "type": "string", "format": "uri", "pattern": "^https://" },
+                "role": { "type": "string" },
+                "photoUrl": { "type": "string", "format": "uri", "pattern": "^https://lh3\\.googleusercontent\\.com/d/" }
+              }
             }
           }
         }

@@ -524,6 +524,7 @@
 .staff-dashboard-page .plc-dashboard-embed .plc-summary-icon svg { width: 25px; height: 25px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .staff-dashboard-page .plc-dashboard-embed .plc-public-resource-card { cursor: default; }
 .staff-dashboard-page .plc-dashboard-embed .plc-public-resource-card > .plc-department-icon { flex: 0 0 40px; }
+.staff-dashboard-page .plc-dashboard-embed .plc-public-resource-card > .plc-resource-photo { width: 40px; height: 40px; flex: 0 0 40px; border-radius: 50%; object-fit: cover; }
 @media (max-width: 1050px) {
   .staff-dashboard-page .plc-dashboard-embed .plc-department-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .staff-dashboard-page .plc-dashboard-embed .plc-member-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }

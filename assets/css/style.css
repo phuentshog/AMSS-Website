@@ -1807,15 +1807,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .nav-dropdown > a[aria-expanded="true"] { color: var(--forest); }
 
 .spms-page { min-height: 70vh; }
-.spms-page .spms-heading { margin-bottom: 28px; }
+.spms-page .spms-heading { margin-bottom: 16px; }
 .spms-page .spms-heading h1 {
-  margin: 0 0 12px;
+  margin: 0 0 5px;
   color: var(--forest);
   font-family: var(--serif);
   font-size: clamp(32px, 4vw, 46px);
   font-weight: 500;
   line-height: 1.15;
 }
+.spms-page .spms-heading > p:last-child { margin: 0; }
 .spms-route-tabs {
   display: flex;
   justify-content: center;
@@ -1850,8 +1851,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   display: flex;
   align-items: center;
   gap: 18px;
-  margin-bottom: 22px;
-  padding: 24px 28px;
+  margin-bottom: 16px;
+  padding: 17px 22px;
   border-left: 3px solid var(--color-gold);
   color: #fff;
   background: var(--color-primary-dark);
@@ -1887,7 +1888,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   font-size: 10px;
   white-space: nowrap;
 }
-.spms-dashboard-tools { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 22px; }
+.spms-dashboard-tools { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 15px; }
 .spms-inner-tabs { display: flex; flex-wrap: wrap; gap: 3px; }
 .spms-inner-tab {
   min-height: 42px;
