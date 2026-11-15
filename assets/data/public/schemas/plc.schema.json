@@ -11,11 +11,11 @@
       "type": "array",
       "items": {
         "type": "object", "additionalProperties": false,
-        "required": ["id", "title"],
+        "required": ["id", "title", "memberCount"],
         "properties": {
           "id": { "type": "string" },
           "title": { "type": "string" },
-          "memberCountBand": { "type": "string" },
+          "memberCount": { "type": "integer", "minimum": 0, "description": "Aggregate educator membership count for this department only; no individual profiles are included." },
           "resources": {
             "type": "array",
             "items": {

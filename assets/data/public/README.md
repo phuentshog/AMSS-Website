@@ -26,9 +26,9 @@ them.
 - Annual examination: public timeline, timetable, and approved binder or
   subject summaries. Do not include named invigilation assignments, initials,
   source sheet names, or private staffing notes.
-- PLC: department labels, approved public resource links, and optionally
-  aggregate member counts. Do not include private folder links or staff
-  profiles without approval.
+- PLC: department labels, aggregate membership counts, and only resources
+  deliberately cleared for public access. Do not include private folder links,
+  individual staff profiles, or private staff assignments.
 - Examination results: school/class/subject-level summaries only. Keep student
   names, individual scores, source workbook names, and source-row references
   private unless an explicit public-release decision is made.

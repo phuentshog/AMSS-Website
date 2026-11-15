@@ -1,5 +1,301 @@
 {
   "schemaVersion": 1,
-  "status": "No paper document has completed public-access and contents verification.",
-  "papers": []
+  "status": "verified-public-pdfs",
+  "verifiedCount": 21,
+  "papers": [
+    {
+      "suggestedDisplayTitle": "Class VI Dzongkha Trial Examination 2026",
+      "year": 2026,
+      "examinationType": "Trial",
+      "class": "VI",
+      "classes": [
+        "VI"
+      ],
+      "subject": "Dzongkha",
+      "resourceType": "question-paper-candidate",
+      "fileFormat": "PDF",
+      "driveFileId": "1s3-gZuN8xXNHwtOQNKdM7m1tqX7JZpmm",
+      "accessVerificationStatus": "verified-public"
+    },
+    {
+      "suggestedDisplayTitle": "Class X Dzongkha Paper I - Trial Examination 2026",
+      "year": 2026,
+      "examinationType": "Trial",
+      "class": "X",
+      "classes": [
+        "X"
+      ],
+      "subject": "Dzongkha",
+      "resourceType": "question-paper-candidate",
+      "fileFormat": "PDF",
+      "driveFileId": "1ItP_bbkH4fvIL_8NF0YTD1mI5M53wifB",
+      "accessVerificationStatus": "verified-public"
+    },
+    {
+      "suggestedDisplayTitle": "Class X Dzongkha Paper II - Trial Examination 2026",
+      "year": 2026,
+      "examinationType": "Trial",
+      "class": "X",
+      "classes": [
+        "X"
+      ],
+      "subject": "Dzongkha",
+      "resourceType": "question-paper-candidate",
+      "fileFormat": "PDF",
+      "driveFileId": "1MUrUIL280QhVocpc1eIm5WFVBA0u_L9f",
+      "accessVerificationStatus": "verified-public"
+    },
+    {
+      "suggestedDisplayTitle": "Class VIII Dzongkha Trial Examination 2026",
+      "year": 2026,
+      "examinationType": "Trial",
+      "class": "VIII",
+      "classes": [
+        "VIII"
+      ],
+      "subject": "Dzongkha",
+      "resourceType": "question-paper-candidate",
+      "fileFormat": "PDF",
+      "driveFileId": "1lwMh-UsxfhVUQJVCcpx47M9PiYF7XzL0",
+      "accessVerificationStatus": "verified-public"
+    },
+    {
+      "suggestedDisplayTitle": "Class VIII English Trial Examination 2026",
+      "year": 2026,
+      "examinationType": "Trial",
+      "class": "VIII",
+      "classes": [
+        "VIII"
+      ],
+      "subject": "English",
+      "resourceType": "question-paper-candidate",
+      "fileFormat": "PDF",
+      "driveFileId": "1DrU-6Pt3bteb7t-RI_XM-eQOQjjvMaze",
+      "accessVerificationStatus": "verified-public"
+    },
+    {
+      "suggestedDisplayTitle": "Class X English Paper I - Trial Examination 2026",
+      "year": 2026,
+      "examinationType": "Trial",
+      "class": "X",
+      "classes": [
+        "X"
+      ],
+      "subject": "English",
+      "resourceType": "question-paper-candidate",
+      "fileFormat": "PDF",
+      "driveFileId": "1BbV5K1QsitkptLugmv2UAas_e2lF2d6-",
+      "accessVerificationStatus": "verified-public"
+    },
+    {
+      "suggestedDisplayTitle": "Class X English Paper II - Trial Examination 2026",
+      "year": 2026,
+      "examinationType": "Trial",
+      "class": "X",
+      "classes": [
+        "X"
+      ],
+      "subject": "English",
+      "resourceType": "question-paper-candidate",
+      "fileFormat": "PDF",
+      "driveFileId": "1sv0KVo6hdVnpeDB3a_YOPbbc0W0CTNCM",
+      "accessVerificationStatus": "verified-public"
+    },
+    {
+      "suggestedDisplayTitle": "Class VI English Trial Examination 2026",
+      "year": 2026,
+      "examinationType": "Trial",
+      "class": "VI",
+      "classes": [
+        "VI"
+      ],
+      "subject": "English",
+      "resourceType": "question-paper-candidate",
+      "fileFormat": "PDF",
+      "driveFileId": "1f-Or8yShHB2lV9Rd5TXC00Sd6nEPz39v",
+      "accessVerificationStatus": "verified-public"
+    },
+    {
+      "suggestedDisplayTitle": "Class VIII Geography Trial Examination 2026",
+      "year": 2026,
+      "examinationType": "Trial",
+      "class": "VIII",
+      "classes": [
+        "VIII"
+      ],
+      "subject": "Geography",
+      "resourceType": "question-paper-candidate",
+      "fileFormat": "PDF",
+      "driveFileId": "1eqRmMHTb_2_j35Lb4ae2JO73OAqeggXZ",
+      "accessVerificationStatus": "verified-public"
+    },
+    {
+      "suggestedDisplayTitle": "Class VIII History Trial Examination 2026",
+      "year": 2026,
+      "examinationType": "Trial",
+      "class": "VIII",
+      "classes": [
+        "VIII"
+      ],
+      "subject": "History",
+      "resourceType": "question-paper-candidate",
+      "fileFormat": "PDF",
+      "driveFileId": "1VS3cEahFKFlNeZwmywgEmYcZ6ZIZ0BQM",
+      "accessVerificationStatus": "verified-public"
+    },
+    {
+      "suggestedDisplayTitle": "Class X Economics Trial Examination 2026",
+      "year": 2026,
+      "examinationType": "Trial",
+      "class": "X",
+      "classes": [
+        "X"
+      ],
+      "subject": "Economics",
+      "resourceType": "question-paper-candidate",
+      "fileFormat": "PDF",
+      "driveFileId": "1SILER82Y7f0_EtjcJgNglWv45evP6Mw_",
+      "accessVerificationStatus": "verified-public"
+    },
+    {
+      "suggestedDisplayTitle": "Class X History Trial Examination 2026",
+      "year": 2026,
+      "examinationType": "Trial",
+      "class": "X",
+      "classes": [
+        "X"
+      ],
+      "subject": "History",
+      "resourceType": "question-paper-candidate",
+      "fileFormat": "PDF",
+      "driveFileId": "10Q0GQywdKsCks5ITJepjDFa9twbJTTCz",
+      "accessVerificationStatus": "verified-public"
+    },
+    {
+      "suggestedDisplayTitle": "Class X ICT Trial Examination 2026",
+      "year": 2026,
+      "examinationType": "Trial",
+      "class": "X",
+      "classes": [
+        "X"
+      ],
+      "subject": "ICT",
+      "resourceType": "question-paper-candidate",
+      "fileFormat": "PDF",
+      "driveFileId": "1oRCFFgZKmplOmOffuJ236Gzwk85lnJe4",
+      "accessVerificationStatus": "verified-public"
+    },
+    {
+      "suggestedDisplayTitle": "Class VIII ICT Trial Examination 2026",
+      "year": 2026,
+      "examinationType": "Trial",
+      "class": "VIII",
+      "classes": [
+        "VIII"
+      ],
+      "subject": "ICT",
+      "resourceType": "question-paper-candidate",
+      "fileFormat": "PDF",
+      "driveFileId": "1OQYFwaThdMlgnhYzfSCS8X2XRtxXx7Jn",
+      "accessVerificationStatus": "verified-public"
+    },
+    {
+      "suggestedDisplayTitle": "Class X Mathematics Trial Examination 2026",
+      "year": 2026,
+      "examinationType": "Trial",
+      "class": "X",
+      "classes": [
+        "X"
+      ],
+      "subject": "Mathematics",
+      "resourceType": "question-paper-candidate",
+      "fileFormat": "PDF",
+      "driveFileId": "1dJpqe57xSYVdAsY9uRk2s4elE5DnAyYF",
+      "accessVerificationStatus": "verified-public"
+    },
+    {
+      "suggestedDisplayTitle": "Class VI A & B Mathematics Trial Examination 2026",
+      "year": 2026,
+      "examinationType": "Trial",
+      "class": "VI",
+      "classes": [
+        "VI"
+      ],
+      "subject": "Mathematics",
+      "resourceType": "question-paper-candidate",
+      "fileFormat": "PDF",
+      "driveFileId": "1DFE_jHld9i-AXYtSdekjb-3d_C0I71Gl",
+      "accessVerificationStatus": "verified-public"
+    },
+    {
+      "suggestedDisplayTitle": "Class VIII Mathematics Trial Examination 2026",
+      "year": 2026,
+      "examinationType": "Trial",
+      "class": "VIII",
+      "classes": [
+        "VIII"
+      ],
+      "subject": "Mathematics",
+      "resourceType": "question-paper-candidate",
+      "fileFormat": "PDF",
+      "driveFileId": "1laUX-_C5607WEFYOHb-sFL41QidA2CJx",
+      "accessVerificationStatus": "verified-public"
+    },
+    {
+      "suggestedDisplayTitle": "Class X Chemistry Trial Examination 2026",
+      "year": 2026,
+      "examinationType": "Trial",
+      "class": "X",
+      "classes": [
+        "X"
+      ],
+      "subject": "Chemistry",
+      "resourceType": "question-paper-candidate",
+      "fileFormat": "PDF",
+      "driveFileId": "1XB00UJw9UGQrB3WDvW239I3HVz0gj7o6",
+      "accessVerificationStatus": "verified-public"
+    },
+    {
+      "suggestedDisplayTitle": "Class X Biology Trial Examination 2026",
+      "year": 2026,
+      "examinationType": "Trial",
+      "class": "X",
+      "classes": [
+        "X"
+      ],
+      "subject": "Biology",
+      "resourceType": "question-paper-candidate",
+      "fileFormat": "PDF",
+      "driveFileId": "1kRomIZ-oigvPsQAQfq8MkFS4iUDSY_ej",
+      "accessVerificationStatus": "verified-public"
+    },
+    {
+      "suggestedDisplayTitle": "Class VI Science Trial Examination 2026",
+      "year": 2026,
+      "examinationType": "Trial",
+      "class": "VI",
+      "classes": [
+        "VI"
+      ],
+      "subject": "Science",
+      "resourceType": "question-paper-candidate",
+      "fileFormat": "PDF",
+      "driveFileId": "12_mrS1KoYGKWmCNOUbWCnUT1oQG1uLDr",
+      "accessVerificationStatus": "verified-public"
+    },
+    {
+      "suggestedDisplayTitle": "Class X Physics Trial Examination 2026",
+      "year": 2026,
+      "examinationType": "Trial",
+      "class": "X",
+      "classes": [
+        "X"
+      ],
+      "subject": "Physics",
+      "resourceType": "question-paper-candidate",
+      "fileFormat": "PDF",
+      "driveFileId": "1X6Lq7MyihH1IFsOp-qoFMGwfE-Ar7kyX",
+      "accessVerificationStatus": "verified-public"
+    }
+  ]
 }

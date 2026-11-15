@@ -509,6 +509,21 @@
 .staff-dashboard-page .plc-dashboard-embed .plc-footer a { color: var(--plc-accent); font-weight: 600; text-decoration: none; }
 .staff-dashboard-page .plc-dashboard-embed .plc-footer a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .staff-dashboard-page .plc-dashboard-embed [hidden] { display: none !important; }
+.staff-dashboard-page .plc-dashboard-embed .plc-count-summary { padding: 18px; }
+.staff-dashboard-page .plc-dashboard-embed .plc-count-summary > h2 { margin: 0 0 12px; color: var(--plc-text); font-size: 16px; }
+.staff-dashboard-page .plc-dashboard-embed .plc-count-table-wrap { overflow-x: auto; }
+.staff-dashboard-page .plc-dashboard-embed .plc-count-table { width: 100%; border-collapse: collapse; color: var(--plc-body); font-size: 13px; }
+.staff-dashboard-page .plc-dashboard-embed .plc-count-table caption { padding: 0 0 8px; color: var(--plc-muted); text-align: left; }
+.staff-dashboard-page .plc-dashboard-embed .plc-count-table th,
+.staff-dashboard-page .plc-dashboard-embed .plc-count-table td { padding: 9px 10px; border-bottom: 1px solid var(--plc-border); text-align: left; }
+.staff-dashboard-page .plc-dashboard-embed .plc-count-table th { color: var(--plc-text); font-weight: 650; }
+.staff-dashboard-page .plc-dashboard-embed .plc-count-bar-track { display: block; width: min(100%, 300px); height: 9px; overflow: hidden; border-radius: 999px; background: var(--plc-accent-soft); }
+.staff-dashboard-page .plc-dashboard-embed .plc-count-bar { display: block; height: 100%; border-radius: inherit; background: var(--plc-accent); }
+.staff-dashboard-page .plc-dashboard-embed .plc-public-summary { cursor: default; }
+.staff-dashboard-page .plc-dashboard-embed .plc-summary-icon { width: 100%; height: 100%; display: grid; place-items: center; border-radius: inherit; color: var(--plc-accent); background: var(--plc-accent-soft); }
+.staff-dashboard-page .plc-dashboard-embed .plc-summary-icon svg { width: 25px; height: 25px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.staff-dashboard-page .plc-dashboard-embed .plc-public-resource-card { cursor: default; }
+.staff-dashboard-page .plc-dashboard-embed .plc-public-resource-card > .plc-department-icon { flex: 0 0 40px; }
 @media (max-width: 1050px) {
   .staff-dashboard-page .plc-dashboard-embed .plc-department-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .staff-dashboard-page .plc-dashboard-embed .plc-member-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }

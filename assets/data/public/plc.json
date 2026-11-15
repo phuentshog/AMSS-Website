@@ -4,42 +4,36 @@
       "id": "dept-1",
       "title": "Humanities",
       "memberCount": 4,
-      "memberCountBand": "<10",
       "resources": []
     },
     {
       "id": "dept-2",
       "title": "Science",
       "memberCount": 5,
-      "memberCountBand": "<10",
       "resources": []
     },
     {
       "id": "dept-3",
       "title": "Dzongkha",
       "memberCount": 4,
-      "memberCountBand": "<10",
       "resources": []
     },
     {
       "id": "dept-4",
       "title": "Maths & ICT",
       "memberCount": 7,
-      "memberCountBand": "<10",
       "resources": []
     },
     {
       "id": "dept-5",
       "title": "Elementary",
       "memberCount": 6,
-      "memberCountBand": "<10",
       "resources": []
     },
     {
       "id": "dept-6",
       "title": "English",
       "memberCount": 4,
-      "memberCountBand": "<10",
       "resources": []
     }
   ]
