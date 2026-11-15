@@ -1,4 +1,4 @@
-const DATA_URL = "assets/data/public/academic-performance.json";
+const DATA_URL = "assets/data/academic-target-2026.json";
 const classLabels = { VI: "Class VI", VIII: "Class VIII", X: "Class X" };
 const academicRoot = document.querySelector("#academic");
 
@@ -200,7 +200,7 @@ if (academicRoot) {
       empty.append(title, document.createTextNode("Change or clear the filters to see results.")); host.append(empty); return;
     }
     const dl = document.createElement("dl"); dl.className = "academic-detail-grid";
-    const details = [["Class", classLabels[row.class]], ["Subject", row.subject], ["Subject Teacher", row.teacher || "Unable to verify"], ["Target mean", format(row.target)], ["Midterm mean", format(row.midterm)], ["Difference", row.difference === null ? "N/A" : `${row.difference > 0 ? "+" : ""}${format(row.difference)}`], ["Status", row.status]];
+    const details = [["Class", classLabels[row.class]], ["Subject", row.subject], ["Responsible teacher", row.teacher || "Unable to verify"], ["Target mean", format(row.target)], ["Midterm mean", format(row.midterm)], ["Difference", row.difference === null ? "N/A" : `${row.difference > 0 ? "+" : ""}${format(row.difference)}`], ["Status", row.status]];
     if (row.limitation) details.push(["Note", row.limitation]);
     for (const [label, value] of details) { const wrapper = document.createElement("div"); const term = document.createElement("dt"); const valueNode = document.createElement("dd"); term.textContent = label; valueNode.textContent = value; wrapper.append(term, valueNode); dl.append(wrapper); }
     host.append(dl);
@@ -357,10 +357,10 @@ if (academicRoot) {
     if (data?.auditStatus !== "verified" || !Array.isArray(data.records)) throw new Error("Verified academic audit data is unavailable");
     records = normalizeAndDeduplicate(data.records.filter((record) => Object.hasOwn(classLabels, record?.class)
       && typeof record?.subject === "string" && record.subject.trim().toLocaleLowerCase() !== "ss" && record.subject.trim().toLocaleLowerCase() !== "social studies"
-      && (record.cohortSizeBand === "10+")
+      && (record.teacher === null || typeof record.teacher === "string")
       && (record.targetMean === null || Number.isFinite(record.targetMean))
       && (record.midtermMean === null || Number.isFinite(record.midtermMean)))
-      .map((record) => ({ ...record, teacher: typeof record.teacher === "string" ? record.teacher : null, department: typeof record.department === "string" ? record.department : null })));
+      .map((record) => ({ ...record, department: typeof record.department === "string" ? record.department : null })));
     const method = document.querySelector("#academic-method-note");
     if (method) method.textContent = "A difference is the midterm mean minus the target mean. Midterm results are shown on a 100-mark scale. Missing comparisons are not assessed.";
     renderOptions(); render();

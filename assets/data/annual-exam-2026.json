@@ -1,0 +1,2113 @@
+{
+  "year": 2026,
+  "sourceSheets": {
+    "annualExam": [
+      "Timeline",
+      "Timetable ",
+      "exam timing",
+      "binding ",
+      "invigilation"
+    ],
+    "linkedVerification": [
+      "INVIGILATION DUTY MATRIX",
+      "Class IX Timing",
+      "ROOM-WISE DUTY ROSTER",
+      "DAILY ROOM ALLOCATION",
+      "TEACHER DUTY SUMMARY",
+      "VALIDATION - CONTROL",
+      "ROOM-WISE HOUR CALCULATION"
+    ]
+  },
+  "timeline": {
+    "events": [
+      {
+        "event": "Formulation of the Specification Grid",
+        "date": "22 October",
+        "duration": "3 days*"
+      },
+      {
+        "event": "Annual Question Paper Setting",
+        "date": "22 October",
+        "duration": "13 days*"
+      },
+      {
+        "event": "Submission of the Specification Grid",
+        "date": "25 October",
+        "duration": "—"
+      },
+      {
+        "event": "Question Paper Moderation",
+        "date": "7 November",
+        "duration": "2 days*"
+      },
+      {
+        "event": "Submission of Moderated Question Papers",
+        "date": "8 November",
+        "duration": "1 day"
+      },
+      {
+        "event": "Question Paper Printing",
+        "date": "9 November",
+        "duration": "—"
+      },
+      {
+        "event": "Submission of Model Answers",
+        "date": "15 November",
+        "duration": "1 day"
+      },
+      {
+        "event": "Annual Examination",
+        "date": "16 November",
+        "duration": "—"
+      }
+    ],
+    "notes": [],
+    "asteriskNote": "Some source durations have an asterisk; the workbook does not define the marker."
+  },
+  "timetable": {
+    "classes": [
+      "Class IV",
+      "Class V",
+      "Class VII",
+      "Class IX"
+    ],
+    "rows": [
+      {
+        "date": "16/11/2026",
+        "day": "Monday",
+        "classIV": "",
+        "classV": "",
+        "classVII": "",
+        "classIX": {
+          "paperI": "Mathematics I",
+          "paperII": "Mathematics II"
+        }
+      },
+      {
+        "date": "17/11/2026",
+        "day": "Tuesday",
+        "classIV": "",
+        "classV": "",
+        "classVII": "",
+        "classIX": {
+          "paperI": "Dzongkha I",
+          "paperII": "Dzongkha II"
+        }
+      },
+      {
+        "date": "18/11/2026",
+        "day": "Wednesday",
+        "classIV": "",
+        "classV": "",
+        "classVII": "",
+        "classIX": {
+          "paperI": "English I",
+          "paperII": "English II"
+        }
+      },
+      {
+        "date": "19/11/2026",
+        "day": "Thursday",
+        "classIV": "",
+        "classV": "",
+        "classVII": "Mathematics",
+        "classIX": {
+          "paperI": "Chemistry I",
+          "paperII": "Chemistry II"
+        }
+      },
+      {
+        "date": "20/11/2026",
+        "day": "Friday",
+        "classIV": "",
+        "classV": "",
+        "classVII": "Dzongkha",
+        "classIX": {
+          "paperI": "Economics I",
+          "paperII": "Economics II"
+        }
+      },
+      {
+        "date": "23/11/2026",
+        "day": "Monday",
+        "classIV": "Mathematics",
+        "classV": "Mathematics",
+        "classVII": "English",
+        "classIX": {
+          "paperI": "Physics I",
+          "paperII": "Physics II"
+        }
+      },
+      {
+        "date": "24/11/2026",
+        "day": "Tuesday",
+        "classIV": "DTI",
+        "classV": "Science",
+        "classVII": "ICT",
+        "classIX": {
+          "paperI": "History I",
+          "paperII": "History II"
+        }
+      },
+      {
+        "date": "25/11/2026",
+        "day": "Wednesday",
+        "classIV": "English",
+        "classV": "Dzongkha",
+        "classVII": "Geography",
+        "classIX": {
+          "paperI": "DTI I",
+          "paperII": "DTI II"
+        }
+      },
+      {
+        "date": "26/11/2026",
+        "day": "Thursday",
+        "classIV": "Science",
+        "classV": "ICT",
+        "classVII": "Science",
+        "classIX": {
+          "paperI": "Geography I",
+          "paperII": "Geography II"
+        }
+      },
+      {
+        "date": "27/11/2026",
+        "day": "Friday",
+        "classIV": "Dzongkha",
+        "classV": "English",
+        "classVII": "History",
+        "classIX": {
+          "paperI": "Biology I",
+          "paperII": "Biology II"
+        }
+      }
+    ],
+    "breaks": [
+      "Weekends"
+    ],
+    "classIXPaperTimes": [
+      {
+        "date": "16/11/2026",
+        "day": "Monday",
+        "exam": "Exam 1",
+        "paper": "Paper I",
+        "subject": "Mathematics I",
+        "start": "9:00 AM",
+        "end": "10:30 AM"
+      },
+      {
+        "date": "16/11/2026",
+        "day": "Monday",
+        "exam": "Exam 2",
+        "paper": "Paper II",
+        "subject": "Mathematics II",
+        "start": "11:00 AM",
+        "end": "12:30 PM"
+      },
+      {
+        "date": "17/11/2026",
+        "day": "Tuesday",
+        "exam": "Exam 1",
+        "paper": "Paper I",
+        "subject": "Dzongkha I",
+        "start": "9:00 AM",
+        "end": "11:00 AM"
+      },
+      {
+        "date": "17/11/2026",
+        "day": "Tuesday",
+        "exam": "Exam 2",
+        "paper": "Paper II",
+        "subject": "Dzongkha II",
+        "start": "1:30 PM",
+        "end": "3:30 PM"
+      },
+      {
+        "date": "18/11/2026",
+        "day": "Wednesday",
+        "exam": "Exam 1",
+        "paper": "Paper I",
+        "subject": "English I",
+        "start": "9:00 AM",
+        "end": "11:00 AM"
+      },
+      {
+        "date": "18/11/2026",
+        "day": "Wednesday",
+        "exam": "Exam 2",
+        "paper": "Paper II",
+        "subject": "English II",
+        "start": "1:30 PM",
+        "end": "3:30 PM"
+      },
+      {
+        "date": "19/11/2026",
+        "day": "Thursday",
+        "exam": "Exam 1",
+        "paper": "Paper I",
+        "subject": "Chemistry I",
+        "start": "9:00 AM",
+        "end": "10:00 AM"
+      },
+      {
+        "date": "19/11/2026",
+        "day": "Thursday",
+        "exam": "Exam 2",
+        "paper": "Paper II",
+        "subject": "Chemistry II",
+        "start": "10:30 AM",
+        "end": "12:00 PM"
+      },
+      {
+        "date": "20/11/2026",
+        "day": "Friday",
+        "exam": "Exam 1",
+        "paper": "Paper I",
+        "subject": "Economics I",
+        "start": "9:00 AM",
+        "end": "10:30 AM"
+      },
+      {
+        "date": "20/11/2026",
+        "day": "Friday",
+        "exam": "Exam 2",
+        "paper": "Paper II",
+        "subject": "Economics II",
+        "start": "11:00 AM",
+        "end": "12:30 PM"
+      },
+      {
+        "date": "23/11/2026",
+        "day": "Monday",
+        "exam": "Exam 1",
+        "paper": "Paper I",
+        "subject": "Physics I",
+        "start": "9:00 AM",
+        "end": "10:00 AM"
+      },
+      {
+        "date": "23/11/2026",
+        "day": "Monday",
+        "exam": "Exam 2",
+        "paper": "Paper II",
+        "subject": "Physics II",
+        "start": "10:30 AM",
+        "end": "12:00 PM"
+      },
+      {
+        "date": "24/11/2026",
+        "day": "Tuesday",
+        "exam": "Exam 1",
+        "paper": "Paper I",
+        "subject": "History I",
+        "start": "9:00 AM",
+        "end": "10:30 AM"
+      },
+      {
+        "date": "24/11/2026",
+        "day": "Tuesday",
+        "exam": "Exam 2",
+        "paper": "Paper II",
+        "subject": "History II",
+        "start": "11:00 AM",
+        "end": "12:30 PM"
+      },
+      {
+        "date": "25/11/2026",
+        "day": "Wednesday",
+        "exam": "Exam 1",
+        "paper": "Paper I",
+        "subject": "DTI I",
+        "start": "9:00 AM",
+        "end": "10:30 AM"
+      },
+      {
+        "date": "25/11/2026",
+        "day": "Wednesday",
+        "exam": "Exam 2",
+        "paper": "Paper II",
+        "subject": "DTI II",
+        "start": "11:00 AM",
+        "end": "12:30 PM"
+      },
+      {
+        "date": "26/11/2026",
+        "day": "Thursday",
+        "exam": "Exam 1",
+        "paper": "Paper I",
+        "subject": "Geography I",
+        "start": "9:00 AM",
+        "end": "10:00 AM"
+      },
+      {
+        "date": "26/11/2026",
+        "day": "Thursday",
+        "exam": "Exam 2",
+        "paper": "Paper II",
+        "subject": "Geography II",
+        "start": "10:30 AM",
+        "end": "11:30 AM"
+      },
+      {
+        "date": "27/11/2026",
+        "day": "Friday",
+        "exam": "Exam 1",
+        "paper": "Paper I",
+        "subject": "Biology I",
+        "start": "9:00 AM",
+        "end": "10:00 AM"
+      },
+      {
+        "date": "27/11/2026",
+        "day": "Friday",
+        "exam": "Exam 2",
+        "paper": "Paper II",
+        "subject": "Biology II",
+        "start": "10:30 AM",
+        "end": "12:00 PM"
+      }
+    ],
+    "dayTimingVariants": [
+      {
+        "name": "Without Assembly",
+        "events": [
+          {
+            "time": "Time",
+            "activity": "Activity"
+          },
+          {
+            "time": "8:30 – 8:40 AM",
+            "activity": "Entering exam hall"
+          },
+          {
+            "time": "8:40 – 8:45 AM",
+            "activity": "Paper distribution"
+          },
+          {
+            "time": "8:45 – 9:00 AM",
+            "activity": "Reading time"
+          },
+          {
+            "time": "9:00 AM",
+            "activity": "Writing time starts"
+          },
+          {
+            "time": "10:20 AM",
+            "activity": "Last 10 minutes warning for 1.5-hour paper"
+          },
+          {
+            "time": "10:30 AM",
+            "activity": "Writing time over for 1.5-hour paper"
+          },
+          {
+            "time": "10:50 AM",
+            "activity": "Last 10 minutes warning for 2-hour paper"
+          },
+          {
+            "time": "11:00 AM",
+            "activity": "Writing time over for 2-hour paper"
+          },
+          {
+            "time": "11:50 AM",
+            "activity": "Last 10 minutes warning for 3-hour paper"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Writing time over for 3-hour paper"
+          }
+        ]
+      },
+      {
+        "name": "With Assembly",
+        "events": [
+          {
+            "time": "Time",
+            "activity": "Activity"
+          },
+          {
+            "time": "8:55 – 9:00 AM",
+            "activity": "Entering exam hall"
+          },
+          {
+            "time": "9:00 – 9:05 AM",
+            "activity": "Paper distribution"
+          },
+          {
+            "time": "9:05 – 9:20 AM",
+            "activity": "Reading time"
+          },
+          {
+            "time": "9:20 AM",
+            "activity": "Writing time starts"
+          },
+          {
+            "time": "10:40 AM",
+            "activity": "Last 10 minutes warning for 1.5-hour paper"
+          },
+          {
+            "time": "10:50 AM",
+            "activity": "Writing time over for 1.5-hour paper"
+          },
+          {
+            "time": "11:10 AM",
+            "activity": "Last 10 minutes warning for 2-hour paper"
+          },
+          {
+            "time": "11:20 AM",
+            "activity": "Writing time over for 2-hour paper"
+          },
+          {
+            "time": "12:10 PM",
+            "activity": "Last 10 minutes warning for 3-hour paper"
+          },
+          {
+            "time": "12:20 PM",
+            "activity": "Writing time over for 3-hour paper"
+          }
+        ]
+      }
+    ],
+    "timingNote": "The timing variants are alternatives; the source does not assign a variant to a class or date."
+  },
+  "invigilation": {
+    "duties": [
+      {
+        "date": "20/11/2026",
+        "day": "Friday",
+        "session": "Exam 2",
+        "time": "Class IX: 11:00–12:30",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: Economics II",
+        "room": "C2",
+        "teacher": "Bala Ram Chapagai",
+        "initials": "BRC",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 2"
+      },
+      {
+        "date": "23/11/2026",
+        "day": "Monday",
+        "session": "Exam 1",
+        "time": "Class IV: 9:00–10:30; Class V: 9:00–10:30",
+        "class": "Class IV; Class V",
+        "subjectPaper": "Class IV: Mathematics; Class V: Mathematics",
+        "room": "IV A",
+        "teacher": "Bala Ram Chapagai",
+        "initials": "BRC",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "IV A"
+      },
+      {
+        "date": "25/11/2026",
+        "day": "Wednesday",
+        "session": "Exam 1",
+        "time": "Class IV: 9:00–10:30; Class V: 9:00–10:30",
+        "class": "Class IV; Class V",
+        "subjectPaper": "Class IV: English; Class V: Dzongkha",
+        "room": "IV B",
+        "teacher": "Bala Ram Chapagai",
+        "initials": "BRC",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "IV B"
+      },
+      {
+        "date": "26/11/2026",
+        "day": "Thursday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:00; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Geography I; Class VII: Science",
+        "room": "C1",
+        "teacher": "Bala Ram Chapagai",
+        "initials": "BRC",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 1"
+      },
+      {
+        "date": "19/11/2026",
+        "day": "Thursday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:00; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Chemistry I; Class VII: Mathematics",
+        "room": "C1",
+        "teacher": "Cheten Tshering",
+        "initials": "CT",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 1"
+      },
+      {
+        "date": "20/11/2026",
+        "day": "Friday",
+        "session": "Exam 2",
+        "time": "Class IX: 11:00–12:30",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: Economics II",
+        "room": "C3 + C4",
+        "teacher": "Cheten Tshering",
+        "initials": "CT",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 3 + C 4"
+      },
+      {
+        "date": "25/11/2026",
+        "day": "Wednesday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:30; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: DTI I; Class VII: Geography",
+        "room": "C1",
+        "teacher": "Cheten Tshering",
+        "initials": "CT",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 1"
+      },
+      {
+        "date": "18/11/2026",
+        "day": "Wednesday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–11:00",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: English I",
+        "room": "C1",
+        "teacher": "Dechen Tshomo",
+        "initials": "DT",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 1"
+      },
+      {
+        "date": "20/11/2026",
+        "day": "Friday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:30; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Economics I; Class VII: Dzongkha",
+        "room": "C4",
+        "teacher": "Dechen Tshomo",
+        "initials": "DT",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 4"
+      },
+      {
+        "date": "24/11/2026",
+        "day": "Tuesday",
+        "session": "Exam 2",
+        "time": "Class IX: 11:00–12:30",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: History II",
+        "room": "C2",
+        "teacher": "Dechen Tshomo",
+        "initials": "DT",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 2"
+      },
+      {
+        "date": "19/11/2026",
+        "day": "Thursday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:00; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Chemistry I; Class VII: Mathematics",
+        "room": "C2",
+        "teacher": "Dechen Yangzom",
+        "initials": "DY",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 2"
+      },
+      {
+        "date": "23/11/2026",
+        "day": "Monday",
+        "session": "Exam 1",
+        "time": "Class IV: 9:00–10:30",
+        "class": "Class IV",
+        "subjectPaper": "Class IV: Mathematics",
+        "room": "V A",
+        "teacher": "Dechen Yangzom",
+        "initials": "DY",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "V A"
+      },
+      {
+        "date": "25/11/2026",
+        "day": "Wednesday",
+        "session": "Exam 2",
+        "time": "Class IX: 11:00–12:30",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: DTI II",
+        "room": "C3 + C4",
+        "teacher": "Dechen Yangzom",
+        "initials": "DY",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 3 + C 4"
+      },
+      {
+        "date": "27/11/2026",
+        "day": "Friday",
+        "session": "Exam 1",
+        "time": "Class IV: 9:00–10:30; Class V: 9:00–10:30",
+        "class": "Class IV; Class V",
+        "subjectPaper": "Class IV: Dzongkha; Class V: English",
+        "room": "IV B",
+        "teacher": "Dechen Yangzom",
+        "initials": "DY",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "IV B"
+      },
+      {
+        "date": "16/11/2026",
+        "day": "Monday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:30",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: Mathematics I",
+        "room": "C2",
+        "teacher": "Deki Wangmo",
+        "initials": "DW",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 2"
+      },
+      {
+        "date": "24/11/2026",
+        "day": "Tuesday",
+        "session": "Exam 1",
+        "time": "Class IV: 9:00–10:30",
+        "class": "Class IV",
+        "subjectPaper": "Class IV: DTI",
+        "room": "V A",
+        "teacher": "Deki Wangmo",
+        "initials": "DW",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "V A"
+      },
+      {
+        "date": "26/11/2026",
+        "day": "Thursday",
+        "session": "Exam 2",
+        "time": "Class IX: 10:30–11:30; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Geography II; Class VII: Science (continues from Exam 1)",
+        "room": "C1",
+        "teacher": "Deki Wangmo",
+        "initials": "DW",
+        "longestDurationHours": 1,
+        "creditedDutyHours": 1,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 1"
+      },
+      {
+        "date": "27/11/2026",
+        "day": "Friday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:00; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Biology I; Class VII: History",
+        "room": "C2",
+        "teacher": "Deki Wangmo",
+        "initials": "DW",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 2"
+      },
+      {
+        "date": "18/11/2026",
+        "day": "Wednesday",
+        "session": "Exam 2",
+        "time": "Class IX: 13:30–15:30",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: English II",
+        "room": "C2",
+        "teacher": "Dhan Kumar Rai",
+        "initials": "DKR",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 2"
+      },
+      {
+        "date": "23/11/2026",
+        "day": "Monday",
+        "session": "Exam 1",
+        "time": "Class IV: 9:00–10:30; Class V: 9:00–10:30",
+        "class": "Class IV; Class V",
+        "subjectPaper": "Class IV: Mathematics; Class V: Mathematics",
+        "room": "IV B",
+        "teacher": "Dhan Kumar Rai",
+        "initials": "DKR",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "IV B"
+      },
+      {
+        "date": "27/11/2026",
+        "day": "Friday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:00; Class V: 9:00–10:30; Class VII: 9:00–11:00",
+        "class": "Class IX; Class V; Class VII",
+        "subjectPaper": "Class IX: Biology I; Class V: English; Class VII: History",
+        "room": "C4",
+        "teacher": "Dhan Kumar Rai",
+        "initials": "DKR",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 4"
+      },
+      {
+        "date": "17/11/2026",
+        "day": "Tuesday",
+        "session": "Exam 2",
+        "time": "Class IX: 13:30–15:30",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: Dzongkha II",
+        "room": "C1",
+        "teacher": "Durba Kumar Chhetri",
+        "initials": "DKC",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 1"
+      },
+      {
+        "date": "18/11/2026",
+        "day": "Wednesday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–11:00",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: English I",
+        "room": "C2",
+        "teacher": "Durba Kumar Chhetri",
+        "initials": "DKC",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 2"
+      },
+      {
+        "date": "27/11/2026",
+        "day": "Friday",
+        "session": "Exam 2",
+        "time": "Class IX: 10:30–12:00; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Biology II; Class VII: History (continues from Exam 1)",
+        "room": "C2",
+        "teacher": "Durba Kumar Chhetri",
+        "initials": "DKC",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 2"
+      },
+      {
+        "date": "16/11/2026",
+        "day": "Monday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:30",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: Mathematics I",
+        "room": "C1",
+        "teacher": "Goma Devi Sunar",
+        "initials": "GDS",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 1"
+      },
+      {
+        "date": "19/11/2026",
+        "day": "Thursday",
+        "session": "Exam 2",
+        "time": "Class IX: 10:30–12:00; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Chemistry II; Class VII: Mathematics (continues from Exam 1)",
+        "room": "C2",
+        "teacher": "Goma Devi Sunar",
+        "initials": "GDS",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 2"
+      },
+      {
+        "date": "23/11/2026",
+        "day": "Monday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:00; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Physics I; Class VII: English",
+        "room": "C1",
+        "teacher": "Goma Devi Sunar",
+        "initials": "GDS",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 1"
+      },
+      {
+        "date": "24/11/2026",
+        "day": "Tuesday",
+        "session": "Exam 1",
+        "time": "Class IV: 9:00–10:30; Class V: 9:00–10:30",
+        "class": "Class IV; Class V",
+        "subjectPaper": "Class IV: DTI; Class V: Science",
+        "room": "C6",
+        "teacher": "Goma Devi Sunar",
+        "initials": "GDS",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 6"
+      },
+      {
+        "date": "23/11/2026",
+        "day": "Monday",
+        "session": "Exam 1",
+        "time": "Class V: 9:00–10:30; Class VII: 9:00–11:00",
+        "class": "Class V; Class VII",
+        "subjectPaper": "Class V: Mathematics; Class VII: English",
+        "room": "C5",
+        "teacher": "Kinley Dema",
+        "initials": "KD",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 5"
+      },
+      {
+        "date": "24/11/2026",
+        "day": "Tuesday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:30; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: History I; Class VII: ICT",
+        "room": "C3",
+        "teacher": "Kinley Dema",
+        "initials": "KD",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 3"
+      },
+      {
+        "date": "25/11/2026",
+        "day": "Wednesday",
+        "session": "Exam 2",
+        "time": "Class IX: 11:00–12:30",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: DTI II",
+        "room": "C1",
+        "teacher": "Kinley Dema",
+        "initials": "KD",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 1"
+      },
+      {
+        "date": "16/11/2026",
+        "day": "Monday",
+        "session": "Exam 2",
+        "time": "Class IX: 11:00–12:30",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: Mathematics II",
+        "room": "C1",
+        "teacher": "Madhu Nepal",
+        "initials": "MN",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 1"
+      },
+      {
+        "date": "20/11/2026",
+        "day": "Friday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:30; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Economics I; Class VII: Dzongkha",
+        "room": "C1",
+        "teacher": "Madhu Nepal",
+        "initials": "MN",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 1"
+      },
+      {
+        "date": "25/11/2026",
+        "day": "Wednesday",
+        "session": "Exam 1",
+        "time": "Class V: 9:00–10:30; Class VII: 9:00–11:00",
+        "class": "Class V; Class VII",
+        "subjectPaper": "Class V: Dzongkha; Class VII: Geography",
+        "room": "C5",
+        "teacher": "Madhu Nepal",
+        "initials": "MN",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 5"
+      },
+      {
+        "date": "19/11/2026",
+        "day": "Thursday",
+        "session": "Exam 2",
+        "time": "Class IX: 10:30–12:00; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Chemistry II; Class VII: Mathematics (continues from Exam 1)",
+        "room": "C3 + C4",
+        "teacher": "Passang Tshechu",
+        "initials": "PT",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 3 + C 4"
+      },
+      {
+        "date": "20/11/2026",
+        "day": "Friday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:30; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Economics I; Class VII: Dzongkha",
+        "room": "C3",
+        "teacher": "Passang Tshechu",
+        "initials": "PT",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 3"
+      },
+      {
+        "date": "26/11/2026",
+        "day": "Thursday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:00; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Geography I; Class VII: Science",
+        "room": "C3",
+        "teacher": "Passang Tshechu",
+        "initials": "PT",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 3"
+      },
+      {
+        "date": "16/11/2026",
+        "day": "Monday",
+        "session": "Exam 2",
+        "time": "Class IX: 11:00–12:30",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: Mathematics II",
+        "room": "C3 + C4",
+        "teacher": "Pem Choki",
+        "initials": "PC",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 3 + C 4"
+      },
+      {
+        "date": "17/11/2026",
+        "day": "Tuesday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–11:00",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: Dzongkha I",
+        "room": "C1",
+        "teacher": "Pem Choki",
+        "initials": "PC",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 1"
+      },
+      {
+        "date": "26/11/2026",
+        "day": "Thursday",
+        "session": "Exam 1",
+        "time": "Class V: 9:00–10:30; Class VII: 9:00–11:00",
+        "class": "Class V; Class VII",
+        "subjectPaper": "Class V: ICT; Class VII: Science",
+        "room": "C5",
+        "teacher": "Pem Choki",
+        "initials": "PC",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 5"
+      },
+      {
+        "date": "17/11/2026",
+        "day": "Tuesday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–11:00",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: Dzongkha I",
+        "room": "C2",
+        "teacher": "Pema Wangchuk",
+        "initials": "PW",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 2"
+      },
+      {
+        "date": "24/11/2026",
+        "day": "Tuesday",
+        "session": "Exam 2",
+        "time": "Class IX: 11:00–12:30",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: History II",
+        "room": "C3 + C4",
+        "teacher": "Pema Wangchuk",
+        "initials": "PW",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 3 + C 4"
+      },
+      {
+        "date": "26/11/2026",
+        "day": "Thursday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:00; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Geography I; Class VII: Science",
+        "room": "C2",
+        "teacher": "Pema Wangchuk",
+        "initials": "PW",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 2"
+      },
+      {
+        "date": "20/11/2026",
+        "day": "Friday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:30; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Economics I; Class VII: Dzongkha",
+        "room": "C2",
+        "teacher": "Phub Dolay",
+        "initials": "PD",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 2"
+      },
+      {
+        "date": "24/11/2026",
+        "day": "Tuesday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:30; Class V: 9:00–10:30; Class VII: 9:00–11:00",
+        "class": "Class IX; Class V; Class VII",
+        "subjectPaper": "Class IX: History I; Class V: Science; Class VII: ICT",
+        "room": "C4",
+        "teacher": "Phub Dolay",
+        "initials": "PD",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 4"
+      },
+      {
+        "date": "25/11/2026",
+        "day": "Wednesday",
+        "session": "Exam 2",
+        "time": "Class IX: 11:00–12:30",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: DTI II",
+        "room": "C2",
+        "teacher": "Phub Dolay",
+        "initials": "PD",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 2"
+      },
+      {
+        "date": "18/11/2026",
+        "day": "Wednesday",
+        "session": "Exam 2",
+        "time": "Class IX: 13:30–15:30",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: English II",
+        "room": "C1",
+        "teacher": "Sangay Dema",
+        "initials": "SD",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 1"
+      },
+      {
+        "date": "24/11/2026",
+        "day": "Tuesday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:30; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: History I; Class VII: ICT",
+        "room": "C1",
+        "teacher": "Sangay Dema",
+        "initials": "SD",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 1"
+      },
+      {
+        "date": "26/11/2026",
+        "day": "Thursday",
+        "session": "Exam 1",
+        "time": "Class IV: 9:00–10:30; Class V: 9:00–10:30",
+        "class": "Class IV; Class V",
+        "subjectPaper": "Class IV: Science; Class V: ICT",
+        "room": "C6",
+        "teacher": "Sangay Dema",
+        "initials": "SD",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 6"
+      },
+      {
+        "date": "19/11/2026",
+        "day": "Thursday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:00; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Chemistry I; Class VII: Mathematics",
+        "room": "C3",
+        "teacher": "Sangay Wangmo",
+        "initials": "SW",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 3"
+      },
+      {
+        "date": "20/11/2026",
+        "day": "Friday",
+        "session": "Exam 1",
+        "time": "Class VII: 9:00–11:00",
+        "class": "Class VII",
+        "subjectPaper": "Class VII: Dzongkha",
+        "room": "C5",
+        "teacher": "Sangay Wangmo",
+        "initials": "SW",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 5"
+      },
+      {
+        "date": "23/11/2026",
+        "day": "Monday",
+        "session": "Exam 2",
+        "time": "Class IX: 10:30–12:00; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Physics II; Class VII: English (continues from Exam 1)",
+        "room": "C3 + C4",
+        "teacher": "Sangay Wangmo",
+        "initials": "SW",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 3 + C 4"
+      },
+      {
+        "date": "19/11/2026",
+        "day": "Thursday",
+        "session": "Exam 2",
+        "time": "Class IX: 10:30–12:00; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Chemistry II; Class VII: Mathematics (continues from Exam 1)",
+        "room": "C1",
+        "teacher": "Sarita Devi Mongar",
+        "initials": "SDM",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 1"
+      },
+      {
+        "date": "23/11/2026",
+        "day": "Monday",
+        "session": "Exam 1",
+        "time": "Class IV: 9:00–10:30; Class V: 9:00–10:30",
+        "class": "Class IV; Class V",
+        "subjectPaper": "Class IV: Mathematics; Class V: Mathematics",
+        "room": "C6",
+        "teacher": "Sarita Devi Mongar",
+        "initials": "SDM",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 6"
+      },
+      {
+        "date": "26/11/2026",
+        "day": "Thursday",
+        "session": "Exam 1",
+        "time": "Class IV: 9:00–10:30; Class V: 9:00–10:30",
+        "class": "Class IV; Class V",
+        "subjectPaper": "Class IV: Science; Class V: ICT",
+        "room": "IV B",
+        "teacher": "Sarita Devi Mongar",
+        "initials": "SDM",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "IV B"
+      },
+      {
+        "date": "27/11/2026",
+        "day": "Friday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:00; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Biology I; Class VII: History",
+        "room": "C3",
+        "teacher": "Sarita Devi Mongar",
+        "initials": "SDM",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 3"
+      },
+      {
+        "date": "17/11/2026",
+        "day": "Tuesday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–11:00",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: Dzongkha I",
+        "room": "C3 + C4",
+        "teacher": "Sarita Ghalley",
+        "initials": "SG",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 3 + C 4 (IX only, 1 student)"
+      },
+      {
+        "date": "23/11/2026",
+        "day": "Monday",
+        "session": "Exam 2",
+        "time": "Class IX: 10:30–12:00; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Physics II; Class VII: English (continues from Exam 1)",
+        "room": "C2",
+        "teacher": "Sarita Ghalley",
+        "initials": "SG",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 2"
+      },
+      {
+        "date": "25/11/2026",
+        "day": "Wednesday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:30; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: DTI I; Class VII: Geography",
+        "room": "C3",
+        "teacher": "Sarita Ghalley",
+        "initials": "SG",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 3"
+      },
+      {
+        "date": "23/11/2026",
+        "day": "Monday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:00; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Physics I; Class VII: English",
+        "room": "C2",
+        "teacher": "Sonam Choki",
+        "initials": "SC",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 2"
+      },
+      {
+        "date": "25/11/2026",
+        "day": "Wednesday",
+        "session": "Exam 1",
+        "time": "Class IV: 9:00–10:30; Class V: 9:00–10:30",
+        "class": "Class IV; Class V",
+        "subjectPaper": "Class IV: English; Class V: Dzongkha",
+        "room": "IV A",
+        "teacher": "Sonam Choki",
+        "initials": "SC",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "IV A"
+      },
+      {
+        "date": "26/11/2026",
+        "day": "Thursday",
+        "session": "Exam 2",
+        "time": "Class IX: 10:30–11:30; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Geography II; Class VII: Science (continues from Exam 1)",
+        "room": "C2",
+        "teacher": "Sonam Choki",
+        "initials": "SC",
+        "longestDurationHours": 1,
+        "creditedDutyHours": 1,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 2"
+      },
+      {
+        "date": "27/11/2026",
+        "day": "Friday",
+        "session": "Exam 1",
+        "time": "Class V: 9:00–10:30; Class VII: 9:00–11:00",
+        "class": "Class V; Class VII",
+        "subjectPaper": "Class V: English; Class VII: History",
+        "room": "C5",
+        "teacher": "Sonam Choki",
+        "initials": "SC",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 5"
+      },
+      {
+        "date": "20/11/2026",
+        "day": "Friday",
+        "session": "Exam 2",
+        "time": "Class IX: 11:00–12:30",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: Economics II",
+        "room": "C1",
+        "teacher": "Sonam Phuntsho",
+        "initials": "SP",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 1"
+      },
+      {
+        "date": "24/11/2026",
+        "day": "Tuesday",
+        "session": "Exam 1",
+        "time": "Class V: 9:00–10:30; Class VII: 9:00–11:00",
+        "class": "Class V; Class VII",
+        "subjectPaper": "Class V: Science; Class VII: ICT",
+        "room": "C5",
+        "teacher": "Sonam Phuntsho",
+        "initials": "SP",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 5"
+      },
+      {
+        "date": "26/11/2026",
+        "day": "Thursday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:00; Class V: 9:00–10:30; Class VII: 9:00–11:00",
+        "class": "Class IX; Class V; Class VII",
+        "subjectPaper": "Class IX: Geography I; Class V: ICT; Class VII: Science",
+        "room": "C4",
+        "teacher": "Sonam Phuntsho",
+        "initials": "SP",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 4"
+      },
+      {
+        "date": "23/11/2026",
+        "day": "Monday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:00; Class V: 9:00–10:30; Class VII: 9:00–11:00",
+        "class": "Class IX; Class V; Class VII",
+        "subjectPaper": "Class IX: Physics I; Class V: Mathematics; Class VII: English",
+        "room": "C4",
+        "teacher": "Sonam Yangchen",
+        "initials": "Syc",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 4"
+      },
+      {
+        "date": "25/11/2026",
+        "day": "Wednesday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:30; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: DTI I; Class VII: Geography",
+        "room": "C2",
+        "teacher": "Sonam Yangchen",
+        "initials": "Syc",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 2"
+      },
+      {
+        "date": "27/11/2026",
+        "day": "Friday",
+        "session": "Exam 2",
+        "time": "Class IX: 10:30–12:00; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Biology II; Class VII: History (continues from Exam 1)",
+        "room": "C1",
+        "teacher": "Sonam Yangchen",
+        "initials": "Syc",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 1"
+      },
+      {
+        "date": "18/11/2026",
+        "day": "Wednesday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–11:00",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: English I",
+        "room": "C3 + C4",
+        "teacher": "Sonam Yangzom",
+        "initials": "Syz",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 3 + C 4 (IX only, 1 student)"
+      },
+      {
+        "date": "24/11/2026",
+        "day": "Tuesday",
+        "session": "Exam 1",
+        "time": "Class IV: 9:00–10:30; Class V: 9:00–10:30",
+        "class": "Class IV; Class V",
+        "subjectPaper": "Class IV: DTI; Class V: Science",
+        "room": "IV A",
+        "teacher": "Sonam Yangzom",
+        "initials": "Syz",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "IV A"
+      },
+      {
+        "date": "26/11/2026",
+        "day": "Thursday",
+        "session": "Exam 2",
+        "time": "Class IX: 10:30–11:30; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Geography II; Class VII: Science (continues from Exam 1)",
+        "room": "C3 + C4",
+        "teacher": "Sonam Yangzom",
+        "initials": "Syz",
+        "longestDurationHours": 1,
+        "creditedDutyHours": 1,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 3 + C 4"
+      },
+      {
+        "date": "27/11/2026",
+        "day": "Friday",
+        "session": "Exam 1",
+        "time": "Class IV: 9:00–10:30; Class V: 9:00–10:30",
+        "class": "Class IV; Class V",
+        "subjectPaper": "Class IV: Dzongkha; Class V: English",
+        "room": "IV A",
+        "teacher": "Sonam Yangzom",
+        "initials": "Syz",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "IV A"
+      },
+      {
+        "date": "16/11/2026",
+        "day": "Monday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:30",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: Mathematics I",
+        "room": "C3 + C4",
+        "teacher": "Sumjay",
+        "initials": "S",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 3 + C 4 (IX only, 1 student)"
+      },
+      {
+        "date": "17/11/2026",
+        "day": "Tuesday",
+        "session": "Exam 2",
+        "time": "Class IX: 13:30–15:30",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: Dzongkha II",
+        "room": "C3 + C4",
+        "teacher": "Sumjay",
+        "initials": "S",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 3 + C 4"
+      },
+      {
+        "date": "27/11/2026",
+        "day": "Friday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:00; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Biology I; Class VII: History",
+        "room": "C1",
+        "teacher": "Sumjay",
+        "initials": "S",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 1"
+      },
+      {
+        "date": "17/11/2026",
+        "day": "Tuesday",
+        "session": "Exam 2",
+        "time": "Class IX: 13:30–15:30",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: Dzongkha II",
+        "room": "C2",
+        "teacher": "Tashi Lungmo",
+        "initials": "TL",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 2"
+      },
+      {
+        "date": "24/11/2026",
+        "day": "Tuesday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:30; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: History I; Class VII: ICT",
+        "room": "C2",
+        "teacher": "Tashi Lungmo",
+        "initials": "TL",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 2"
+      },
+      {
+        "date": "25/11/2026",
+        "day": "Wednesday",
+        "session": "Exam 1",
+        "time": "Class IV: 9:00–10:30",
+        "class": "Class IV",
+        "subjectPaper": "Class IV: English",
+        "room": "V A",
+        "teacher": "Tashi Lungmo",
+        "initials": "TL",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "V A"
+      },
+      {
+        "date": "23/11/2026",
+        "day": "Monday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:00; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Physics I; Class VII: English",
+        "room": "C3",
+        "teacher": "Tashi Tshomo",
+        "initials": "TT",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 3"
+      },
+      {
+        "date": "24/11/2026",
+        "day": "Tuesday",
+        "session": "Exam 2",
+        "time": "Class IX: 11:00–12:30",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: History II",
+        "room": "C1",
+        "teacher": "Tashi Tshomo",
+        "initials": "TT",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 1"
+      },
+      {
+        "date": "25/11/2026",
+        "day": "Wednesday",
+        "session": "Exam 1",
+        "time": "Class IV: 9:00–10:30; Class V: 9:00–10:30",
+        "class": "Class IV; Class V",
+        "subjectPaper": "Class IV: English; Class V: Dzongkha",
+        "room": "C6",
+        "teacher": "Tashi Tshomo",
+        "initials": "TT",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 6"
+      },
+      {
+        "date": "27/11/2026",
+        "day": "Friday",
+        "session": "Exam 1",
+        "time": "Class IV: 9:00–10:30; Class V: 9:00–10:30",
+        "class": "Class IV; Class V",
+        "subjectPaper": "Class IV: Dzongkha; Class V: English",
+        "room": "C6",
+        "teacher": "Tashi Tshomo",
+        "initials": "TT",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 6"
+      },
+      {
+        "date": "19/11/2026",
+        "day": "Thursday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:00; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Chemistry I; Class VII: Mathematics",
+        "room": "C4",
+        "teacher": "Tshering Deki",
+        "initials": "TD",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 4"
+      },
+      {
+        "date": "24/11/2026",
+        "day": "Tuesday",
+        "session": "Exam 1",
+        "time": "Class IV: 9:00–10:30; Class V: 9:00–10:30",
+        "class": "Class IV; Class V",
+        "subjectPaper": "Class IV: DTI; Class V: Science",
+        "room": "IV B",
+        "teacher": "Tshering Deki",
+        "initials": "TD",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "IV B"
+      },
+      {
+        "date": "26/11/2026",
+        "day": "Thursday",
+        "session": "Exam 1",
+        "time": "Class IV: 9:00–10:30",
+        "class": "Class IV",
+        "subjectPaper": "Class IV: Science",
+        "room": "V A",
+        "teacher": "Tshering Deki",
+        "initials": "TD",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "V A"
+      },
+      {
+        "date": "27/11/2026",
+        "day": "Friday",
+        "session": "Exam 2",
+        "time": "Class IX: 10:30–12:00; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Biology II; Class VII: History (continues from Exam 1)",
+        "room": "C3 + C4",
+        "teacher": "Tshering Deki",
+        "initials": "TD",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 3 + C 4"
+      },
+      {
+        "date": "18/11/2026",
+        "day": "Wednesday",
+        "session": "Exam 2",
+        "time": "Class IX: 13:30–15:30",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: English II",
+        "room": "C3 + C4",
+        "teacher": "Tshering Yangzom",
+        "initials": "TY",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 3 + C 4"
+      },
+      {
+        "date": "25/11/2026",
+        "day": "Wednesday",
+        "session": "Exam 1",
+        "time": "Class IX: 9:00–10:30; Class V: 9:00–10:30; Class VII: 9:00–11:00",
+        "class": "Class IX; Class V; Class VII",
+        "subjectPaper": "Class IX: DTI I; Class V: Dzongkha; Class VII: Geography",
+        "room": "C4",
+        "teacher": "Tshering Yangzom",
+        "initials": "TY",
+        "longestDurationHours": 2,
+        "creditedDutyHours": 2,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 4"
+      },
+      {
+        "date": "26/11/2026",
+        "day": "Thursday",
+        "session": "Exam 1",
+        "time": "Class IV: 9:00–10:30; Class V: 9:00–10:30",
+        "class": "Class IV; Class V",
+        "subjectPaper": "Class IV: Science; Class V: ICT",
+        "room": "IV A",
+        "teacher": "Tshering Yangzom",
+        "initials": "TY",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "IV A"
+      },
+      {
+        "date": "16/11/2026",
+        "day": "Monday",
+        "session": "Exam 2",
+        "time": "Class IX: 11:00–12:30",
+        "class": "Class IX",
+        "subjectPaper": "Class IX: Mathematics II",
+        "room": "C2",
+        "teacher": "Wangchuk Namgyel",
+        "initials": "WN",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 2"
+      },
+      {
+        "date": "19/11/2026",
+        "day": "Thursday",
+        "session": "Exam 1",
+        "time": "Class VII: 9:00–11:00",
+        "class": "Class VII",
+        "subjectPaper": "Class VII: Mathematics",
+        "room": "C5",
+        "teacher": "Wangchuk Namgyel",
+        "initials": "WN",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 5"
+      },
+      {
+        "date": "23/11/2026",
+        "day": "Monday",
+        "session": "Exam 2",
+        "time": "Class IX: 10:30–12:00; Class VII: 9:00–11:00",
+        "class": "Class IX; Class VII",
+        "subjectPaper": "Class IX: Physics II; Class VII: English (continues from Exam 1)",
+        "room": "C1",
+        "teacher": "Wangchuk Namgyel",
+        "initials": "WN",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "C 1"
+      },
+      {
+        "date": "27/11/2026",
+        "day": "Friday",
+        "session": "Exam 1",
+        "time": "Class IV: 9:00–10:30",
+        "class": "Class IV",
+        "subjectPaper": "Class IV: Dzongkha",
+        "room": "V A",
+        "teacher": "Wangchuk Namgyel",
+        "initials": "WN",
+        "longestDurationHours": 1.5,
+        "creditedDutyHours": 1.5,
+        "verificationStatus": "Verified",
+        "roomDetail": "V A"
+      }
+    ],
+    "staffTotals": [
+      {
+        "name": "Bala Ram Chapagai",
+        "initials": "BRC",
+        "totalDuties": 4,
+        "totalHours": 6
+      },
+      {
+        "name": "Cheten Tshering",
+        "initials": "CT",
+        "totalDuties": 3,
+        "totalHours": 5
+      },
+      {
+        "name": "Dechen Tshomo",
+        "initials": "DT",
+        "totalDuties": 3,
+        "totalHours": 5.5
+      },
+      {
+        "name": "Dechen Yangzom",
+        "initials": "DY",
+        "totalDuties": 4,
+        "totalHours": 6
+      },
+      {
+        "name": "Deki Wangmo",
+        "initials": "DW",
+        "totalDuties": 4,
+        "totalHours": 5.5
+      },
+      {
+        "name": "Dhan Kumar Rai",
+        "initials": "DKR",
+        "totalDuties": 3,
+        "totalHours": 5
+      },
+      {
+        "name": "Durba Kumar Chhetri",
+        "initials": "DKC",
+        "totalDuties": 3,
+        "totalHours": 5.5
+      },
+      {
+        "name": "Goma Devi Sunar",
+        "initials": "GDS",
+        "totalDuties": 4,
+        "totalHours": 6
+      },
+      {
+        "name": "Kinley Dema",
+        "initials": "KD",
+        "totalDuties": 3,
+        "totalHours": 5
+      },
+      {
+        "name": "Madhu Nepal",
+        "initials": "MN",
+        "totalDuties": 3,
+        "totalHours": 5.5
+      },
+      {
+        "name": "Passang Tshechu",
+        "initials": "PT",
+        "totalDuties": 3,
+        "totalHours": 5
+      },
+      {
+        "name": "Pem Choki",
+        "initials": "PC",
+        "totalDuties": 3,
+        "totalHours": 5
+      },
+      {
+        "name": "Pema Wangchuk",
+        "initials": "PW",
+        "totalDuties": 3,
+        "totalHours": 5
+      },
+      {
+        "name": "Phub Dolay",
+        "initials": "PD",
+        "totalDuties": 3,
+        "totalHours": 5.5
+      },
+      {
+        "name": "Sangay Dema",
+        "initials": "SD",
+        "totalDuties": 3,
+        "totalHours": 5.5
+      },
+      {
+        "name": "Sangay Wangmo",
+        "initials": "SW",
+        "totalDuties": 3,
+        "totalHours": 5
+      },
+      {
+        "name": "Sarita Devi Mongar",
+        "initials": "SDM",
+        "totalDuties": 4,
+        "totalHours": 6
+      },
+      {
+        "name": "Sarita Ghalley",
+        "initials": "SG",
+        "totalDuties": 3,
+        "totalHours": 5.5
+      },
+      {
+        "name": "Sonam Choki",
+        "initials": "SC",
+        "totalDuties": 4,
+        "totalHours": 5.5
+      },
+      {
+        "name": "Sonam Phuntsho",
+        "initials": "SP",
+        "totalDuties": 3,
+        "totalHours": 5
+      },
+      {
+        "name": "Sonam Yangchen",
+        "initials": "Syc",
+        "totalDuties": 3,
+        "totalHours": 5
+      },
+      {
+        "name": "Sonam Yangzom",
+        "initials": "Syz",
+        "totalDuties": 4,
+        "totalHours": 6
+      },
+      {
+        "name": "Sumjay",
+        "initials": "S",
+        "totalDuties": 3,
+        "totalHours": 5
+      },
+      {
+        "name": "Tashi Lungmo",
+        "initials": "TL",
+        "totalDuties": 3,
+        "totalHours": 5.5
+      },
+      {
+        "name": "Tashi Tshomo",
+        "initials": "TT",
+        "totalDuties": 4,
+        "totalHours": 6
+      },
+      {
+        "name": "Tshering Deki",
+        "initials": "TD",
+        "totalDuties": 4,
+        "totalHours": 6
+      },
+      {
+        "name": "Tshering Yangzom",
+        "initials": "TY",
+        "totalDuties": 3,
+        "totalHours": 5.5
+      },
+      {
+        "name": "Wangchuk Namgyel",
+        "initials": "WN",
+        "totalDuties": 4,
+        "totalHours": 6
+      }
+    ],
+    "totalDuties": 94,
+    "totalCreditedHours": 153,
+    "checks": [
+      {
+        "check": "Class IX two-hour timing and shared-room workloads valid",
+        "result": "PASS",
+        "status": "17/11 and 18/11: Paper I 9:00–11:00; Paper II 13:30–15:30. Shared writing overlap is counted once."
+      },
+      {
+        "check": "Room totals reconcile; sample-roster restrictions applied",
+        "result": "PASS",
+        "status": "Room seating totals match source. Tue afternoon unavailable: BRC, CT, DKR, PT, PW; Wed afternoon: PT, PW, SC. No restricted teacher is assigned to 13:30 Paper II."
+      },
+      {
+        "check": "Room/session duty counted once and totals reconcile",
+        "result": "PASS",
+        "status": "94 unique room/session credits sum to 153.0 hours; Teacher Duty Summary and matrix totals match."
+      }
+    ],
+    "notes": [
+      "For leave or absence, invigilators arrange substitution with prior permission from the Principal."
+    ],
+    "sourceAssignment": "Project workbook invigilation matrix",
+    "supplementalMatches": 94,
+    "supplementalDifferences": 0,
+    "detailAnnotationDifferences": 3
+  },
+  "binders": {
+    "sourceColumnHeading": "English",
+    "records": [
+      {
+        "binder": "Durba Kumar",
+        "department": "Maths & ICT",
+        "English": "IV"
+      },
+      {
+        "binder": "Madhu Nepal",
+        "department": "Science",
+        "English": "IX"
+      },
+      {
+        "binder": "Tashi Tshomo",
+        "department": "Dzongkha",
+        "English": "V"
+      },
+      {
+        "binder": "Kinley Dema",
+        "department": "Humanities",
+        "English": "VII"
+      }
+    ],
+    "note": "The source uses “English” as the fourth column heading; values are preserved under that heading."
+  },
+  "sourceCautions": [
+    "Labels are preserved with surrounding whitespace normalized.",
+    "The original workbooks were read only and were not modified."
+  ]
+}

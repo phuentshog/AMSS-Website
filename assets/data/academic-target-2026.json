@@ -1,0 +1,220 @@
+{
+  "year": 2026,
+  "source": [
+    "Academic target for 2026/2025 Academic score.(BCSEA Performance)xlsx.xlsx",
+    "Academic target for 2026/Teachers.xlsx",
+    "Academic target for 2026/Midterm Exam Consolidated 2026/VI A_consolidated.xlsx",
+    "Academic target for 2026/Midterm Exam Consolidated 2026/VI B_consolidated.xlsx",
+    "Academic target for 2026/Midterm Exam Consolidated 2026/VIII A_consolidated.xlsx",
+    "Academic target for 2026/Midterm Exam Consolidated 2026/X A_2026_Midterm_Cons.xlsx",
+    "assets/data/plc-data.json"
+  ],
+  "auditStatus": "verified",
+  "auditNote": "Aggregated subject means and teacher assignments were audited against the source workbooks. Department links were matched to the existing PLC directory. Coverage is limited to VI A/B, VIII A and X A; full class coverage is not established for VIII or X. Class VI SS remains excluded because no comparable midterm result or verified subject teacher assignment was available. Class X History and Civics is assessed using the midterm HCG (History & Civics) total matched to the BCSEA History target.",
+  "method": "Target mean is the source workbook’s 2026 target (prior school mean × 1.03). Midterm mean is the arithmetic mean of each listed student’s subject total, normalized from 40 marks to 100 (mean total ÷ 40 × 100). The Class X History target is labeled HCG in the BCSEA workbook and is compared with the distinct HCG (History & Civics) midterm total. Teacher assignments are transcribed from Teachers.xlsx after subject-name normalization. Class VI SS is excluded because no comparable midterm result or verified subject teacher assignment was available.",
+  "coverage": {
+    "VI": [
+      "VI A",
+      "VI B"
+    ],
+    "VIII": [
+      "VIII A"
+    ],
+    "X": [
+      "X A"
+    ]
+  },
+  "classes": [
+    "VI",
+    "VIII",
+    "X"
+  ],
+  "records": [
+    {
+      "class": "VI",
+      "subject": "English",
+      "teacher": "Sarita Devi Monger",
+      "targetMean": 86.4479,
+      "midtermMean": 67.3892,
+      "department": null
+    },
+    {
+      "class": "VI",
+      "subject": "Dzongkha",
+      "teacher": "Pema Wangchuk",
+      "targetMean": 81.576,
+      "midtermMean": 79.5991,
+      "department": "Dzongkha"
+    },
+    {
+      "class": "VI",
+      "subject": "Maths",
+      "teacher": "Sonam Yangchen",
+      "targetMean": 77.9504,
+      "midtermMean": 66.4906,
+      "department": "Maths & ICT"
+    },
+    {
+      "class": "VI",
+      "subject": "Science",
+      "teacher": "Pema Choki",
+      "targetMean": 81.9983,
+      "midtermMean": 72.9717,
+      "department": "Science"
+    },
+    {
+      "class": "VI",
+      "subject": "ICT",
+      "teacher": "Sangay Dorji",
+      "targetMean": 79.7323,
+      "midtermMean": 72.0047,
+      "department": "Maths & ICT"
+    },
+    {
+      "class": "VI",
+      "subject": "SS",
+      "teacher": null,
+      "targetMean": 88.4152,
+      "midtermMean": null,
+      "limitation": "No corresponding midterm subject or teacher assignment found.",
+      "department": null
+    },
+    {
+      "class": "VIII",
+      "subject": "English",
+      "teacher": "Deki Wangmo",
+      "targetMean": 78.7744,
+      "midtermMean": 63.6034,
+      "department": "English"
+    },
+    {
+      "class": "VIII",
+      "subject": "Dzongkha",
+      "teacher": "Wangchuk Namgyel",
+      "targetMean": 77.8474,
+      "midtermMean": 69.3267,
+      "department": null
+    },
+    {
+      "class": "VIII",
+      "subject": "History and Civics",
+      "teacher": "Phuntsho Wangdi",
+      "targetMean": 75.9419,
+      "midtermMean": 56.0603,
+      "department": "Humanities"
+    },
+    {
+      "class": "VIII",
+      "subject": "Geography",
+      "teacher": "Sumjay",
+      "targetMean": 73.4699,
+      "midtermMean": 57.4655,
+      "department": "Humanities"
+    },
+    {
+      "class": "VIII",
+      "subject": "Mathematics",
+      "teacher": "Cheten Tshering",
+      "targetMean": 67.98,
+      "midtermMean": 54.506,
+      "department": "Maths & ICT"
+    },
+    {
+      "class": "VIII",
+      "subject": "ICT",
+      "teacher": "Sonam Choki",
+      "targetMean": 70.6992,
+      "midtermMean": 74.8552,
+      "department": "Maths & ICT"
+    },
+    {
+      "class": "VIII",
+      "subject": "Science",
+      "teacher": "Sonam Phuntsho",
+      "targetMean": 72.0382,
+      "midtermMean": 63.5405,
+      "department": "Science"
+    },
+    {
+      "class": "X",
+      "subject": "English",
+      "teacher": "Deki Wangmo",
+      "targetMean": 76.117,
+      "midtermMean": 66.1154,
+      "department": "English"
+    },
+    {
+      "class": "X",
+      "subject": "Dzongkha",
+      "teacher": "Passang Tshechu",
+      "targetMean": 75.9419,
+      "midtermMean": 72.3077,
+      "department": "Dzongkha"
+    },
+    {
+      "class": "X",
+      "subject": "History and Civics",
+      "teacher": "Phuntsho Wangdi",
+      "targetMean": 73.233,
+      "midtermMean": 55.9519,
+      "department": "Humanities"
+    },
+    {
+      "class": "X",
+      "subject": "Geography",
+      "teacher": "Sumjay",
+      "targetMean": 72.1515,
+      "midtermMean": 59.5288,
+      "department": "Humanities"
+    },
+    {
+      "class": "X",
+      "subject": "Economics",
+      "teacher": "Tshering Deki",
+      "targetMean": 71.5129,
+      "midtermMean": 65.8462,
+      "department": "Humanities"
+    },
+    {
+      "class": "X",
+      "subject": "ICT",
+      "teacher": "Sonam Choki",
+      "targetMean": 62.006,
+      "midtermMean": 71.2115,
+      "department": "Maths & ICT"
+    },
+    {
+      "class": "X",
+      "subject": "Maths",
+      "teacher": "Cheten Tshering",
+      "targetMean": 70.8949,
+      "midtermMean": 51.1346,
+      "department": "Maths & ICT"
+    },
+    {
+      "class": "X",
+      "subject": "Physics",
+      "teacher": "Sonam Phuntsho",
+      "targetMean": 66.1054,
+      "midtermMean": 59.9904,
+      "department": "Science"
+    },
+    {
+      "class": "X",
+      "subject": "Chemistry",
+      "teacher": "Bala Ram Chapagai",
+      "targetMean": 66.5174,
+      "midtermMean": 61.8077,
+      "department": "Science"
+    },
+    {
+      "class": "X",
+      "subject": "Biology",
+      "teacher": "Anu Uroan",
+      "targetMean": 73.4905,
+      "midtermMean": 63.9423,
+      "department": null
+    }
+  ],
+  "departmentAuditNote": "Department assignments use exact teacher-name matches in assets/data/plc-data.json. If a teacher appears in multiple departments, a matching subject role is required. Unmatched names remain unassigned and are excluded from department rankings."
+}

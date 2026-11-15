@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://phuentshog.github.io/AMSS-Website/assets/data/public/schemas/plc.schema.json",
   "title": "Public PLC directory summary",
-  "description": "Department summaries and approved teacher folder shortcuts. Folder contents remain governed by their existing Google Drive permissions.",
+  "description": "Department labels and approved public resources; no private Drive folders or unapproved staff profiles.",
   "type": "object",
   "additionalProperties": false,
   "required": ["departments"],
@@ -11,22 +11,17 @@
       "type": "array",
       "items": {
         "type": "object", "additionalProperties": false,
-        "required": ["id", "title", "memberCount"],
+        "required": ["id", "title"],
         "properties": {
           "id": { "type": "string" },
           "title": { "type": "string" },
-          "memberCount": { "type": "integer", "minimum": 0, "description": "Aggregate educator membership count for this department only; no individual profiles are included." },
+          "memberCountBand": { "type": "string" },
           "resources": {
             "type": "array",
             "items": {
               "type": "object", "additionalProperties": false,
               "required": ["title", "url"],
-              "properties": {
-                "title": { "type": "string" },
-                "url": { "type": "string", "format": "uri", "pattern": "^https://" },
-                "role": { "type": "string" },
-                "photoUrl": { "type": "string", "format": "uri", "pattern": "^https://lh3\\.googleusercontent\\.com/d/" }
-              }
+              "properties": { "title": { "type": "string" }, "url": { "type": "string", "format": "uri", "pattern": "^https://" } }
             }
           }
         }

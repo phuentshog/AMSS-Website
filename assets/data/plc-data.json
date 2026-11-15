@@ -1,0 +1,214 @@
+{
+  "departments": [
+    {
+      "name": "Humanities",
+      "educators": [
+        {
+          "name": "Sumjay",
+          "role": "HOD",
+          "folderUrl": "https://drive.google.com/drive/folders/1vjX7aRtrU8ZBBsxs8FuhYx1Z_4Z4d7qs",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1-kT8W-aFXBAo92tz9rGM1pfIEATdt340=w800"
+        },
+        {
+          "name": "Phuntsho Wangdi",
+          "role": "History Teacher",
+          "folderUrl": "https://drive.google.com/drive/folders/1-6JW-yx5JqVPediRlJ3fTGLDuf64rxZA",
+          "photoUrl": "https://lh3.googleusercontent.com/d/14n1ZkBpqlzf2BxrGVMzOe1uC0-s70JPj=w800"
+        },
+        {
+          "name": "Tshering Deki",
+          "role": "Economics Teacher",
+          "folderUrl": "https://drive.google.com/drive/folders/1WNaKsB38kZxicIJ6SYS6MwuRwti00G-_",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1eWWpRNr9smQATRymhQVmtLBWNzGcnF_j=w800"
+        },
+        {
+          "name": "Sarita Ghalley",
+          "role": "Economics Teacher",
+          "folderUrl": "https://drive.google.com/drive/folders/1LbavYtt34K0lbS9KK2MzLfARxE5WfF5X",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1NDEav-bnL5XXT8R66OTHFWew5hCkk8-A=w800"
+        }
+      ]
+    },
+    {
+      "name": "Science",
+      "educators": [
+        {
+          "name": "Sonam Phuntsho",
+          "role": "HOD",
+          "folderUrl": "https://drive.google.com/drive/folders/1pTbUGv74YS3hrCYu8wpSuJX9Oz8RWLWC",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1abUFGmLWSafpXt4IFWRaQ0_eGPxpa_Cf=w800"
+        },
+        {
+          "name": "Anu Uraon",
+          "role": "Bio Teacher",
+          "folderUrl": "https://drive.google.com/drive/folders/1eGonkRo5ffT3AUy51UGQnAQb7TVuwZcq",
+          "photoUrl": null
+        },
+        {
+          "name": "Bala Ram Chapagai",
+          "role": "Chemistry Teacher",
+          "folderUrl": "https://drive.google.com/drive/folders/15vlCU7YsGfGF5UG86wlmk08-D9cNJnpw",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1BMC18BD7W2Y7-sJZlRTPcO0gBZyvcZnY=w800"
+        },
+        {
+          "name": "Pema Choki",
+          "role": "Science Teacher",
+          "folderUrl": "https://drive.google.com/drive/folders/1R1nDeEtBPsKBhKhgoROTO4MndJyZWnS1",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1NaWLb6ATlAY-DaSQzyJTnhExa_lLK05C=w800"
+        },
+        {
+          "name": "Sonam Yangzom",
+          "role": "Science Teacher",
+          "folderUrl": "https://drive.google.com/drive/folders/1LefeMjLaDBW3GkACGBXmo9BbOTk",
+          "photoUrl": "https://lh3.googleusercontent.com/d/11C2hTCELna0ykOEDSAwB_X4E-SvWRI83=w800"
+        }
+      ]
+    },
+    {
+      "name": "Dzongkha",
+      "educators": [
+        {
+          "name": "Passang Tshechu",
+          "role": "HOD",
+          "folderUrl": "https://drive.google.com/drive/folders/1DImSxd6uMsKZCQCPxGbUTdVeaeq0uw0S",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1LpgtPlo_p1cLqXdLsIXvC67wKOThACT8=w800"
+        },
+        {
+          "name": "Pema Wangchuk",
+          "role": "Dzongkha Teacher",
+          "folderUrl": "https://drive.google.com/drive/folders/1ndwPFksIPQvh__huveSwYrW_gOBXCULx",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1Dtpu0h3619toYHC8vIY6EosNhUIPUq0a=w800"
+        },
+        {
+          "name": "Tshering Yangzom",
+          "role": "Dzongkha Teacher",
+          "folderUrl": "https://drive.google.com/drive/folders/1mfhilWuhgIBhr6ymp9KBv3Nzq9f9wNe_",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1EOL4G8UiSLDHXQbkj_NHTVN1GLo6_CNY=w800"
+        },
+        {
+          "name": "Wangchuk Namgyal",
+          "role": "Dzongkha Teacher",
+          "folderUrl": "https://drive.google.com/drive/folders/1iW4e6OErf1xYYDW8HDXresOTJtp0wP9e",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1sYYYau-CcdSB4oWvT1pV1CO75ez5oU_A=w800"
+        }
+      ]
+    },
+    {
+      "name": "Maths & ICT",
+      "educators": [
+        {
+          "name": "Cheten Tshering",
+          "role": "HOD",
+          "folderUrl": "https://drive.google.com/drive/folders/1UoH5euuv-EKrirFO2GA-fuwWgkvKP7GT",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1cC4eGRnX6zuKOJtPOr75uCH-1PTzKp3j=w800"
+        },
+        {
+          "name": "Dhan Kumar Rai",
+          "role": "Maths Teacher",
+          "folderUrl": "https://drive.google.com/drive/folders/12EHps9kwmfUyReCD19XrAIiO6w5M7fKz",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1d5C9qK7MDlEiZaumNMwKwfjfkOwrvCvX=w800"
+        },
+        {
+          "name": "Sonam Yangchen",
+          "role": "Maths Teacher",
+          "folderUrl": "https://drive.google.com/drive/folders/1MjUemHFDbbWhlx8Pum6xxp3tKEt11RxF",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1-e7emSMt1N12xGrd827c1-yBsHbRJcGU=w800"
+        },
+        {
+          "name": "Sarita Ghalley",
+          "role": "Maths Teacher",
+          "folderUrl": "https://drive.google.com/drive/folders/1tXXmMSWeD0C71rcUNLvw-mgjjFKpd8Hr",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1NDEav-bnL5XXT8R66OTHFWew5hCkk8-A=w800"
+        },
+        {
+          "name": "Sangay Dorji",
+          "role": "DTI Teacher",
+          "folderUrl": "https://drive.google.com/drive/folders/18eL9-pNdtfDy0SeZsyU9MKhG3Ayqck0l",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1SCodUUX5dkInhABvpYUJebg6mI5jgrOE=w800"
+        },
+        {
+          "name": "Sonam Choki",
+          "role": "DTI Teacher",
+          "folderUrl": "https://drive.google.com/drive/folders/1LAF3ZON7XSldSqnCqeYKVpjG7mQnajxy",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1h8Wds7xqrxC3ApD41xWOpi3qY2PA74AP=w800"
+        },
+        {
+          "name": "Tashi Lungmo",
+          "role": "DTI Teacher",
+          "folderUrl": "https://drive.google.com/drive/folders/1B-K22Ck_5sMip9h3uVCjBzRbdxoNge9t",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1SdmjoXgu_9wnMtTdB92fhTsGjh2sUhe3=w800"
+        }
+      ]
+    },
+    {
+      "name": "Elementary",
+      "educators": [
+        {
+          "name": "Tadin Om",
+          "role": "HOD",
+          "folderUrl": "https://drive.google.com/drive/folders/1kCgfrsRkrN9STkMNUef94Rp6Dn1gWkqS",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1qEg6lHflSBHVffv4Ps2uusqP4gstEZox=w800"
+        },
+        {
+          "name": "Dechen Tshomo",
+          "role": "",
+          "folderUrl": "https://drive.google.com/drive/folders/1L4JqqH0FpXdi5o0TJqOCONpApWjR8Ni4",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1UVgDmMa0OUnj4l55vTWfQyXdGLxWiR9Y=w800"
+        },
+        {
+          "name": "Dechen Yangzom",
+          "role": "",
+          "folderUrl": "https://drive.google.com/drive/folders/1XaAOmiLC1WTRD_oq5LDqJ6e3_H2sW2Ze",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1B-YGG_PPlhkQpRkz0gtoTHmeImTp2qYI=w800"
+        },
+        {
+          "name": "Goma Devi Sunar",
+          "role": "",
+          "folderUrl": "https://drive.google.com/drive/folders/1b2dXFzaagYpZvdNo0KKBu4iF9FmBZNzV",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1WI6GbVdwco639yvo1SRFDAfGpM7d91t3=w800"
+        },
+        {
+          "name": "Phub Dolay",
+          "role": "",
+          "folderUrl": "https://drive.google.com/drive/folders/1f6WTU9A4MU5c71oX_lVyzt9rl15-2Nsz",
+          "photoUrl": "https://lh3.googleusercontent.com/d/19FD08yW6tS7PHwtijVFRB46H0FkZ1wkd=w800"
+        },
+        {
+          "name": "Sangay Dema",
+          "role": "",
+          "folderUrl": "https://drive.google.com/drive/folders/1hp-Ogzic5r22CoowtbQLRa7HfSg2Zirc",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1zN0uXZt1_IEWcuNtKrow7BAX8ampVHSL=w800"
+        }
+      ]
+    },
+    {
+      "name": "English",
+      "educators": [
+        {
+          "name": "Sangay Wangmo",
+          "role": "HOD",
+          "folderUrl": "https://drive.google.com/drive/folders/1L0Qy4Tff3yRHv-MuFeQnvQm6SZMva-sC",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1OZiBQVWWLRaSU8qOYDIB8kXUc7KVNMW6=w800"
+        },
+        {
+          "name": "Deki Wangmo",
+          "role": "English Teacher",
+          "folderUrl": "https://drive.google.com/drive/folders/1XVeRxQiheCxQBMEJuCRwseDFk7GgV5Us",
+          "photoUrl": "https://lh3.googleusercontent.com/d/15GuXzI6mQf6ODbyjz2TNNKdEtIaLh2zB=w800"
+        },
+        {
+          "name": "Sarita Devi Mongar",
+          "role": "English Teacher",
+          "folderUrl": "https://drive.google.com/drive/folders/1Jb6MFRbhMaQue5PEBwSYZFbjYAh26SBh",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1KNZH4hmWsngis29E2qX7HUEXuA7oBaPz=w800"
+        },
+        {
+          "name": "Tshering Deki",
+          "role": "English Teacher",
+          "folderUrl": "https://drive.google.com/drive/folders/1tEucb-r30JR8gqboaWb_du5tNHb4bYD1",
+          "photoUrl": "https://lh3.googleusercontent.com/d/1eWWpRNr9smQATRymhQVmtLBWNzGcnF_j=w800"
+        }
+      ]
+    }
+  ]
+}
