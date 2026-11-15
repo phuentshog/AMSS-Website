@@ -13,7 +13,7 @@ if (academicRoot) {
   const clearSearch = document.querySelector("#academic-search-clear");
   const filterStatus = document.querySelector("#academic-filter-status");
   const format = (value) => Number.isFinite(value) ? Number(value).toFixed(2) : "N/A";
-  const searchable = (record) => `${record.subject || ""} ${record.department || ""}`.toLocaleLowerCase();
+  const searchable = (record) => `${record.subject || ""} ${record.teacher || ""}`.toLocaleLowerCase();
   const canonicalSubject = (subject) => {
     const value = String(subject || "").trim().toLocaleLowerCase().replace(/\s+/g, " ");
     return ["history", "history and civics", "hcg (history & civics)"].includes(value) ? "History and Civics" : String(subject || "").trim();
@@ -38,9 +38,9 @@ if (academicRoot) {
     const normalized = [];
     for (const group of groups.values()) {
       if (group.length === 1) { normalized.push(group[0]); continue; }
-      const signatures = new Set(group.map((r) => JSON.stringify([r.department, r.targetMean, r.midtermMean])));
+      const signatures = new Set(group.map((r) => JSON.stringify([r.teacher, r.department, r.targetMean, r.midtermMean])));
       if (signatures.size === 1) normalized.push(group[0]);
-      else normalized.push({ ...group[0], department: null, targetMean: null, midtermMean: null, duplicateConflict: true, limitation: "Conflicting duplicate records were found for this class and subject; the result is excluded until reconciled." });
+      else normalized.push({ ...group[0], teacher: null, department: null, targetMean: null, midtermMean: null, duplicateConflict: true, limitation: "Conflicting duplicate records were found for this class and subject; the result is excluded until reconciled." });
     }
     return normalized;
   }
@@ -48,10 +48,10 @@ if (academicRoot) {
   function selectedRecords() {
     const query = (subjectSearch?.value || "").trim().toLocaleLowerCase();
     const selectedSubject = subjectFilter?.value || "";
-    const selectedDepartment = teacherFilter?.value || "";
+    const selectedTeacher = teacherFilter?.value || "";
     return records.map(buildRecord).filter((record) => (!activeClass || record.class === activeClass)
       && (!selectedSubject || record.subject === selectedSubject)
-      && (!selectedDepartment || record.department === selectedDepartment)
+      && (!selectedTeacher || record.teacher === selectedTeacher)
       && (!query || searchable(record).includes(query)));
   }
 
@@ -85,9 +85,9 @@ if (academicRoot) {
     replaceOptions(subjectFilter, "All relevant subjects", subjects, oldSubject);
 
     const searchContext = context.filter((record) => !subjectFilter?.value || record.subject === subjectFilter.value);
-    const departments = [...new Set(searchContext.map((record) => record.department).filter(Boolean))].sort();
-    const oldDepartment = teacherFilter?.value || "";
-    replaceOptions(teacherFilter, "All relevant departments", departments, oldDepartment);
+    const teachers = [...new Set(searchContext.map((record) => record.teacher).filter(Boolean))].sort();
+    const oldTeacher = teacherFilter?.value || "";
+    replaceOptions(teacherFilter, "All relevant teachers", teachers, oldTeacher);
     if (subjectSearch) subjectSearch.disabled = records.length === 0;
     if (clearSearch) clearSearch.disabled = !subjectSearch?.value;
   }
@@ -200,7 +200,7 @@ if (academicRoot) {
       empty.append(title, document.createTextNode("Change or clear the filters to see results.")); host.append(empty); return;
     }
     const dl = document.createElement("dl"); dl.className = "academic-detail-grid";
-    const details = [["Class", classLabels[row.class]], ["Subject", row.subject], ["Department", row.department || "Not specified"], ["Target mean", format(row.target)], ["Midterm mean", format(row.midterm)], ["Difference", row.difference === null ? "N/A" : `${row.difference > 0 ? "+" : ""}${format(row.difference)}`], ["Status", row.status]];
+    const details = [["Class", classLabels[row.class]], ["Subject", row.subject], ["Subject Teacher", row.teacher || "Unable to verify"], ["Target mean", format(row.target)], ["Midterm mean", format(row.midterm)], ["Difference", row.difference === null ? "N/A" : `${row.difference > 0 ? "+" : ""}${format(row.difference)}`], ["Status", row.status]];
     if (row.limitation) details.push(["Note", row.limitation]);
     for (const [label, value] of details) { const wrapper = document.createElement("div"); const term = document.createElement("dt"); const valueNode = document.createElement("dd"); term.textContent = label; valueNode.textContent = value; wrapper.append(term, valueNode); dl.append(wrapper); }
     host.append(dl);
@@ -208,7 +208,7 @@ if (academicRoot) {
 
   function appendDataRow(body, row, withLimitation = false) {
     const tr = document.createElement("tr");
-    const values = [classLabels[row.class], row.subject, row.department || "Not specified", format(row.target), format(row.midterm), row.difference === null ? "N/A" : `${row.difference > 0 ? "+" : ""}${format(row.difference)}`, row.status];
+    const values = [classLabels[row.class], row.subject, row.teacher || "Unable to verify", format(row.target), format(row.midterm), row.difference === null ? "N/A" : `${row.difference > 0 ? "+" : ""}${format(row.difference)}`, row.status];
     for (const value of values) { const td = document.createElement("td"); td.textContent = value; tr.append(td); }
     tr.lastElementChild.className = `academic-status academic-status--${row.status.toLocaleLowerCase().replaceAll(" ", "-")}`;
     if (withLimitation && row.limitation) { const trNote = document.createElement("tr"); trNote.className = "academic-limitation"; const td = document.createElement("td"); td.colSpan = 7; td.textContent = `Why unable to assess: ${row.limitation}`; trNote.append(td); body.append(tr, trNote); }
@@ -360,7 +360,7 @@ if (academicRoot) {
       && (record.cohortSizeBand === "10+")
       && (record.targetMean === null || Number.isFinite(record.targetMean))
       && (record.midtermMean === null || Number.isFinite(record.midtermMean)))
-      .map((record) => ({ ...record, department: typeof record.department === "string" ? record.department : null })));
+      .map((record) => ({ ...record, teacher: typeof record.teacher === "string" ? record.teacher : null, department: typeof record.department === "string" ? record.department : null })));
     const method = document.querySelector("#academic-method-note");
     if (method) method.textContent = "A difference is the midterm mean minus the target mean. Midterm results are shown on a 100-mark scale. Missing comparisons are not assessed.";
     renderOptions(); render();
