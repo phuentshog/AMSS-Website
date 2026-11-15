@@ -1,7 +1,39 @@
 (() => {
   const root = document.querySelector("#staff-directory-groups");
-  const data = window.AMSS_STAFF_DIRECTORY;
-  if (!root || !data) return;
+  if (!root) return;
+
+  const adaptPublicDirectory = (source) => {
+    if (!source || !Array.isArray(source.staff) || !Array.isArray(source.groups)) return null;
+    const people = source.staff.map((person, index) => {
+      const id = person.id || `public-staff-${index + 1}`;
+      const designation = String(person.role || "").split(";").map((value) => value.trim()).filter(Boolean);
+      return {
+        id,
+        name: person.displayName,
+        designation,
+        photo: person.portraitPath,
+        memberships: [{ group: person.department, designation }],
+        responsibilities: [],
+        qualification: [],
+        subject: [],
+      };
+    });
+    const idsByDepartment = new Map();
+    source.staff.forEach((person, index) => {
+      const id = person.id || `public-staff-${index + 1}`;
+      if (!idsByDepartment.has(person.department)) idsByDepartment.set(person.department, []);
+      idsByDepartment.get(person.department).push(id);
+    });
+    const groups = source.groups.map((group) => ({ ...group, members: idsByDepartment.get(group.id) || [] }));
+    const sections = source.sections.map((section) => ({
+      ...section,
+      groups: groups.filter((group) => group.section === section.id).map((group) => group.id),
+    }));
+    return { ...source, sections, groups, staff: people };
+  };
+
+  const start = (data) => {
+  if (!data) return;
 
   const groups = new Map(data.groups.map((group) => [group.id, group]));
   const people = new Map(data.staff.map((person) => [person.id, person]));
@@ -335,8 +367,11 @@
       const active = button.dataset.departmentId === departmentId && category === "department";
       button.classList.toggle("is-active", active);
       button.setAttribute("aria-pressed", String(active));
+      if (active) button.setAttribute("aria-current", "true");
+      else button.removeAttribute("aria-current");
     });
     if (departmentMenu) departmentMenu.hidden = true;
+    if (category === "department") departmentTrigger?.focus();
     render();
   };
 
@@ -485,4 +520,21 @@
   });
 
   render();
+  };
+
+  if (window.AMSS_STAFF_DIRECTORY) {
+    start(window.AMSS_STAFF_DIRECTORY);
+  } else {
+    fetch("assets/data/public/staff-directory.json", { headers: { Accept: "application/json" } })
+      .then((response) => {
+        if (!response.ok) throw new Error(`Staff directory request failed (${response.status})`);
+        return response.json();
+      })
+      .then(adaptPublicDirectory)
+      .then(start)
+      .catch((error) => {
+        console.error("Unable to load the public staff directory:", error);
+        root.textContent = "The staff directory is temporarily unavailable. Please reload the page.";
+      });
+  }
 })();

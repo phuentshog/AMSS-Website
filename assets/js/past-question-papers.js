@@ -19,15 +19,14 @@
     'Design Technology and Innovation (DTI)': 'DTI',
     'Digital Technology and Information': 'DTI',
   };
-  const initialInstructions = 'Search the 21 verified public PDFs by title or filter by class, subject, examination and year. Download links work without Staff Login.';
+  const initialInstructions = 'Search the verified public PDFs by title or filter by class, subject, examination and year. Download links work without Staff Login.';
   const unverifiedExplanation = 'This paper is listed in the catalogue, but its document has not yet been confirmed as accessible to students. Please check again later.';
   const isQuestionPaperCandidate = (paper) => paper?.resourceType === 'question-paper-candidate';
   const hasVerifiedStudentAccess = (paper) => paper?.accessVerificationStatus === 'verified-public';
-  const validDriveId = (value) => typeof value === 'string' && /^[A-Za-z0-9_-]{20,60}$/.test(value);
-
   const buildDownloadUrl = (paper) => {
-    if (!paper || !validDriveId(paper.driveFileId) || String(paper.fileFormat || '').toLowerCase() !== 'pdf') return null;
-    return `https://drive.google.com/uc?export=download&id=${encodeURIComponent(paper.driveFileId)}`;
+    if (!paper || typeof paper.publicPath !== 'string' || !paper.publicPath.startsWith('assets/question-papers/')) return null;
+    if (String(paper.fileFormat || '').toLowerCase() !== 'pdf' || !/^[a-z0-9-]+\.pdf$/i.test(paper.filename || '')) return null;
+    return paper.publicPath;
   };
 
   const normalizeClass = (value) => String(value ?? '').trim().replace(/\s+/g, ' ').replace(/^class\s+/i, '').toLocaleUpperCase();
@@ -158,8 +157,7 @@
       const download = document.createElement('a');
       download.className = 'papers-open-link papers-download-link';
       download.href = downloadUrl;
-      download.target = '_blank';
-      download.rel = 'noopener noreferrer';
+      download.download = paper.filename;
       download.textContent = 'Download PDF';
       download.setAttribute('aria-label', `Download ${title.textContent}`);
       actions.append(download);

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "verified-public-pdfs",
+  "status": "verified-public-local-pdfs",
   "verifiedCount": 21,
   "papers": [
     {
@@ -14,8 +14,9 @@
       "subject": "Dzongkha",
       "resourceType": "question-paper-candidate",
       "fileFormat": "PDF",
-      "driveFileId": "1s3-gZuN8xXNHwtOQNKdM7m1tqX7JZpmm",
-      "accessVerificationStatus": "verified-public"
+      "accessVerificationStatus": "verified-public",
+      "filename": "class-vi-dzongkha-trial-examination-2026.pdf",
+      "publicPath": "assets/question-papers/2026-trial/class-vi-dzongkha-trial-examination-2026.pdf"
     },
     {
       "suggestedDisplayTitle": "Class X Dzongkha Paper I - Trial Examination 2026",
@@ -28,8 +29,9 @@
       "subject": "Dzongkha",
       "resourceType": "question-paper-candidate",
       "fileFormat": "PDF",
-      "driveFileId": "1ItP_bbkH4fvIL_8NF0YTD1mI5M53wifB",
-      "accessVerificationStatus": "verified-public"
+      "accessVerificationStatus": "verified-public",
+      "filename": "class-x-dzongkha-paper-i-trial-examination-2026.pdf",
+      "publicPath": "assets/question-papers/2026-trial/class-x-dzongkha-paper-i-trial-examination-2026.pdf"
     },
     {
       "suggestedDisplayTitle": "Class X Dzongkha Paper II - Trial Examination 2026",
@@ -42,8 +44,9 @@
       "subject": "Dzongkha",
       "resourceType": "question-paper-candidate",
       "fileFormat": "PDF",
-      "driveFileId": "1MUrUIL280QhVocpc1eIm5WFVBA0u_L9f",
-      "accessVerificationStatus": "verified-public"
+      "accessVerificationStatus": "verified-public",
+      "filename": "class-x-dzongkha-paper-ii-trial-examination-2026.pdf",
+      "publicPath": "assets/question-papers/2026-trial/class-x-dzongkha-paper-ii-trial-examination-2026.pdf"
     },
     {
       "suggestedDisplayTitle": "Class VIII Dzongkha Trial Examination 2026",
@@ -56,8 +59,9 @@
       "subject": "Dzongkha",
       "resourceType": "question-paper-candidate",
       "fileFormat": "PDF",
-      "driveFileId": "1lwMh-UsxfhVUQJVCcpx47M9PiYF7XzL0",
-      "accessVerificationStatus": "verified-public"
+      "accessVerificationStatus": "verified-public",
+      "filename": "class-viii-dzongkha-trial-examination-2026.pdf",
+      "publicPath": "assets/question-papers/2026-trial/class-viii-dzongkha-trial-examination-2026.pdf"
     },
     {
       "suggestedDisplayTitle": "Class VIII English Trial Examination 2026",
@@ -70,8 +74,9 @@
       "subject": "English",
       "resourceType": "question-paper-candidate",
       "fileFormat": "PDF",
-      "driveFileId": "1DrU-6Pt3bteb7t-RI_XM-eQOQjjvMaze",
-      "accessVerificationStatus": "verified-public"
+      "accessVerificationStatus": "verified-public",
+      "filename": "class-viii-english-trial-examination-2026.pdf",
+      "publicPath": "assets/question-papers/2026-trial/class-viii-english-trial-examination-2026.pdf"
     },
     {
       "suggestedDisplayTitle": "Class X English Paper I - Trial Examination 2026",
@@ -84,8 +89,9 @@
       "subject": "English",
       "resourceType": "question-paper-candidate",
       "fileFormat": "PDF",
-      "driveFileId": "1BbV5K1QsitkptLugmv2UAas_e2lF2d6-",
-      "accessVerificationStatus": "verified-public"
+      "accessVerificationStatus": "verified-public",
+      "filename": "class-x-english-paper-i-trial-examination-2026.pdf",
+      "publicPath": "assets/question-papers/2026-trial/class-x-english-paper-i-trial-examination-2026.pdf"
     },
     {
       "suggestedDisplayTitle": "Class X English Paper II - Trial Examination 2026",
@@ -98,8 +104,9 @@
       "subject": "English",
       "resourceType": "question-paper-candidate",
       "fileFormat": "PDF",
-      "driveFileId": "1sv0KVo6hdVnpeDB3a_YOPbbc0W0CTNCM",
-      "accessVerificationStatus": "verified-public"
+      "accessVerificationStatus": "verified-public",
+      "filename": "class-x-english-paper-ii-trial-examination-2026.pdf",
+      "publicPath": "assets/question-papers/2026-trial/class-x-english-paper-ii-trial-examination-2026.pdf"
     },
     {
       "suggestedDisplayTitle": "Class VI English Trial Examination 2026",
@@ -112,8 +119,9 @@
       "subject": "English",
       "resourceType": "question-paper-candidate",
       "fileFormat": "PDF",
-      "driveFileId": "1f-Or8yShHB2lV9Rd5TXC00Sd6nEPz39v",
-      "accessVerificationStatus": "verified-public"
+      "accessVerificationStatus": "verified-public",
+      "filename": "class-vi-english-trial-examination-2026.pdf",
+      "publicPath": "assets/question-papers/2026-trial/class-vi-english-trial-examination-2026.pdf"
     },
     {
       "suggestedDisplayTitle": "Class VIII Geography Trial Examination 2026",
@@ -126,8 +134,9 @@
       "subject": "Geography",
       "resourceType": "question-paper-candidate",
       "fileFormat": "PDF",
-      "driveFileId": "1eqRmMHTb_2_j35Lb4ae2JO73OAqeggXZ",
-      "accessVerificationStatus": "verified-public"
+      "accessVerificationStatus": "verified-public",
+      "filename": "class-viii-geography-trial-examination-2026.pdf",
+      "publicPath": "assets/question-papers/2026-trial/class-viii-geography-trial-examination-2026.pdf"
     },
     {
       "suggestedDisplayTitle": "Class VIII History Trial Examination 2026",
@@ -140,8 +149,9 @@
       "subject": "History",
       "resourceType": "question-paper-candidate",
       "fileFormat": "PDF",
-      "driveFileId": "1VS3cEahFKFlNeZwmywgEmYcZ6ZIZ0BQM",
-      "accessVerificationStatus": "verified-public"
+      "accessVerificationStatus": "verified-public",
+      "filename": "class-viii-history-trial-examination-2026.pdf",
+      "publicPath": "assets/question-papers/2026-trial/class-viii-history-trial-examination-2026.pdf"
     },
     {
       "suggestedDisplayTitle": "Class X Economics Trial Examination 2026",
@@ -154,8 +164,9 @@
       "subject": "Economics",
       "resourceType": "question-paper-candidate",
       "fileFormat": "PDF",
-      "driveFileId": "1SILER82Y7f0_EtjcJgNglWv45evP6Mw_",
-      "accessVerificationStatus": "verified-public"
+      "accessVerificationStatus": "verified-public",
+      "filename": "class-x-economics-trial-examination-2026.pdf",
+      "publicPath": "assets/question-papers/2026-trial/class-x-economics-trial-examination-2026.pdf"
     },
     {
       "suggestedDisplayTitle": "Class X History Trial Examination 2026",
@@ -168,8 +179,9 @@
       "subject": "History",
       "resourceType": "question-paper-candidate",
       "fileFormat": "PDF",
-      "driveFileId": "10Q0GQywdKsCks5ITJepjDFa9twbJTTCz",
-      "accessVerificationStatus": "verified-public"
+      "accessVerificationStatus": "verified-public",
+      "filename": "class-x-history-trial-examination-2026.pdf",
+      "publicPath": "assets/question-papers/2026-trial/class-x-history-trial-examination-2026.pdf"
     },
     {
       "suggestedDisplayTitle": "Class X ICT Trial Examination 2026",
@@ -182,8 +194,9 @@
       "subject": "ICT",
       "resourceType": "question-paper-candidate",
       "fileFormat": "PDF",
-      "driveFileId": "1oRCFFgZKmplOmOffuJ236Gzwk85lnJe4",
-      "accessVerificationStatus": "verified-public"
+      "accessVerificationStatus": "verified-public",
+      "filename": "class-x-ict-trial-examination-2026.pdf",
+      "publicPath": "assets/question-papers/2026-trial/class-x-ict-trial-examination-2026.pdf"
     },
     {
       "suggestedDisplayTitle": "Class VIII ICT Trial Examination 2026",
@@ -196,8 +209,9 @@
       "subject": "ICT",
       "resourceType": "question-paper-candidate",
       "fileFormat": "PDF",
-      "driveFileId": "1OQYFwaThdMlgnhYzfSCS8X2XRtxXx7Jn",
-      "accessVerificationStatus": "verified-public"
+      "accessVerificationStatus": "verified-public",
+      "filename": "class-viii-ict-trial-examination-2026.pdf",
+      "publicPath": "assets/question-papers/2026-trial/class-viii-ict-trial-examination-2026.pdf"
     },
     {
       "suggestedDisplayTitle": "Class X Mathematics Trial Examination 2026",
@@ -210,8 +224,9 @@
       "subject": "Mathematics",
       "resourceType": "question-paper-candidate",
       "fileFormat": "PDF",
-      "driveFileId": "1dJpqe57xSYVdAsY9uRk2s4elE5DnAyYF",
-      "accessVerificationStatus": "verified-public"
+      "accessVerificationStatus": "verified-public",
+      "filename": "class-x-mathematics-trial-examination-2026.pdf",
+      "publicPath": "assets/question-papers/2026-trial/class-x-mathematics-trial-examination-2026.pdf"
     },
     {
       "suggestedDisplayTitle": "Class VI A & B Mathematics Trial Examination 2026",
@@ -224,8 +239,9 @@
       "subject": "Mathematics",
       "resourceType": "question-paper-candidate",
       "fileFormat": "PDF",
-      "driveFileId": "1DFE_jHld9i-AXYtSdekjb-3d_C0I71Gl",
-      "accessVerificationStatus": "verified-public"
+      "accessVerificationStatus": "verified-public",
+      "filename": "class-vi-a-b-mathematics-trial-examination-2026.pdf",
+      "publicPath": "assets/question-papers/2026-trial/class-vi-a-b-mathematics-trial-examination-2026.pdf"
     },
     {
       "suggestedDisplayTitle": "Class VIII Mathematics Trial Examination 2026",
@@ -238,8 +254,9 @@
       "subject": "Mathematics",
       "resourceType": "question-paper-candidate",
       "fileFormat": "PDF",
-      "driveFileId": "1laUX-_C5607WEFYOHb-sFL41QidA2CJx",
-      "accessVerificationStatus": "verified-public"
+      "accessVerificationStatus": "verified-public",
+      "filename": "class-viii-mathematics-trial-examination-2026.pdf",
+      "publicPath": "assets/question-papers/2026-trial/class-viii-mathematics-trial-examination-2026.pdf"
     },
     {
       "suggestedDisplayTitle": "Class X Chemistry Trial Examination 2026",
@@ -252,8 +269,9 @@
       "subject": "Chemistry",
       "resourceType": "question-paper-candidate",
       "fileFormat": "PDF",
-      "driveFileId": "1XB00UJw9UGQrB3WDvW239I3HVz0gj7o6",
-      "accessVerificationStatus": "verified-public"
+      "accessVerificationStatus": "verified-public",
+      "filename": "class-x-chemistry-trial-examination-2026.pdf",
+      "publicPath": "assets/question-papers/2026-trial/class-x-chemistry-trial-examination-2026.pdf"
     },
     {
       "suggestedDisplayTitle": "Class X Biology Trial Examination 2026",
@@ -266,8 +284,9 @@
       "subject": "Biology",
       "resourceType": "question-paper-candidate",
       "fileFormat": "PDF",
-      "driveFileId": "1kRomIZ-oigvPsQAQfq8MkFS4iUDSY_ej",
-      "accessVerificationStatus": "verified-public"
+      "accessVerificationStatus": "verified-public",
+      "filename": "class-x-biology-trial-examination-2026.pdf",
+      "publicPath": "assets/question-papers/2026-trial/class-x-biology-trial-examination-2026.pdf"
     },
     {
       "suggestedDisplayTitle": "Class VI Science Trial Examination 2026",
@@ -280,8 +299,9 @@
       "subject": "Science",
       "resourceType": "question-paper-candidate",
       "fileFormat": "PDF",
-      "driveFileId": "12_mrS1KoYGKWmCNOUbWCnUT1oQG1uLDr",
-      "accessVerificationStatus": "verified-public"
+      "accessVerificationStatus": "verified-public",
+      "filename": "class-vi-science-trial-examination-2026.pdf",
+      "publicPath": "assets/question-papers/2026-trial/class-vi-science-trial-examination-2026.pdf"
     },
     {
       "suggestedDisplayTitle": "Class X Physics Trial Examination 2026",
@@ -294,8 +314,9 @@
       "subject": "Physics",
       "resourceType": "question-paper-candidate",
       "fileFormat": "PDF",
-      "driveFileId": "1X6Lq7MyihH1IFsOp-qoFMGwfE-Ar7kyX",
-      "accessVerificationStatus": "verified-public"
+      "accessVerificationStatus": "verified-public",
+      "filename": "class-x-physics-trial-examination-2026.pdf",
+      "publicPath": "assets/question-papers/2026-trial/class-x-physics-trial-examination-2026.pdf"
     }
   ]
 }

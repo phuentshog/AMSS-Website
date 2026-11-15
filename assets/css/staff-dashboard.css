@@ -844,6 +844,17 @@ body.staff-dashboard-page :focus-visible {
   .staff-dashboard-page .dashboard-menu-toggle { width: 38px; height: 38px; }
   .staff-dashboard-page .portal-profile strong { max-width: 38px; font-size: 8px; }
 }
+@media (max-width: 600px) {
+  .staff-dashboard-page .dashboard-nav,
+  .staff-dashboard-page .dashboard-nav-links,
+  .staff-dashboard-page .dashboard-nav-group,
+  .staff-dashboard-page .dashboard-nav-submenu { width: 100%; min-width: 0; max-width: 100%; }
+  .staff-dashboard-page .dashboard-nav-submenu { overflow-wrap: anywhere; }
+  .staff-dashboard-page .dashboard-nav-submenu-trigger { min-width: 0; min-height: 44px; white-space: normal; overflow-wrap: anywhere; }
+  .staff-dashboard-page .portal-dashboard-main > *,
+  .staff-dashboard-page .dashboard-section,
+  .staff-dashboard-page .dashboard-card { min-width: 0; }
+}
 @media (prefers-reduced-motion: reduce) {
   .staff-dashboard-page *,
   .staff-dashboard-page *::before,
