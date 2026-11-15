@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://phuentshog.github.io/AMSS-Website/assets/data/public/schemas/trial-exam.schema.json",
+  "title": "Public trial examination summary",
+  "description": "Approved class/subject aggregates. Small cohorts must be suppressed.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["year", "records", "passStats", "method", "limitations"],
+  "properties": {
+    "year": { "type": "integer" },
+    "method": { "type": "string" },
+    "limitations": { "type": "array", "items": { "type": "string" } },
+    "passStats": { "type": "object", "description": "Aggregate-only; omit small cohorts and all student identifiers." },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["class", "subject"],
+        "properties": {
+          "class": { "type": "string" },
+          "subject": { "type": "string" },
+          "meanPercent": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+          "targetPercent": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+          "passRate": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+          "department": { "type": "string" },
+          "cohortSizeBand": { "type": "string" },
+          "suppressed": { "type": "boolean", "description": "True when the approved minimum cohort threshold is not met." }
+        }
+      }
+    }
+  }
+}

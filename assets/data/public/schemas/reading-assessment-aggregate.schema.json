@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://phuentshog.github.io/AMSS-Website/assets/data/public/schemas/reading-assessment-aggregate.schema.json",
+  "title": "Public reading assessment aggregates",
+  "description": "Cohort aggregates only; never include child-level records or identifiers.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "groups"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["class", "round", "stage"],
+        "properties": {
+          "class": { "type": "string" },
+          "round": { "type": "string" },
+          "stage": { "type": "string" },
+          "cohortSizeBand": { "type": "string" },
+          "suppressed": { "type": "boolean" },
+          "meanOrfWords": { "type": ["number", "null"], "minimum": 0 },
+          "meanOrfAccuracy": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+          "meanMazeAdjustedScore": { "type": ["number", "null"], "minimum": 0 },
+          "performanceBands": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["band"],
+              "properties": {
+                "band": { "type": "string" },
+                "countBand": { "type": "string", "description": "Broad, threshold-protected count; do not expose exact small counts." }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

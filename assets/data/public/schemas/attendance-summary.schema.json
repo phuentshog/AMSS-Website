@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://phuentshog.github.io/AMSS-Website/assets/data/public/schemas/attendance-summary.schema.json",
+  "title": "Public attendance summary",
+  "description": "Aggregate attendance rates only; no student/staff identities or individual histories.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["periods"],
+  "properties": {
+    "periods": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["period", "group"],
+        "properties": {
+          "period": { "type": "string" },
+          "group": { "type": "string", "description": "Use a sufficiently large class/grade or whole-school group." },
+          "attendanceRate": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+          "cohortSizeBand": { "type": "string" },
+          "suppressed": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

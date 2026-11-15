@@ -1,0 +1,16 @@
+(() => {
+const root=document.querySelector('#annual-exam-content');if(!root)return;
+const e=v=>String(v??'—').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const table=(h,rows)=>`<div class="annual-table-wrap"><table><thead><tr>${h.map(v=>`<th>${e(v)}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map(v=>`<td>${e(v)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+const card=(title,html)=>`<section class="annual-card"><h3>${e(title)}</h3>${html}</section>`;
+fetch('assets/data/public/annual-exam.json').then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(d=>{
+const t=d.timeline,tt=d.timetable;
+root.querySelector('[data-annual-timeline]').innerHTML=`<ol>${t.events.map(x=>`<li><time>${e(x.date)}</time><h3>${e(x.event)}</h3><p>${e(x.duration)}</p></li>`).join('')}</ol>`;
+root.querySelector('[data-annual-timeline-note]').textContent=t.asteriskNote||'Public schedule summary.';
+root.querySelector('[data-annual-timetable]').innerHTML=table(['Date','Day','Class IV','Class V','Class VII','Class IX · Paper I','Class IX · Paper II'],tt.rows.map(r=>[r.date,r.day,r.classIV,r.classV,r.classVII,r.classIX?.paperI,r.classIX?.paperII]))+card('Class IX paper times',table(['Date','Day','Session','Paper','Subject','Start','End'],tt.classIXPaperTimes.map(r=>[r.date,r.day,r.exam,r.paper,r.subject,r.start,r.end])))+`<div class="annual-timing-variants">${tt.dayTimingVariants.map(v=>card(v.name,table(['Time','Activity'],v.events.map(x=>[x.time,x.activity])))).join('')}</div>`;
+const duty=d.invigilation.dutySummary||[],filters=root.querySelector('[data-duty-filters]'),body=root.querySelector('[data-duty-rows]'),summary=root.querySelector('[data-duty-summary]');
+filters.innerHTML=`<label>Date<select data-duty-date><option value="">All dates</option>${[...new Set(duty.map(x=>x.date))].map(x=>`<option>${e(x)}</option>`).join('')}</select></label><label>Session<select data-duty-session><option value="">All sessions</option><option>Exam 1</option><option>Exam 2</option></select></label>`;
+const render=()=>{const date=filters.querySelector('[data-duty-date]').value,session=filters.querySelector('[data-duty-session]').value,a=duty.filter(x=>(!date||x.date===date)&&(!session||x.session===session));body.innerHTML=a.map(x=>[x.date,x.session,x.assignmentCountBand].map(v=>`<td>${e(v)}</td>`).join('')).map(x=>`<tr>${x}</tr>`).join('');summary.textContent=`${a.length} aggregate date/session summaries`;};filters.addEventListener('change',render);render();
+const staff=root.querySelector('[data-annual-staff]');if(staff)staff.textContent='Staff totals and named assignments are withheld from this public view.';const notes=root.querySelector('[data-annual-duty-notes]');if(notes)notes.textContent=(d.invigilation.notes||[]).join(' ');const binders=root.querySelector('[data-annual-binders]');if(binders)binders.textContent='Named binder assignments are not published.';const checks=root.querySelector('[data-annual-source-checks]');if(checks)checks.textContent='Internal source workbook checks are not published.';
+}).catch(err=>{console.error(err);root.textContent='Annual examination public summary data could not be loaded.';});
+})();

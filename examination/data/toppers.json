@@ -1,264 +1,552 @@
 {
-  "source": "Examination /Subject Toppers.xlsx",
+  "publicDataNotice": "Anonymous class/subject averages only. Individual student names, scores, and portraits are not published.",
   "classes": [
     {
-      "sheet": "CE VI",
-      "label": "Class VI",
+      "label": "CE VI",
       "records": [
         {
-          "name": "Tenzin Tshoki Wangmo",
           "subject": "English",
-          "score": 95,
-          "year": 2025,
-          "photo": "Examination /subject toppers Photo/Tenzin Tshokey Wangmo.jpg",
-          "photoMatch": "unambiguous spelling variant",
-          "sourceRow": 3
-        },
-        {
-          "name": "Anuska Mongar",
-          "subject": "Dzongkha",
-          "score": 93,
-          "year": 2025,
-          "photo": "Examination /subject toppers Photo/Anuska Monger.jpg",
-          "photoMatch": "unambiguous spelling variant",
-          "sourceRow": 4
-        },
-        {
-          "name": "Tshering Samdrup",
-          "subject": "Mathematics",
-          "score": 91.38,
+          "score": 60.6,
           "year": 2023,
-          "photo": "Examination /subject toppers Photo/Tshering Samdrup.jpg",
-          "photoMatch": "normalized filename",
-          "sourceRow": 5
+          "cohortSizeBand": "10+"
         },
         {
-          "name": "Kabita Ghalley",
-          "subject": "Science",
-          "score": 98,
+          "subject": "English",
+          "score": 61.6,
+          "year": 2024,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "English",
+          "score": 67.9,
           "year": 2025,
-          "photo": "Examination /subject toppers Photo/kabita ghalley.jpg",
-          "photoMatch": "normalized filename",
-          "sourceRow": 6
+          "cohortSizeBand": "10+"
         },
         {
-          "name": "Kabita Ghalley",
+          "subject": "Dzongkha",
+          "score": 66.7,
+          "year": 2023,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Dzongkha",
+          "score": 55.2,
+          "year": 2024,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Dzongkha",
+          "score": 58.7,
+          "year": 2025,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Maths",
+          "score": 53.0,
+          "year": 2023,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Maths",
+          "score": 47.1,
+          "year": 2024,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Maths",
+          "score": 52.1,
+          "year": 2025,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Sci",
+          "score": 44.8,
+          "year": 2023,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Sci",
+          "score": 48.7,
+          "year": 2024,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Sci",
+          "score": 60.4,
+          "year": 2025,
+          "cohortSizeBand": "10+"
+        },
+        {
           "subject": "ICT",
-          "score": 97,
-          "year": 2025,
-          "photo": "Examination /subject toppers Photo/kabita ghalley.jpg",
-          "photoMatch": "normalized filename",
-          "sourceRow": 7
+          "score": 48.4,
+          "year": 2023,
+          "cohortSizeBand": "10+"
         },
         {
-          "name": "Dodrup Yangchen Dorji",
-          "subject": "Social Studies",
-          "score": 99,
+          "subject": "ICT",
+          "score": 50.9,
+          "year": 2024,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "ICT",
+          "score": 54.8,
           "year": 2025,
-          "photo": "Examination /subject toppers Photo/Dodrup Yangchen Dorji.jpg",
-          "photoMatch": "normalized filename",
-          "sourceRow": 8
+          "cohortSizeBand": "10+"
         }
       ]
     },
     {
-      "sheet": "CE VIII",
-      "label": "Class VIII",
+      "label": "CE VIII",
       "records": [
         {
-          "name": "Priya Chhetri",
           "subject": "English",
-          "score": 91,
-          "year": 2024,
-          "photo": "Examination /subject toppers Photo/Priya Chhetri.jpg",
-          "photoMatch": "normalized filename",
-          "sourceRow": 3
-        },
-        {
-          "name": "Priya Chhetri",
-          "subject": "Dzongkha",
-          "score": 88,
-          "year": 2024,
-          "photo": "Examination /subject toppers Photo/Priya Chhetri.jpg",
-          "photoMatch": "normalized filename",
-          "sourceRow": 4
-        },
-        {
-          "name": "Kezang Dendup",
-          "subject": "Mathematics",
-          "score": 92.13,
-          "year": 2023,
-          "photo": null,
-          "photoMatch": null,
-          "sourceRow": 5
-        },
-        {
-          "name": "Priya Chhetri",
-          "subject": "Science",
-          "score": 94,
-          "year": 2024,
-          "photo": "Examination /subject toppers Photo/Priya Chhetri.jpg",
-          "photoMatch": "normalized filename",
-          "sourceRow": 6
-        },
-        {
-          "name": "Ugyen Wangchuk",
-          "subject": "History",
-          "score": 88,
-          "year": 2025,
-          "photo": "Examination /subject toppers Photo/Ugyen Wangchuk.jpg",
-          "photoMatch": "normalized filename",
-          "sourceRow": 7
-        },
-        {
-          "name": "Karma Tenzin",
-          "subject": "Geography",
-          "score": 91,
-          "year": 2024,
-          "photo": "Examination /subject toppers Photo/karma_tenzin-removebg-preview.png",
-          "photoMatch": "normalized filename",
-          "sourceRow": 8
-        },
-        {
-          "name": "Karma Tenzin",
-          "subject": "ICT",
-          "score": 95,
-          "year": 2024,
-          "photo": "Examination /subject toppers Photo/karma_tenzin-removebg-preview.png",
-          "photoMatch": "normalized filename",
-          "sourceRow": 9
-        }
-      ]
-    },
-    {
-      "sheet": "BCSE",
-      "label": "Class X",
-      "records": [
-        {
-          "name": "Tenzin Tshomo Thinley",
-          "subject": "English",
-          "score": 90,
+          "score": 61.5,
           "year": 2022,
-          "photo": null,
-          "photoMatch": null,
-          "sourceRow": 3
+          "cohortSizeBand": "10+"
         },
         {
-          "name": "Yangzom",
+          "subject": "English",
+          "score": 74.3,
+          "year": 2023,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "English",
+          "score": 64.2,
+          "year": 2024,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "English",
+          "score": 60.9,
+          "year": 2025,
+          "cohortSizeBand": "10+"
+        },
+        {
           "subject": "Dzongkha",
-          "score": 84,
+          "score": 59.7,
+          "year": 2022,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Dzongkha",
+          "score": 64.2,
+          "year": 2023,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Dzongkha",
+          "score": 66.0,
+          "year": 2024,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Dzongkha",
+          "score": 59.5,
+          "year": 2025,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Maths",
+          "score": 45.4,
+          "year": 2022,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Maths",
+          "score": 53.5,
+          "year": 2023,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Maths",
+          "score": 45.7,
+          "year": 2024,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Maths",
+          "score": 44.0,
+          "year": 2025,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Sci",
+          "score": 51.0,
+          "year": 2022,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Sci",
+          "score": 44.4,
+          "year": 2023,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Sci",
+          "score": 54.8,
+          "year": 2024,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Sci",
+          "score": 49.9,
+          "year": 2025,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "His",
+          "score": 55.9,
+          "year": 2022,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "His",
+          "score": 65.0,
+          "year": 2023,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "His",
+          "score": 51.0,
+          "year": 2024,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "His",
+          "score": 56.2,
+          "year": 2025,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Geo",
+          "score": 46.4,
+          "year": 2022,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Geo",
+          "score": 63.8,
+          "year": 2023,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Geo",
+          "score": 61.1,
+          "year": 2024,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Geo",
+          "score": 52.3,
+          "year": 2025,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "ICT",
+          "score": 46.1,
+          "year": 2023,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "ICT",
+          "score": 56.5,
+          "year": 2024,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "ICT",
+          "score": 47.8,
+          "year": 2025,
+          "cohortSizeBand": "10+"
+        }
+      ]
+    },
+    {
+      "label": "BCSE X",
+      "records": [
+        {
+          "subject": "English",
+          "score": 56.3,
           "year": 2021,
-          "photo": null,
-          "photoMatch": null,
-          "sourceRow": 4
+          "cohortSizeBand": "10+"
         },
         {
-          "name": "Rinzin Wangmo",
-          "subject": "Dzongkha",
-          "score": 84,
-          "year": 2024,
-          "photo": null,
-          "photoMatch": null,
-          "sourceRow": 5
-        },
-        {
-          "name": "Bishnu Hari Powdel",
-          "subject": "Mathematics",
-          "score": 90,
+          "subject": "English",
+          "score": 54.3,
           "year": 2022,
-          "photo": null,
-          "photoMatch": null,
-          "sourceRow": 6
+          "cohortSizeBand": "10+"
         },
         {
-          "name": "Tenzin Tshomo Thinley",
-          "subject": "Geography",
-          "score": 89,
-          "year": 2022,
-          "photo": null,
-          "photoMatch": null,
-          "sourceRow": 7
-        },
-        {
-          "name": "Tshering Pem",
-          "subject": "Geography",
-          "score": 89,
-          "year": 2022,
-          "photo": null,
-          "photoMatch": null,
-          "sourceRow": 8
-        },
-        {
-          "name": "Dechen Wangmo",
-          "subject": "History",
-          "score": 85,
-          "year": 2025,
-          "photo": "Examination /subject toppers Photo/Dechen Wangmo.png",
-          "photoMatch": "normalized filename",
-          "sourceRow": 9
-        },
-        {
-          "name": "Tenzin Tshomo Thinley",
-          "subject": "Physics",
-          "score": 87,
-          "year": 2022,
-          "photo": null,
-          "photoMatch": null,
-          "sourceRow": 10
-        },
-        {
-          "name": "Tenzin Tshomo Thinley",
-          "subject": "Chemistry",
-          "score": 88,
-          "year": 2022,
-          "photo": null,
-          "photoMatch": null,
-          "sourceRow": 11
-        },
-        {
-          "name": "Tenzin Tshomo Thinley",
-          "subject": "Biology",
-          "score": 90,
-          "year": 2022,
-          "photo": null,
-          "photoMatch": null,
-          "sourceRow": 12
-        },
-        {
-          "name": "Kelden Om Tamang",
-          "subject": "Economics",
-          "score": 87,
+          "subject": "English",
+          "score": 62.3,
           "year": 2023,
-          "photo": null,
-          "photoMatch": null,
-          "sourceRow": 13
+          "cohortSizeBand": "10+"
         },
         {
-          "name": "Bishnu Hari Powdel",
-          "subject": "Economics",
-          "score": 87,
-          "year": 2022,
-          "photo": null,
-          "photoMatch": null,
-          "sourceRow": 14
-        },
-        {
-          "name": "Tenzin Tshomo Thinley",
-          "subject": "Economics",
-          "score": 87,
-          "year": 2022,
-          "photo": null,
-          "photoMatch": null,
-          "sourceRow": 15
-        },
-        {
-          "name": "Sailensfer Pokwal",
-          "subject": "ICT",
-          "score": 79,
+          "subject": "English",
+          "score": 55.0,
           "year": 2024,
-          "photo": null,
-          "photoMatch": null,
-          "sourceRow": 16
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "English",
+          "score": 62.7,
+          "year": 2025,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Dzongkha",
+          "score": 53.0,
+          "year": 2021,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Dzongkha",
+          "score": 57.5,
+          "year": 2022,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Dzongkha",
+          "score": 54.8,
+          "year": 2023,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Dzongkha",
+          "score": 57.0,
+          "year": 2024,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Dzongkha",
+          "score": 62.8,
+          "year": 2025,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "History",
+          "score": 42.4,
+          "year": 2021,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "History",
+          "score": 33.8,
+          "year": 2022,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "History",
+          "score": 55.3,
+          "year": 2023,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "History",
+          "score": 43.8,
+          "year": 2024,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "History",
+          "score": 58.7,
+          "year": 2025,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Geography",
+          "score": 34.1,
+          "year": 2021,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Geography",
+          "score": 42.7,
+          "year": 2022,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Geography",
+          "score": 51.4,
+          "year": 2023,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Geography",
+          "score": 52.4,
+          "year": 2024,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Geography",
+          "score": 57.2,
+          "year": 2025,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Economics",
+          "score": 42.1,
+          "year": 2021,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Economics",
+          "score": 47.3,
+          "year": 2022,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Economics",
+          "score": 66.4,
+          "year": 2023,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Economics",
+          "score": 56.3,
+          "year": 2025,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "ICT",
+          "score": 48.0,
+          "year": 2023,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "ICT",
+          "score": 48.4,
+          "year": 2024,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "ICT",
+          "score": 43.1,
+          "year": 2025,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Maths",
+          "score": 34.1,
+          "year": 2021,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Maths",
+          "score": 33.3,
+          "year": 2022,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Maths",
+          "score": 36.8,
+          "year": 2023,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Maths",
+          "score": 39.2,
+          "year": 2024,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Maths",
+          "score": 55.7,
+          "year": 2025,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Physics",
+          "score": 38.3,
+          "year": 2021,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Physics",
+          "score": 43.8,
+          "year": 2022,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Physics",
+          "score": 52.4,
+          "year": 2023,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Physics",
+          "score": 48.6,
+          "year": 2024,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Physics",
+          "score": 48.8,
+          "year": 2025,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Chemistry",
+          "score": 39.2,
+          "year": 2021,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Chemistry",
+          "score": 42.0,
+          "year": 2022,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Chemistry",
+          "score": 50.1,
+          "year": 2023,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Chemistry",
+          "score": 37.9,
+          "year": 2024,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Chemistry",
+          "score": 49.4,
+          "year": 2025,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Biology",
+          "score": 42.1,
+          "year": 2021,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Biology",
+          "score": 44.8,
+          "year": 2022,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Biology",
+          "score": 49.6,
+          "year": 2023,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Biology",
+          "score": 49.4,
+          "year": 2024,
+          "cohortSizeBand": "10+"
+        },
+        {
+          "subject": "Biology",
+          "score": 59.1,
+          "year": 2025,
+          "cohortSizeBand": "10+"
         }
       ]
     }

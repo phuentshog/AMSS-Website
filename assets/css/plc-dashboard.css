@@ -1,0 +1,540 @@
+/* Staff Dashboard PLC redesign. Deliberately scoped to this embedded directory. */
+.staff-dashboard-page .plc-dashboard-embed {
+  --plc-page: #fff;
+  --plc-surface: #fff;
+  --plc-surface-soft: #f8fafc;
+  --plc-surface-muted: #f1f5f9;
+  --plc-text: #0f172a;
+  --plc-body: #475569;
+  --plc-muted: #64748b;
+  --plc-accent: #2563eb;
+  --plc-accent-soft: #eff6ff;
+  --plc-border: #e2e8f0;
+  --plc-radius: 12px;
+  --plc-shadow: 0 4px 16px rgb(15 23 42 / 5%);
+  --plc-shadow-hover: 0 9px 24px rgb(37 99 235 / 10%);
+  width: 100%;
+  padding: 0;
+  color: var(--plc-text);
+  background: var(--plc-page);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+:root[data-theme="dark"] .staff-dashboard-page .plc-dashboard-embed {
+  --plc-page: #1c2026;
+  --plc-surface: #252b33;
+  --plc-surface-soft: #20262e;
+  --plc-surface-muted: #2c333c;
+  --plc-text: #edf1f6;
+  --plc-body: #cbd5e1;
+  --plc-muted: #aab6c5;
+  --plc-accent: #8bb6ff;
+  --plc-accent-soft: #203452;
+  --plc-border: #3c4652;
+  --plc-shadow: 0 4px 16px rgb(0 0 0 / 15%);
+  --plc-shadow-hover: 0 9px 24px rgb(0 0 0 / 24%);
+}
+.staff-dashboard-page .plc-dashboard-embed :is(h1,h2,h3,p,span,strong,a,button,label,input) {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+  width: min(100%, 1320px);
+  margin-inline: auto;
+  padding: 24px clamp(16px, 2.4vw, 32px) 0;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-hero {
+  display: grid;
+  gap: 6px;
+  min-height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-hero::before { content: none; }
+.staff-dashboard-page .plc-dashboard-embed .plc-hero > * { position: static; }
+.staff-dashboard-page .plc-dashboard-embed .plc-hero .plc-eyebrow {
+  margin: 0;
+  color: var(--plc-accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-hero h1 {
+  margin: 0;
+  color: var(--plc-text);
+  font-size: clamp(28px, 3vw, 32px);
+  font-weight: 650;
+  letter-spacing: -.03em;
+  line-height: 1.2;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-hero-copy {
+  display: block;
+  max-width: none;
+  margin: 0;
+  color: var(--plc-body);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: auto;
+  margin: 8px 0 0;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  min-height: 30px;
+  padding: 5px 10px;
+  border: 1px solid var(--plc-border);
+  border-radius: 999px;
+  background: var(--plc-surface-soft);
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-stat strong {
+  color: var(--plc-text);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-stat span {
+  color: var(--plc-body);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.staff-dashboard-page .plc-dashboard-embed #plc-status {
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--plc-border);
+  border-left: 3px solid var(--plc-accent);
+  border-radius: 9px;
+  color: var(--plc-body);
+  background: var(--plc-surface-soft);
+  font-size: 13px;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-status--error { border-left-color: #dc2626; }
+.staff-dashboard-page .plc-dashboard-embed .plc-status-actions { align-items: center; }
+.staff-dashboard-page .plc-dashboard-embed #plc-directory-view {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-search-panel {
+  display: grid;
+  gap: 8px;
+  min-height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-search-label {
+  color: var(--plc-text);
+  font-size: 14px;
+  font-weight: 600;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-search-row { display: block; }
+.staff-dashboard-page .plc-dashboard-embed .plc-search-control {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr) 32px;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 9px 0 13px;
+  border: 1px solid var(--plc-border);
+  border-radius: 10px;
+  background: var(--plc-surface);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-search-control:focus-within {
+  border-color: var(--plc-accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--plc-accent) 18%, transparent);
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-search-control > svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: var(--plc-muted);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-search-input {
+  width: 100%;
+  min-width: 0;
+  min-height: 42px;
+  padding: 8px 0;
+  border: 0;
+  outline: 0;
+  color: var(--plc-text);
+  background: transparent;
+  box-shadow: none;
+  font-size: 14px;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-search-input::placeholder { color: var(--plc-muted); opacity: 1; }
+.staff-dashboard-page .plc-dashboard-embed .plc-search-input:focus-visible { outline: 0; box-shadow: none; }
+.staff-dashboard-page .plc-dashboard-embed .plc-search-clear {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 7px;
+  color: var(--plc-muted);
+  background: transparent;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-search-clear:hover { color: var(--plc-accent); background: var(--plc-accent-soft); }
+.staff-dashboard-page .plc-dashboard-embed .plc-search-clear:focus-visible,
+.staff-dashboard-page .plc-dashboard-embed :is(button,a,input):focus-visible {
+  outline: 3px solid var(--plc-accent);
+  outline-offset: 3px;
+}
+.staff-dashboard-page .plc-dashboard-embed #plc-home-view { display: grid; gap: 12px; }
+.staff-dashboard-page .plc-dashboard-embed .plc-department-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-department-tile {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) 24px;
+  grid-template-rows: auto auto 1fr;
+  align-items: center;
+  gap: 4px 12px;
+  min-width: 0;
+  min-height: 132px;
+  padding: 16px;
+  border: 1px solid var(--plc-border);
+  border-radius: var(--plc-radius);
+  color: var(--plc-text);
+  background: var(--plc-surface);
+  box-shadow: none;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 150ms ease, background-color 150ms ease, box-shadow 150ms ease;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-department-tile:hover,
+.staff-dashboard-page .plc-dashboard-embed .plc-department-tile:focus-visible {
+  border-color: var(--plc-accent);
+  background: var(--plc-surface-soft);
+  box-shadow: var(--plc-shadow-hover);
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-department-tile:focus-visible { outline-offset: 2px; }
+.staff-dashboard-page .plc-dashboard-embed .plc-tile-top { display: contents; }
+.staff-dashboard-page .plc-dashboard-embed .plc-department-icon {
+  grid-column: 1;
+  grid-row: 1 / 4;
+  align-self: start;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--plc-border);
+  border-radius: 10px;
+  color: var(--plc-accent);
+  background: var(--plc-accent-soft);
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-department-icon:is(.plc-department-icon--landmark,.plc-department-icon--flask-conical,.plc-department-icon--book-open,.plc-department-icon--calculator,.plc-department-icon--shapes,.plc-department-icon--languages) {
+  --plc-icon-ink: var(--plc-accent);
+  --plc-icon-tint: var(--plc-accent-soft);
+  --plc-icon-border: var(--plc-border);
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-department-icon svg { width: 21px; height: 21px; }
+.staff-dashboard-page .plc-dashboard-embed .plc-tile-arrow {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+  color: var(--plc-muted);
+  font-size: 17px;
+  transition: color 150ms ease, transform 150ms ease;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-department-tile:hover .plc-tile-arrow { color: var(--plc-accent); transform: translateX(3px); }
+.staff-dashboard-page .plc-dashboard-embed .plc-department-tile h3 {
+  grid-column: 2 / 4;
+  grid-row: 1;
+  align-self: start;
+  margin: 0 22px 0 0;
+  color: var(--plc-text);
+  font-size: 16px;
+  font-weight: 650;
+  letter-spacing: -.015em;
+  line-height: 1.3;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-tile-count {
+  grid-column: 2 / 4;
+  grid-row: 2;
+  color: var(--plc-muted);
+  font-size: 13px;
+  line-height: 1.3;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-avatar-stack {
+  grid-column: 2 / 4;
+  grid-row: 3;
+  align-self: end;
+  margin: 8px 0 0;
+  padding: 0;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-mini-avatar {
+  width: 25px;
+  height: 25px;
+  margin-left: -7px;
+  border: 2px solid var(--plc-surface);
+  color: var(--plc-accent);
+  background: var(--plc-accent-soft);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 8px;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-mini-avatar:first-child { margin-left: 0; }
+.staff-dashboard-page .plc-dashboard-embed .plc-avatar-overflow {
+  width: auto;
+  min-width: 27px;
+  padding-inline: 5px;
+  border-radius: 999px;
+  color: var(--plc-accent);
+  background: var(--plc-accent-soft);
+  font-size: 9px;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-search-results { gap: 8px; margin: 8px 0 0; }
+.staff-dashboard-page .plc-dashboard-embed .plc-search-status { color: var(--plc-body); font-size: 13px; }
+.staff-dashboard-page .plc-dashboard-embed .plc-search-result {
+  border-color: var(--plc-border);
+  border-radius: 10px;
+  color: var(--plc-text);
+  background: var(--plc-surface);
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-search-result-main strong { font-size: 14px; }
+.staff-dashboard-page .plc-dashboard-embed .plc-search-result-main span { color: var(--plc-muted); font-size: 13px; }
+.staff-dashboard-page .plc-dashboard-embed .plc-department-view { display: grid; gap: 16px; }
+.staff-dashboard-page .plc-dashboard-embed .plc-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--plc-muted);
+  font-size: 13px;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-breadcrumb button {
+  padding: 0;
+  border: 0;
+  color: var(--plc-accent);
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-breadcrumb button:hover { text-decoration: underline; text-underline-offset: 3px; }
+.staff-dashboard-page .plc-dashboard-embed .plc-department-heading {
+  display: block;
+  padding: 0 0 12px;
+  border-bottom: 1px solid var(--plc-border);
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-department-heading .plc-eyebrow { margin: 0 0 4px; color: var(--plc-accent); font-size: 12px; }
+.staff-dashboard-page .plc-dashboard-embed .plc-department-heading h2 {
+  margin: 0;
+  color: var(--plc-text);
+  font-size: 27px;
+  font-weight: 650;
+  letter-spacing: -.025em;
+  line-height: 1.2;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-department-heading p:last-child { margin: 4px 0 0; color: var(--plc-muted); font-size: 13px; }
+.staff-dashboard-page .plc-dashboard-embed .plc-hod-card {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
+  min-height: 120px;
+  padding: 16px 18px;
+  border: 1px solid var(--plc-border);
+  border-radius: var(--plc-radius);
+  background: var(--plc-surface);
+  box-shadow: var(--plc-shadow);
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-hod-photo { width: 76px; max-width: 76px; justify-self: start; }
+.staff-dashboard-page .plc-dashboard-embed .plc-hod-photo .plc-portrait,
+.staff-dashboard-page .plc-dashboard-embed .plc-teacher-card .plc-portrait {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 50%;
+  background: var(--plc-accent-soft);
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-portrait img { position: absolute; inset: 0; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+.staff-dashboard-page .plc-dashboard-embed .plc-photo-fallback {
+  color: #1d4ed8;
+  background: #eff6ff;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 22px;
+  font-weight: 650;
+  letter-spacing: -.02em;
+}
+:root[data-theme="dark"] .staff-dashboard-page .plc-dashboard-embed .plc-photo-fallback { color: #bfdbfe; background: #203452; }
+.staff-dashboard-page .plc-dashboard-embed .plc-hod-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 4px 16px;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-hod-badge {
+  grid-column: 1 / -1;
+  justify-self: start;
+  min-height: 23px;
+  margin: 0 0 2px;
+  padding: 3px 8px;
+  border: 1px solid var(--plc-border);
+  border-radius: 999px;
+  color: var(--plc-accent);
+  background: var(--plc-accent-soft);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-hod-copy h3 {
+  grid-column: 1;
+  margin: 0;
+  color: var(--plc-text);
+  font-size: 20px;
+  font-weight: 650;
+  line-height: 1.25;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-hod-copy p { grid-column: 1; margin: 0; font-size: 13px; }
+.staff-dashboard-page .plc-dashboard-embed .plc-hod-department { color: var(--plc-body); font-weight: 600; }
+.staff-dashboard-page .plc-dashboard-embed .plc-hod-role { color: var(--plc-muted); }
+.staff-dashboard-page .plc-dashboard-embed .plc-hod-copy > .plc-button,
+.staff-dashboard-page .plc-dashboard-embed .plc-hod-copy > .plc-folder-note {
+  grid-column: 2;
+  grid-row: 2 / 5;
+  justify-self: end;
+  align-self: center;
+  margin: 0;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-button {
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid var(--plc-border);
+  border-radius: 9px;
+  color: var(--plc-text);
+  background: var(--plc-surface-soft);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 150ms ease, background-color 150ms ease, color 150ms ease;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-button:hover { border-color: var(--plc-accent); color: var(--plc-accent); background: var(--plc-accent-soft); }
+.staff-dashboard-page .plc-dashboard-embed .plc-section-heading { align-items: center; margin: 0; }
+.staff-dashboard-page .plc-dashboard-embed .plc-section-heading h2 { margin: 0; color: var(--plc-text); font-size: 20px; font-weight: 650; }
+.staff-dashboard-page .plc-dashboard-embed .plc-section-heading p { margin: 3px 0 0; color: var(--plc-muted); font-size: 12px; }
+.staff-dashboard-page .plc-dashboard-embed .plc-member-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-teacher-card {
+  display: grid;
+  grid-template-rows: 56px 1fr;
+  justify-items: center;
+  gap: 6px;
+  min-width: 0;
+  min-height: 170px;
+  padding: 13px 10px;
+  border: 1px solid var(--plc-border);
+  border-radius: var(--plc-radius);
+  color: var(--plc-text);
+  background: var(--plc-surface);
+  box-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  transition: border-color 150ms ease, background-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+.staff-dashboard-page .plc-dashboard-embed a.plc-teacher-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--plc-accent);
+  background: var(--plc-surface-soft);
+  box-shadow: var(--plc-shadow-hover);
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-teacher-card:focus-visible { outline: 3px solid var(--plc-accent); outline-offset: 2px; }
+.staff-dashboard-page .plc-dashboard-embed .plc-teacher-card .plc-portrait { width: 56px; height: 56px; }
+.staff-dashboard-page .plc-dashboard-embed .plc-teacher-card .plc-photo-fallback { font-size: 18px; }
+.staff-dashboard-page .plc-dashboard-embed .plc-card-copy { display: grid; align-content: start; justify-items: center; gap: 3px; min-width: 0; width: 100%; padding: 0; }
+.staff-dashboard-page .plc-dashboard-embed .plc-card-copy strong {
+  display: -webkit-box;
+  overflow: hidden;
+  max-width: 100%;
+  color: var(--plc-text);
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-card-department { color: var(--plc-muted); font-size: 11px; }
+.staff-dashboard-page .plc-dashboard-embed .plc-card-role { color: var(--plc-body); font-size: 12px; line-height: 1.3; }
+.staff-dashboard-page .plc-dashboard-embed .plc-folder-note { margin: 3px 0 0; color: var(--plc-accent); font-size: 11px; font-weight: 600; }
+.staff-dashboard-page .plc-dashboard-embed .plc-folder-note--missing { color: var(--plc-muted); font-weight: 400; }
+.staff-dashboard-page .plc-dashboard-embed .plc-department-empty,
+.staff-dashboard-page .plc-dashboard-embed .plc-directory-empty,
+.staff-dashboard-page .plc-dashboard-embed .plc-empty {
+  border-color: var(--plc-border);
+  border-radius: var(--plc-radius);
+  color: var(--plc-body);
+  background: var(--plc-surface-soft);
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-empty strong { color: var(--plc-text); }
+.staff-dashboard-page .plc-dashboard-embed .plc-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  min-height: 52px;
+  margin-top: 8px;
+  padding: 12px 0 18px;
+  border-top: 1px solid var(--plc-border);
+  color: var(--plc-muted);
+  font-size: 12px;
+}
+.staff-dashboard-page .plc-dashboard-embed .plc-footer a { color: var(--plc-accent); font-weight: 600; text-decoration: none; }
+.staff-dashboard-page .plc-dashboard-embed .plc-footer a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.staff-dashboard-page .plc-dashboard-embed [hidden] { display: none !important; }
+@media (max-width: 1050px) {
+  .staff-dashboard-page .plc-dashboard-embed .plc-department-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .staff-dashboard-page .plc-dashboard-embed .plc-member-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .staff-dashboard-page .plc-dashboard-embed .plc-shell { gap: 16px; padding: 18px 14px 0; }
+  .staff-dashboard-page .plc-dashboard-embed .plc-hero h1 { font-size: 28px; }
+  .staff-dashboard-page .plc-dashboard-embed .plc-department-grid,
+  .staff-dashboard-page .plc-dashboard-embed .plc-member-grid { grid-template-columns: minmax(0, 1fr); }
+  .staff-dashboard-page .plc-dashboard-embed .plc-department-tile { min-height: 124px; }
+  .staff-dashboard-page .plc-dashboard-embed .plc-hod-card { grid-template-columns: 68px minmax(0, 1fr); gap: 12px; padding: 14px; }
+  .staff-dashboard-page .plc-dashboard-embed .plc-hod-photo { width: 68px; max-width: 68px; }
+  .staff-dashboard-page .plc-dashboard-embed .plc-hod-copy { grid-template-columns: minmax(0, 1fr); }
+  .staff-dashboard-page .plc-dashboard-embed .plc-hod-badge,
+  .staff-dashboard-page .plc-dashboard-embed .plc-hod-copy h3,
+  .staff-dashboard-page .plc-dashboard-embed .plc-hod-copy p,
+  .staff-dashboard-page .plc-dashboard-embed .plc-hod-copy > .plc-button,
+  .staff-dashboard-page .plc-dashboard-embed .plc-hod-copy > .plc-folder-note { grid-column: 1; grid-row: auto; justify-self: start; }
+  .staff-dashboard-page .plc-dashboard-embed .plc-hod-copy h3 { font-size: 18px; }
+  .staff-dashboard-page .plc-dashboard-embed .plc-teacher-card { min-height: 160px; }
+  .staff-dashboard-page .plc-dashboard-embed .plc-search-result { grid-template-columns: minmax(0, 1fr); }
+  .staff-dashboard-page .plc-dashboard-embed .plc-search-result-actions { justify-content: flex-start; }
+  .staff-dashboard-page .plc-dashboard-embed .plc-footer { align-items: flex-start; flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .staff-dashboard-page .plc-dashboard-embed *,
+  .staff-dashboard-page .plc-dashboard-embed *::before,
+  .staff-dashboard-page .plc-dashboard-embed *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}

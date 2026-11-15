@@ -18,7 +18,7 @@
     'Design Technology and Innovation (DTI)': 'DTI',
     'Digital Technology and Information': 'DTI',
   };
-  const initialInstructions = 'Choose one or more filters and click Search Papers. Entries without confirmed access remain listed with a status message.';
+  const initialInstructions = 'No papers are listed yet. Documents will appear after their public access and contents are verified.';
   const unverifiedExplanation = 'This paper is listed in the catalogue, but its document has not yet been confirmed as accessible to students. Please check again later.';
   const isQuestionPaperCandidate = (paper) => paper?.resourceType === 'question-paper-candidate';
   // Allowlisted IDs have evidence of signed-out access: prior viewer checks or unauthenticated PDF retrieval, as detailed in papers-access-audit.md.
@@ -488,8 +488,10 @@
       : classList.length > 1
         ? `Classes ${classList.slice(0, -1).join(', ')} and ${classList.at(-1)}`
         : '';
+    const classDisplayTitle = paper.classDisplay ? `Class ${String(paper.classDisplay).trim()}` : classTitle;
     const subject = paper.subject ? displaySubject(paper.subject) : '';
-    const identity = [classTitle, subject].filter(Boolean).join(' ');
+    const paperNumber = paper.paperNumber ? `Paper ${String(paper.paperNumber).trim()}` : '';
+    const identity = [classDisplayTitle, subject, paperNumber].filter(Boolean).join(' ');
     const exam = paper.examinationType ? examinationTitle(paper.examinationType) : '';
     const year = paper.year !== null && paper.year !== undefined && paper.year !== '' ? String(paper.year) : '';
     const context = [exam, year].filter(Boolean).join(' ');
@@ -579,7 +581,7 @@
 
   const loadCatalogue = async () => {
     try {
-      const response = await fetch('examination/data/papers-review.json', { headers: { Accept: 'application/json' } });
+      const response = await fetch('examination/data/papers.json', { headers: { Accept: 'application/json' } });
       if (!response.ok) throw new Error(`Catalogue request failed (${response.status}).`);
       const catalogue = await response.json();
       if (!catalogue || !Array.isArray(catalogue.papers)) throw new Error('The catalogue data is not in the expected format.');

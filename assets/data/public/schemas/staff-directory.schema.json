@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://phuentshog.github.io/AMSS-Website/assets/data/public/schemas/staff-directory.schema.json",
+  "title": "Approved public staff directory",
+  "description": "Template only. Do not populate until staff display fields and portraits are approved for public release.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["sections", "groups", "staff"],
+  "properties": {
+    "sections": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["id", "title"], "properties": { "id": { "type": "string" }, "title": { "type": "string" } } } },
+    "groups": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["id", "title", "section"], "properties": { "id": { "type": "string" }, "title": { "type": "string" }, "section": { "type": "string" } } } },
+    "staff": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["displayName", "role", "department"],
+        "properties": {
+          "displayName": { "type": "string" },
+          "role": { "type": "string" },
+          "department": { "type": "string" },
+          "portraitPath": { "type": "string", "description": "Only a portrait approved for public display; use a site-relative asset path." }
+        }
+      }
+    }
+  }
+}

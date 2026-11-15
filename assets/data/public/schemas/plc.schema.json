@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://phuentshog.github.io/AMSS-Website/assets/data/public/schemas/plc.schema.json",
+  "title": "Public PLC directory summary",
+  "description": "Department labels and approved public resources; no private Drive folders or unapproved staff profiles.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["departments"],
+  "properties": {
+    "departments": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "title"],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "memberCountBand": { "type": "string" },
+          "resources": {
+            "type": "array",
+            "items": {
+              "type": "object", "additionalProperties": false,
+              "required": ["title", "url"],
+              "properties": { "title": { "type": "string" }, "url": { "type": "string", "format": "uri", "pattern": "^https://" } }
+            }
+          }
+        }
+      }
+    }
+  }
+}

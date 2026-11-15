@@ -9,7 +9,7 @@
 .student-leader-group--featured { grid-column: 1 / -1; padding: clamp(24px, 3vw, 36px); background: #fffefa; }
 #school-captains { width: 100%; min-width: 0; grid-column: 1 / -1; justify-self: stretch; }
 .student-leader-group-heading { margin-bottom: 19px; }
-.student-leader-group-heading .eyebrow { margin-bottom: 5px; font-size: 9px; }
+.student-leader-group-heading .eyebrow { margin-bottom: 5px; font-size: 10px; font-weight: 700; }
 .student-leader-group-heading h2 { margin: 0; color: var(--color-primary-dark); font-family: var(--font-body); font-size: clamp(18px, 2vw, 22px); font-weight: 700; letter-spacing: 0; line-height: 1.3; }
 .student-leader-cards { display: flex; width: 100%; min-width: 0; flex-wrap: wrap; align-items: flex-start; justify-content: center; gap: 16px; margin-inline: auto; }
 .student-leader-card { width: 190px; max-width: 100%; min-width: 0; flex: 0 1 190px; overflow: hidden; border: 1px solid var(--color-line); border-radius: 4px; background: #fff; }
@@ -20,7 +20,7 @@
 .student-leader-photo-fallback[hidden] { display: none; }
 .student-leader-card-copy { min-height: 92px; padding: 13px 12px 15px; border-top: 2px solid var(--color-gold); text-align: center; }
 .student-leader-card-copy h3 { margin: 0 0 5px; color: var(--color-primary-dark); font-family: var(--font-body); font-size: 15px; font-weight: 700; line-height: 1.35; }
-.student-leader-card-copy p { display: table; max-width: 100%; margin: 5px auto 0; padding: 3px 9px; border: 1px solid rgba(200, 153, 58, .55); border-radius: 999px; color: var(--color-primary-dark); background: #fff8e7; font-size: 11px; font-weight: 600; line-height: 1.35; }
+.student-leader-card-copy p { display: table; max-width: 100%; margin: 5px auto 0; padding: 3px 9px; border: 1px solid rgba(200, 153, 58, .55); border-radius: 999px; color: var(--color-primary-dark); background: #fff8e7; font-size: 11px; font-weight: 650; line-height: 1.4; }
 .student-leader-group--featured .student-leader-group-heading { text-align: center; }
 .student-leader-group--featured .student-leader-cards { gap: 32px; }
 .student-leader-group--featured .student-leader-card { width: 260px; flex-basis: 260px; }
@@ -46,7 +46,7 @@
   .student-leader-card { width: calc((100% - 8px) / 2); max-width: 160px; flex: 0 1 calc((100% - 8px) / 2); }
   .student-leader-group--featured .student-leader-card { width: calc((100% - 8px) / 2); max-width: 160px; flex: 0 1 calc((100% - 8px) / 2); }
   .student-leader-card-copy h3 { font-size: 13px; }
-  .student-leader-card-copy p { font-size: 10px; }
+  .student-leader-card-copy p { font-size: 11px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .student-leaders-page *, .student-leaders-page *::before, .student-leaders-page *::after { scroll-behavior: auto; transition-duration: .01ms !important; }

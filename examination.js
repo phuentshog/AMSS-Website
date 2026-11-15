@@ -392,59 +392,29 @@
 
   const renderToppersClass = (host, classData, allClasses, lightbox) => {
     const records = Array.isArray(classData.records) ? classData.records : [];
-    host.replaceChildren(buildToppersStats(records));
+    const groups = new Map();
+    for (const row of records) {
+      const key = `${row.subject}|${row.year}`;
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key).push(row);
+    }
+    const stats = element('div', 'exam-stats');
+    stats.append(statTile('Subjects represented', new Set(records.map(r => r.subject)).size, 'Anonymous class summaries'), statTile('Years recorded', new Set(records.map(r => r.year)).size, 'Public aggregate years'));
+    host.replaceChildren(stats);
     const top = element('div', 'exam-feature-grid');
-    top.append(renderSpotlight(records, classData, lightbox));
     const chartCard = element('section', 'exam-subpanel');
-    chartCard.append(element('h3', '', 'Top Score by Subject'), drawTopperChart(records));
+    chartCard.append(element('h3', '', 'Class and subject averages'));
+    const chart = element('div', 'exam-aggregate-list');
+    for (const row of records) {
+      const item = element('p', 'exam-aggregate-row', `${row.subject} · ${row.year}: ${formatNumber(row.score)} average (cohort ${row.cohortSizeBand || '10+'})`);
+      chart.append(item);
+    }
+    chartCard.append(chart);
     top.append(chartCard);
     host.append(top);
-
     const hall = element('section', 'exam-hall');
-    hall.append(element('div', 'exam-panel-heading', ''));
-    const hallHeading = hall.firstElementChild;
-    hallHeading.append(element('h3', '', 'Hall of Fame'));
-    const searchLabel = element('label', 'exam-search-label');
-    searchLabel.append(element('span', '', 'Search by student or subject'));
-    const search = element('input', 'exam-search');
-    search.type = 'search';
-    search.placeholder = 'Type a name or subject';
-    search.autocomplete = 'off';
-    searchLabel.append(search);
-    hallHeading.append(searchLabel);
-    const count = element('p', 'exam-result-count');
-    count.setAttribute('aria-live', 'polite');
-    const grid = element('div', 'exam-hall-grid');
-    const empty = element('p', 'exam-empty');
-    const students = uniqueStudentRecords(records).map((student) => ({
-      ...student,
-      achievements: uniqueAchievements(student.records),
-      subjectCount: new Set(uniqueAchievements(student.records).map((record) => normalize(record.subject))).size,
-      best: Math.max(...scoreRecords(student.records).map((record) => record.score), -Infinity),
-    }));
-    students.sort((a, b) => (
-      b.subjectCount - a.subjectCount
-      || b.best - a.best
-      || nameCollator.compare(a.name, b.name)
-    ));
-    const maxScore = Math.max(0, ...scoreRecords(records).map((record) => record.score));
-    const display = () => {
-      const term = normalize(search.value);
-      const filtered = students.filter((student) => (
-        !term
-        || normalize(student.name).includes(term)
-        || student.achievements.some((record) => normalize(record.subject).includes(term))
-      ));
-      count.textContent = `${filtered.length} of ${students.length} students`;
-      grid.replaceChildren(...filtered.map((student) => makeStudentCard(student, classData, maxScore, lightbox)));
-      empty.textContent = filtered.length ? '' : (students.length ? 'No students match your search.' : 'No topper records are available for this class.');
-      empty.hidden = filtered.length > 0;
-      if (!filtered.length) grid.append(empty);
-    };
-    search.addEventListener('input', display);
-    hall.append(count, grid);
+    hall.append(element('h3', '', 'Anonymous subject summary'), element('p', '', 'Individual topper names, portraits and scores are not published.'));
     host.append(hall);
-    display();
   };
 
   const initToppers = (root) => loadData(root, 'examination/data/toppers.json', (data) => {

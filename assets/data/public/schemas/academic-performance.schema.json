@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://phuentshog.github.io/AMSS-Website/assets/data/public/schemas/academic-performance.schema.json",
+  "title": "Public academic performance summary",
+  "description": "Approved school/class/subject aggregates only. No student or staff identifiers.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["year", "auditStatus", "records"],
+  "properties": {
+    "year": { "type": "integer" },
+    "auditStatus": { "enum": ["pending", "verified"] },
+    "method": { "type": "string" },
+    "coverage": { "type": "array", "items": { "type": "string" } },
+    "classes": { "type": "array", "items": { "type": "string" } },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["class", "subject", "targetMean", "midtermMean"],
+        "properties": {
+          "class": { "type": "string" },
+          "subject": { "type": "string" },
+          "department": { "type": "string" },
+          "targetMean": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+          "midtermMean": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+          "cohortSizeBand": { "type": "string", "description": "Optional broad band; do not publish exact small cohort counts." }
+        }
+      }
+    }
+  }
+}

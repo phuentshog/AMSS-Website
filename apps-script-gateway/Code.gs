@@ -4,7 +4,7 @@
  * Identity and roster checks happen on the server for every checkAccess call.
  */
 const SHEET_NAME = "Teachers";
-const PORTAL_URL = "https://phuentshog.github.io/AMSS-Website/staff-dashboard.html";
+const PORTAL_URL = "https://phuentshog.github.io/AMSS-Website/AMSS%20Staff%20Dashboard.html";
 const SCHOOL_NAME = "AREKHA MIDDLE SECONDARY SCHOOL";
 const SCHOOL_ADDRESS = "Arekha, Bongo, Chhukha, Bhutan";
 const ESTABLISHED = "Established 2004";

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://phuentshog.github.io/AMSS-Website/assets/data/public/schemas/examination-results.schema.json",
+  "title": "Public school examination summaries",
+  "description": "Year/class/subject aggregates only, with no student names or source workbook metadata.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["years", "summaries"],
+  "properties": {
+    "years": { "type": "array", "items": { "type": "integer" }, "uniqueItems": true },
+    "summaries": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["year", "class", "subject"],
+        "properties": {
+          "year": { "type": "integer" },
+          "class": { "type": "string" },
+          "subject": { "type": "string" },
+          "mean": { "type": ["number", "null"] },
+          "passRate": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+          "cohortSizeBand": { "type": "string" },
+          "suppressed": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

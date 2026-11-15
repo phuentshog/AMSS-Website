@@ -5,6 +5,32 @@
 // ============================================================
 document.documentElement.classList.add("js");
 
+// The public site keeps its theme preference separate from the staff dashboard.
+const publicThemeKey = "amss-public-theme";
+const publicThemeToggle = document.createElement("button");
+publicThemeToggle.className = "theme-toggle";
+publicThemeToggle.type = "button";
+publicThemeToggle.setAttribute("aria-label", "Switch to dark mode");
+publicThemeToggle.title = "Switch to dark mode";
+publicThemeToggle.innerHTML = '<svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg><svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.3A8.5 8.5 0 0 1 8.7 3.8 8.5 8.5 0 1 0 20.2 15.3Z"></path></svg>';
+function applyPublicTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  const dark = theme === "dark";
+  publicThemeToggle.setAttribute("aria-label", `Switch to ${dark ? "light" : "dark"} mode`);
+  publicThemeToggle.title = `Switch to ${dark ? "light" : "dark"} mode`;
+}
+let publicTheme = "light";
+try { publicTheme = localStorage.getItem(publicThemeKey) === "dark" ? "dark" : "light"; } catch {}
+applyPublicTheme(publicTheme);
+publicThemeToggle.addEventListener("click", () => {
+  publicTheme = publicTheme === "dark" ? "light" : "dark";
+  applyPublicTheme(publicTheme);
+  try { localStorage.setItem(publicThemeKey, publicTheme); } catch {}
+});
+const publicThemeActions = document.querySelector(".site-header .header-actions");
+if (publicThemeActions) publicThemeActions.prepend(publicThemeToggle);
+else document.querySelector(".portal-header .portal-back-link")?.before(publicThemeToggle);
+
 const SPMS_DATA = {
   sources: ["SPMS Score.xlsx", "Academic Learning Score.xlsx", "Non Academic Score.xlsx"],
   years: [
@@ -18,6 +44,13 @@ const SPMS_DATA = {
 const menuToggle = document.querySelector(".menu-toggle");
 const primaryNavigation = document.querySelector("#primary-navigation");
 const mobileNavigationMedia = window.matchMedia("(max-width: 1279px)");
+const listenForMediaQueryChange = (mediaQuery, listener) => {
+  if (typeof mediaQuery.addEventListener === "function") {
+    mediaQuery.addEventListener("change", listener);
+  } else if (typeof mediaQuery.addListener === "function") {
+    mediaQuery.addListener(listener);
+  }
+};
 
 function setMenuOpen(isOpen) {
   if (!menuToggle || !primaryNavigation) return;
@@ -39,7 +72,7 @@ document.addEventListener("click", (event) => {
   setMenuOpen(false);
 });
 
-mobileNavigationMedia.addEventListener("change", () => setMenuOpen(false));
+listenForMediaQueryChange(mobileNavigationMedia, () => setMenuOpen(false));
 
 primaryNavigation?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", (event) => {
@@ -977,7 +1010,7 @@ initSPMS();
       closeCompactSearch();
     }
   };
-  compactToggleMedia.addEventListener("change", syncCompactToggle);
+  listenForMediaQueryChange(compactToggleMedia, syncCompactToggle);
   syncCompactToggle();
   input.addEventListener("focus", () => { if (!input.value.trim()) showPopular(); });
   input.addEventListener("click", () => { if (!input.value.trim()) showPopular(); });

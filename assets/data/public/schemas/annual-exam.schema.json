@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://phuentshog.github.io/AMSS-Website/assets/data/public/schemas/annual-exam.schema.json",
+  "title": "Public annual examination information",
+  "description": "Public timeline and timetable only; named duty assignments remain private.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["year", "timeline", "timetable", "invigilation", "binders"],
+  "properties": {
+    "year": { "type": "integer" },
+    "timeline": {
+      "type": "object", "additionalProperties": false,
+      "required": ["events", "notes"],
+      "properties": {
+        "events": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["date", "event"], "properties": { "date": { "type": "string" }, "event": { "type": "string" }, "duration": { "type": "string" } } } },
+        "notes": { "type": "array", "items": { "type": "string" } },
+        "asteriskNote": { "type": "string" }
+      }
+    },
+    "timetable": {
+      "type": "object", "additionalProperties": false,
+      "required": ["rows"],
+      "properties": {
+        "rows": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["date", "day"], "properties": { "date": { "type": "string" }, "day": { "type": "string" }, "classIV": { "type": "string" }, "classV": { "type": "string" }, "classVII": { "type": "string" }, "classIX": { "type": "object", "properties": { "paperI": { "type": "string" }, "paperII": { "type": "string" } } } } } },
+        "classIXPaperTimes": { "type": "array", "items": { "type": "object", "properties": { "date": { "type": "string" }, "day": { "type": "string" }, "exam": { "type": "string" }, "paper": { "type": "string" }, "subject": { "type": "string" }, "start": { "type": "string" }, "end": { "type": "string" } } } },
+        "timingNote": { "type": "string" },
+        "breaks": { "type": "array", "items": { "type": "string" } },
+        "dayTimingVariants": { "type": "array", "items": { "type": "object", "properties": { "name": { "type": "string" }, "events": { "type": "array", "items": { "type": "object", "properties": { "time": { "type": "string" }, "activity": { "type": "string" } } } } } } }
+      }
+    },
+    "invigilation": {
+      "type": "object", "additionalProperties": false,
+      "description": "Optional approved aggregate counts by date/session only; no names, initials, rooms, or individual assignments.",
+      "properties": {
+        "dutySummary": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["date", "session"], "properties": { "date": { "type": "string" }, "session": { "type": "string" }, "assignmentCountBand": { "type": "string" } } } },
+        "notes": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "binders": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "records": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["binder", "department"], "properties": { "binder": { "type": "string" }, "department": { "type": "string" }, "English": { "type": "string" } } } },
+        "note": { "type": "string" }
+      }
+    }
+  }
+}

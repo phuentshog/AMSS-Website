@@ -1,0 +1,40 @@
+.trial-exam-dashboard{display:grid;gap:22px;max-width:1440px;margin:0 auto;color:var(--ink)}
+.trial-exam-dashboard[hidden]{display:none!important}
+.trial-heading{display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap}
+.trial-status{margin:0;color:var(--mut);font-size:14px;font-weight:600}
+.trial-filter{grid-template-columns:repeat(3,minmax(160px,1fr))}
+.trial-pass-panel{display:grid;grid-template-columns:1fr}
+.trial-pass-result{font-size:18px;font-weight:700;color:var(--ink);text-align:right;font-variant-numeric:tabular-nums}
+.trial-pass-result strong{color:#27623b}
+.trial-pass-result .trial-fail{color:#984638}
+.trial-legend{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.trial-actual-swatch{background:#2563eb}
+.trial-class-charts{display:grid;gap:20px}
+.trial-class-chart{min-width:0;padding:16px 14px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.trial-class-chart h3{margin:0 0 10px;font-size:20px;color:var(--ink)}
+.trial-chart-scroll{max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain}
+.trial-chart-svg{display:block;width:100%;min-width:820px;height:auto}
+.trial-svg-grid{stroke:var(--line);stroke-width:1}
+.trial-svg-axis{stroke:var(--ink);stroke-width:1.25}
+.trial-svg-tick{fill:var(--mut);font:14px system-ui,sans-serif}
+.trial-svg-subject{fill:var(--ink);font:600 15px system-ui,sans-serif}
+.trial-svg-actual{fill:#2563eb}
+.trial-svg-target{fill:#b98a3e}
+.trial-svg-value{fill:var(--ink);font:600 14px system-ui,sans-serif}
+.trial-svg-unavailable{fill:var(--mut);font:600 14px system-ui,sans-serif}
+.trial-results-table{min-width:950px}
+.trial-results-table td,.trial-results-table th{font-variant-numeric:tabular-nums}
+.trial-status-pill{display:inline-flex;align-items:center;padding:5px 9px;border-radius:999px;font-weight:700;font-size:13px;white-space:nowrap}
+.trial-status-pill.is-achieved{color:#1f6338;background:#e9f5ed}
+.trial-status-pill.is-below{color:#8b3b32;background:#fbefed}
+.trial-status-pill.is-unavailable{color:var(--mut);background:var(--bg)}
+.trial-method{line-height:1.55}
+.trial-method ul{margin:10px 0 0;padding-left:22px;color:var(--mut)}
+.trial-method li+li{margin-top:5px}
+:root[data-theme="dark"] .trial-svg-grid{stroke:#3b4654}
+:root[data-theme="dark"] .trial-svg-tick,:root[data-theme="dark"] .trial-svg-subject,:root[data-theme="dark"] .trial-svg-value{fill:#e8ecf1}
+:root[data-theme="dark"] .trial-svg-unavailable{fill:#cbd5e1}
+:root[data-theme="dark"] .trial-status-pill.is-achieved{color:#b7edc6;background:#193a28}
+:root[data-theme="dark"] .trial-status-pill.is-below{color:#ffc6bd;background:#482724}
+@media(max-width:850px){.trial-filter{grid-template-columns:repeat(2,minmax(0,1fr))}.trial-pass-result{font-size:16px}}
+@media(max-width:560px){.trial-exam-dashboard{gap:15px}.trial-heading{align-items:flex-start}.trial-heading h1{font-size:37px}.trial-heading p{font-size:15px}.trial-filter{grid-template-columns:1fr 1fr;padding:12px}.trial-filter label{font-size:13px}.trial-pass-panel{padding:17px 14px 20px!important}.trial-pass-result{text-align:left;font-size:15px}.trial-class-chart{padding:12px 10px}.trial-class-chart h3{font-size:18px}.trial-results-table{min-width:950px}}

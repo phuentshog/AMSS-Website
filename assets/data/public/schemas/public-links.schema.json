@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://phuentshog.github.io/AMSS-Website/assets/data/public/schemas/public-links.schema.json",
+  "title": "Approved announcements and teaching resources",
+  "description": "Only content and links explicitly approved for unrestricted public access.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "announcements": {
+      "type": "array",
+      "items": { "type": "object", "additionalProperties": false, "required": ["title", "date"], "properties": { "title": { "type": "string" }, "date": { "type": "string" }, "summary": { "type": "string" }, "url": { "type": "string", "format": "uri", "pattern": "^https://" } } }
+    },
+    "teachingResources": {
+      "type": "array",
+      "items": { "type": "object", "additionalProperties": false, "required": ["title", "subject", "url"], "properties": { "title": { "type": "string" }, "subject": { "type": "string" }, "url": { "type": "string", "format": "uri", "pattern": "^https://" } } }
+    },
+    "staffServices": {
+      "type": "array",
+      "items": { "type": "object", "additionalProperties": false, "required": ["title", "url"], "properties": { "title": { "type": "string" }, "url": { "type": "string", "format": "uri", "pattern": "^https://" } } }
+    }
+  }
+}

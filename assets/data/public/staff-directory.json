@@ -1,0 +1,335 @@
+{
+  "sections": [
+    {
+      "id": "leadership",
+      "title": "School Leadership"
+    },
+    {
+      "id": "departments",
+      "title": "Departments"
+    },
+    {
+      "id": "support",
+      "title": "Support Staff"
+    },
+    {
+      "id": "wellbeing",
+      "title": "Wellbeing"
+    },
+    {
+      "id": "esp-gsp",
+      "title": "ESP & GSP"
+    }
+  ],
+  "groups": [
+    {
+      "id": "smt",
+      "title": "SMT",
+      "section": "leadership"
+    },
+    {
+      "id": "academic-board",
+      "title": "Academic Board",
+      "section": "leadership"
+    },
+    {
+      "id": "humanities",
+      "title": "Humanities",
+      "section": "departments"
+    },
+    {
+      "id": "english",
+      "title": "English",
+      "section": "departments"
+    },
+    {
+      "id": "science",
+      "title": "Science",
+      "section": "departments"
+    },
+    {
+      "id": "dzongkha",
+      "title": "Dzongkha",
+      "section": "departments"
+    },
+    {
+      "id": "maths-ict",
+      "title": "Maths & ICT",
+      "section": "departments"
+    },
+    {
+      "id": "elementary",
+      "title": "Elementary",
+      "section": "departments"
+    },
+    {
+      "id": "support-staff",
+      "title": "Support Staff",
+      "section": "support"
+    },
+    {
+      "id": "wellbeing",
+      "title": "Wellbeing",
+      "section": "wellbeing"
+    },
+    {
+      "id": "esp-gsp",
+      "title": "ESP & GSP",
+      "section": "esp-gsp"
+    }
+  ],
+  "staff": [
+    {
+      "displayName": "Karma Wangchuk",
+      "role": "Principal",
+      "department": "smt",
+      "portraitPath": "assets/images/staff/photos/karma-wangchuk.png"
+    },
+    {
+      "displayName": "Sangay Dorji",
+      "role": "Vice Principal",
+      "department": "smt",
+      "portraitPath": "assets/images/staff/photos/sangay-dorji.jpg"
+    },
+    {
+      "displayName": "Sarita Devi Mongar",
+      "role": "Academic Head; Teacher",
+      "department": "smt",
+      "portraitPath": "assets/images/staff/photos/sarita-devi-mongar.jpg"
+    },
+    {
+      "displayName": "Pema Wangchuk",
+      "role": "Non-academic Head; སློབ་དཔོན།",
+      "department": "smt",
+      "portraitPath": "assets/images/staff/photos/pema-wangchuk.jpg"
+    },
+    {
+      "displayName": "Phub Doley",
+      "role": "Staff Secretary; Teacher",
+      "department": "smt",
+      "portraitPath": "assets/images/staff/photos/phub-doley.jpg"
+    },
+    {
+      "displayName": "Phuntsho Wangdi",
+      "role": "Exam Secretary; Teacher III",
+      "department": "academic-board",
+      "portraitPath": "assets/images/staff/photos/phuntsho-wangdi.png"
+    },
+    {
+      "displayName": "Sumjay",
+      "role": "HoD; Teacher I",
+      "department": "academic-board",
+      "portraitPath": "assets/images/staff/photos/sumjay.jpg"
+    },
+    {
+      "displayName": "Sangay Wangmo",
+      "role": "HoD; senior Teacher I",
+      "department": "academic-board",
+      "portraitPath": "assets/images/staff/photos/sangay-wangmo.jpg"
+    },
+    {
+      "displayName": "Sonam Phuntsho",
+      "role": "HoD; Teacher",
+      "department": "academic-board",
+      "portraitPath": "assets/images/staff/photos/sonam-phuntsho.jpg"
+    },
+    {
+      "displayName": "Passang Tshechu",
+      "role": "HoD; Teacher",
+      "department": "academic-board",
+      "portraitPath": "assets/images/staff/photos/passang-tshechu.jpg"
+    },
+    {
+      "displayName": "Cheten Tshering",
+      "role": "HoD; Teacher II",
+      "department": "academic-board",
+      "portraitPath": "assets/images/staff/photos/cheten-tshering.jpg"
+    },
+    {
+      "displayName": "Tandin Om",
+      "role": "HoD; TeacherII",
+      "department": "academic-board",
+      "portraitPath": "assets/images/staff/photos/tandin-om.jpg"
+    },
+    {
+      "displayName": "Tshering Deki",
+      "role": "Teacher",
+      "department": "humanities",
+      "portraitPath": "assets/images/staff/photos/tshering-deki.jpg"
+    },
+    {
+      "displayName": "Sarita Ghalley",
+      "role": "Teacher",
+      "department": "humanities",
+      "portraitPath": "assets/images/staff/photos/sarita-ghalley.jpg"
+    },
+    {
+      "displayName": "Deki Wangmo",
+      "role": "Teacher II",
+      "department": "english",
+      "portraitPath": "assets/images/staff/photos/deki-wangmo.png"
+    },
+    {
+      "displayName": "Pem Choki",
+      "role": "Teacher III",
+      "department": "science",
+      "portraitPath": "assets/images/staff/photos/pem-choki.png"
+    },
+    {
+      "displayName": "Bala Ram Chapagai",
+      "role": "Teacher",
+      "department": "science",
+      "portraitPath": "assets/images/staff/photos/bala-ram-chapagai.jpg"
+    },
+    {
+      "displayName": "Sonam Yangzom",
+      "role": "Teacher",
+      "department": "science",
+      "portraitPath": "assets/images/staff/photos/sonam-yangzom.jpg"
+    },
+    {
+      "displayName": "Wangchuk Namgyel",
+      "role": "Teacher",
+      "department": "dzongkha",
+      "portraitPath": "assets/images/staff/photos/wangchuk-namgyel.jpg"
+    },
+    {
+      "displayName": "Tshering Yangzom",
+      "role": "",
+      "department": "dzongkha",
+      "portraitPath": "assets/images/staff/photos/tshering-yangzom.jpg"
+    },
+    {
+      "displayName": "Sonam Yangchen",
+      "role": "Teacher II (P4A)",
+      "department": "maths-ict",
+      "portraitPath": "assets/images/staff/photos/sonam-yangchen.jpg"
+    },
+    {
+      "displayName": "Dhan Kumar Rai",
+      "role": "Teacher",
+      "department": "maths-ict",
+      "portraitPath": "assets/images/staff/photos/dhan-kumar-rai.jpg"
+    },
+    {
+      "displayName": "Tashi Lungmo",
+      "role": "Teacher",
+      "department": "maths-ict",
+      "portraitPath": "assets/images/staff/photos/tashi-lungmo.jpg"
+    },
+    {
+      "displayName": "Sonam Choki",
+      "role": "Teacher",
+      "department": "maths-ict",
+      "portraitPath": "assets/images/staff/photos/sonam-choki.jpg"
+    },
+    {
+      "displayName": "Sangay Dema",
+      "role": "Teacher",
+      "department": "elementary",
+      "portraitPath": "assets/images/staff/photos/sangay-dema.jpg"
+    },
+    {
+      "displayName": "Goma Devi Sunar",
+      "role": "Teacher",
+      "department": "elementary",
+      "portraitPath": "assets/images/staff/photos/goma-devi-sunar.jpg"
+    },
+    {
+      "displayName": "Dechen Tshomo",
+      "role": "Teacher",
+      "department": "elementary",
+      "portraitPath": "assets/images/staff/photos/dechen-tshomo.jpg"
+    },
+    {
+      "displayName": "Dechen Yangzom",
+      "role": "Teacher",
+      "department": "elementary",
+      "portraitPath": "assets/images/staff/photos/dechen-yangzom.jpg"
+    },
+    {
+      "displayName": "Tashi Tshomo",
+      "role": "SSI (S5)",
+      "department": "support-staff",
+      "portraitPath": "assets/images/staff/photos/tashi-tshomo.jpg"
+    },
+    {
+      "displayName": "Madhu Nepal",
+      "role": "Jr Librarian V",
+      "department": "support-staff",
+      "portraitPath": "assets/images/staff/photos/madhu-nepal.jpg"
+    },
+    {
+      "displayName": "Durba Kumar Chhetri",
+      "role": "Jr. Librarian",
+      "department": "support-staff",
+      "portraitPath": "assets/images/staff/photos/durba-kumar-chhetri.jpg"
+    },
+    {
+      "displayName": "Kinga Lhamo",
+      "role": "ICT Lab Assistant",
+      "department": "support-staff",
+      "portraitPath": "assets/images/staff/photos/kinga-lhamo.png"
+    },
+    {
+      "displayName": "Kinley Dema",
+      "role": "Science Lab Assistant",
+      "department": "support-staff",
+      "portraitPath": "assets/images/staff/photos/kinley-dema.png"
+    },
+    {
+      "displayName": "Rinzin Lhamo",
+      "role": "Administrative Assistant",
+      "department": "support-staff",
+      "portraitPath": "assets/images/staff/photos/rinzin-lhamo.jpg"
+    },
+    {
+      "displayName": "Migma Dolma Moktan",
+      "role": "Asst.Counsellor",
+      "department": "wellbeing",
+      "portraitPath": "assets/images/staff/photos/migma-dolma-moktan.jpg"
+    },
+    {
+      "displayName": "Pem Dorji",
+      "role": "Head Cook",
+      "department": "esp-gsp",
+      "portraitPath": "assets/images/staff/photos/pem-dorji.png"
+    },
+    {
+      "displayName": "Nalem",
+      "role": "Cook",
+      "department": "esp-gsp",
+      "portraitPath": "assets/images/staff/photos/nalem.png"
+    },
+    {
+      "displayName": "Dawa Dem",
+      "role": "Cook",
+      "department": "esp-gsp",
+      "portraitPath": "assets/images/staff/photos/dawa-dem.png"
+    },
+    {
+      "displayName": "Nim Pem",
+      "role": "Sweeper",
+      "department": "esp-gsp",
+      "portraitPath": "assets/images/staff/photos/nim-pem.png"
+    },
+    {
+      "displayName": "Sonam Deki",
+      "role": "Sweeper",
+      "department": "esp-gsp",
+      "portraitPath": "assets/images/staff/photos/sonam-deki.png"
+    },
+    {
+      "displayName": "Tashi Peday",
+      "role": "Caretaker",
+      "department": "esp-gsp",
+      "portraitPath": "assets/images/staff/photos/tashi-peday.png"
+    },
+    {
+      "displayName": "Sancha",
+      "role": "Caretaker",
+      "department": "esp-gsp",
+      "portraitPath": "assets/images/staff/photos/sancha.png"
+    }
+  ]
+}

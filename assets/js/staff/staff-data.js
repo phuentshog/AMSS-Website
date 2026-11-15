@@ -183,63 +183,53 @@ window.AMSS_STAFF_DIRECTORY = {
       "id": "karma-wangchuk",
       "name": "Karma Wangchuk",
       "photo": "assets/images/staff/photos/karma-wangchuk.png",
+      "designation": [
+        "Principal"
+      ],
+      "subject": [],
+      "primaryGroup": "smt",
       "memberships": [
         {
           "group": "smt",
           "designation": [
             "Principal"
           ],
-          "subject": [],
-          "qualification": [
-            "Masters in Educational Leadership and Management"
-          ],
-          "responsibilities": []
+          "subject": []
         },
         {
           "group": "academic-board",
           "designation": [
             "Principal"
           ],
-          "subject": [],
-          "qualification": [],
-          "responsibilities": []
+          "subject": []
         }
-      ],
-      "designation": [
-        "Principal"
-      ],
-      "subject": [],
-      "qualification": [
-        "Masters in Educational Leadership and Management"
-      ],
-      "responsibilities": [],
-      "primaryGroup": "smt"
+      ]
     },
     {
       "id": "sangay-dorji",
       "name": "Sangay Dorji",
       "photo": "assets/images/staff/photos/sangay-dorji.jpg",
+      "designation": [
+        "Vice Principal"
+      ],
+      "subject": [
+        "ICT"
+      ],
+      "primaryGroup": "smt",
       "memberships": [
         {
           "group": "smt",
           "designation": [
             "Vice Principal"
           ],
-          "subject": [],
-          "qualification": [
-            "B.Ed Primary",
-            "PgDCCP"
-          ],
-          "responsibilities": []
+          "subject": []
         },
         {
           "group": "academic-board",
           "designation": [
             "Vice Principal"
           ],
-          "subject": [],
-          "qualification": [],
-          "responsibilities": []
+          "subject": []
         },
         {
           "group": "maths-ict",
@@ -248,56 +238,36 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "ICT"
-          ],
-          "qualification": [
-            "B.Ed Primary",
-            "PgDCCP"
-          ],
-          "responsibilities": [
-            "Administration, SMT, Academic Board"
           ]
         }
-      ],
-      "designation": [
-        "Vice Principal"
-      ],
-      "subject": [
-        "ICT"
-      ],
-      "qualification": [
-        "B.Ed Primary",
-        "PgDCCP"
-      ],
-      "responsibilities": [
-        "Administration, SMT, Academic Board"
-      ],
-      "primaryGroup": "smt"
+      ]
     },
     {
       "id": "sarita-devi-mongar",
       "name": "Sarita Devi Mongar",
       "photo": "assets/images/staff/photos/sarita-devi-mongar.jpg",
+      "designation": [
+        "Academic Head",
+        "Teacher"
+      ],
+      "subject": [
+        "English"
+      ],
+      "primaryGroup": "smt",
       "memberships": [
         {
           "group": "smt",
           "designation": [
             "Academic Head"
           ],
-          "subject": [],
-          "qualification": [
-            "BE.d Primary",
-            "PGDE English"
-          ],
-          "responsibilities": []
+          "subject": []
         },
         {
           "group": "academic-board",
           "designation": [
             "Academic Head"
           ],
-          "subject": [],
-          "qualification": [],
-          "responsibilities": []
+          "subject": []
         },
         {
           "group": "english",
@@ -306,52 +276,29 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "English"
-          ],
-          "qualification": [
-            "BE.d Primary",
-            "PGDE English"
-          ],
-          "responsibilities": [
-            "Academic Head",
-            "Literary Coordinator",
-            "SMT"
           ]
         }
-      ],
-      "designation": [
-        "Academic Head",
-        "Teacher"
-      ],
-      "subject": [
-        "English"
-      ],
-      "qualification": [
-        "BE.d Primary",
-        "PGDE English"
-      ],
-      "responsibilities": [
-        "Academic Head",
-        "Literary Coordinator",
-        "SMT"
-      ],
-      "primaryGroup": "smt"
+      ]
     },
     {
       "id": "pema-wangchuk",
       "name": "Pema Wangchuk",
       "photo": "assets/images/staff/photos/pema-wangchuk.jpg",
+      "designation": [
+        "Non-academic Head",
+        "སློབ་དཔོན།"
+      ],
+      "subject": [
+        "རྫོང་ཁ།"
+      ],
+      "primaryGroup": "smt",
       "memberships": [
         {
           "group": "smt",
           "designation": [
             "Non-academic Head"
           ],
-          "subject": [],
-          "qualification": [
-            "BA in Language and Literature",
-            "PGDE in Dzongkha"
-          ],
-          "responsibilities": []
+          "subject": []
         },
         {
           "group": "dzongkha",
@@ -360,56 +307,29 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "རྫོང་ཁ།"
-          ],
-          "qualification": [
-            "BA in Language and Literature",
-            "PGDE in Dzongkha"
-          ],
-          "responsibilities": [
-            "Non-academic Coordinator",
-            "School Scout Secretary",
-            "Student Support Service",
-            "Tarayana club co-ordinator",
-            "SDF Coordinator, SMB, SMT, SHRC, SMC, SGSC"
           ]
         }
-      ],
-      "designation": [
-        "Non-academic Head",
-        "སློབ་དཔོན།"
-      ],
-      "subject": [
-        "རྫོང་ཁ།"
-      ],
-      "qualification": [
-        "BA in Language and Literature",
-        "PGDE in Dzongkha"
-      ],
-      "responsibilities": [
-        "Non-academic Coordinator",
-        "School Scout Secretary",
-        "Student Support Service",
-        "Tarayana club co-ordinator",
-        "SDF Coordinator, SMB, SMT, SHRC, SMC, SGSC"
-      ],
-      "primaryGroup": "smt"
+      ]
     },
     {
       "id": "phub-doley",
       "name": "Phub Doley",
       "photo": "assets/images/staff/photos/phub-doley.jpg",
+      "designation": [
+        "Staff Secretary",
+        "Teacher"
+      ],
+      "subject": [
+        "Dzongkha"
+      ],
+      "primaryGroup": "smt",
       "memberships": [
         {
           "group": "smt",
           "designation": [
             "Staff Secretary"
           ],
-          "subject": [],
-          "qualification": [
-            "Dzongkha Secondary",
-            "M.Ed Dzongkha"
-          ],
-          "responsibilities": []
+          "subject": []
         },
         {
           "group": "elementary",
@@ -418,54 +338,29 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "Dzongkha"
-          ],
-          "qualification": [
-            "BA in Language and Literature",
-            "M.Ed Dzongkha"
-          ],
-          "responsibilities": [
-            "Staff Secretary",
-            "Scout Focal",
-            "SMT",
-            "Tarayana club Coordinator",
-            "Students Supporting Service Coordinator"
           ]
         }
-      ],
-      "designation": [
-        "Staff Secretary",
-        "Teacher"
-      ],
-      "subject": [
-        "Dzongkha"
-      ],
-      "qualification": [
-        "Dzongkha Secondary",
-        "M.Ed Dzongkha",
-        "BA in Language and Literature"
-      ],
-      "responsibilities": [
-        "Staff Secretary",
-        "Scout Focal",
-        "SMT",
-        "Tarayana club Coordinator",
-        "Students Supporting Service Coordinator"
-      ],
-      "primaryGroup": "smt"
+      ]
     },
     {
       "id": "phuntsho-wangdi",
       "name": "Phuntsho Wangdi",
       "photo": "assets/images/staff/photos/phuntsho-wangdi.png",
+      "designation": [
+        "Exam Secretary",
+        "Teacher III"
+      ],
+      "subject": [
+        "History"
+      ],
+      "primaryGroup": "academic-board",
       "memberships": [
         {
           "group": "academic-board",
           "designation": [
             "Exam Secretary"
           ],
-          "subject": [],
-          "qualification": [],
-          "responsibilities": []
+          "subject": []
         },
         {
           "group": "humanities",
@@ -474,53 +369,29 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "History"
-          ],
-          "qualification": [
-            "BA History & Dzongkha",
-            "PGDE History"
-          ],
-          "responsibilities": [
-            "Exam Secretary",
-            "Democracy Coordinator",
-            "Taekwondo Coordinator",
-            "Tsheltrim House Master",
-            "Adult Patrol Leader"
           ]
         }
-      ],
-      "designation": [
-        "Exam Secretary",
-        "Teacher III"
-      ],
-      "subject": [
-        "History"
-      ],
-      "qualification": [
-        "BA History & Dzongkha",
-        "PGDE History"
-      ],
-      "responsibilities": [
-        "Exam Secretary",
-        "Democracy Coordinator",
-        "Taekwondo Coordinator",
-        "Tsheltrim House Master",
-        "Adult Patrol Leader"
-      ],
-      "primaryGroup": "academic-board"
+      ]
     },
     {
       "id": "sumjay",
       "name": "Sumjay",
       "photo": "assets/images/staff/photos/sumjay.jpg",
+      "designation": [
+        "HoD",
+        "Teacher I"
+      ],
+      "subject": [
+        "Geography"
+      ],
+      "primaryGroup": "academic-board",
       "memberships": [
         {
           "group": "academic-board",
           "designation": [
             "HoD"
           ],
-          "subject": [],
-          "qualification": [],
-          "responsibilities": []
+          "subject": []
         },
         {
           "group": "humanities",
@@ -529,45 +400,29 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "Geography"
-          ],
-          "qualification": [
-            "PGDE",
-            "BA Geo & Eco"
-          ],
-          "responsibilities": [
-            "HoD"
           ]
         }
-      ],
-      "designation": [
-        "HoD",
-        "Teacher I"
-      ],
-      "subject": [
-        "Geography"
-      ],
-      "qualification": [
-        "PGDE",
-        "BA Geo & Eco"
-      ],
-      "responsibilities": [
-        "HoD"
-      ],
-      "primaryGroup": "academic-board"
+      ]
     },
     {
       "id": "sangay-wangmo",
       "name": "Sangay Wangmo",
       "photo": "assets/images/staff/photos/sangay-wangmo.jpg",
+      "designation": [
+        "HoD",
+        "senior Teacher I"
+      ],
+      "subject": [
+        "English"
+      ],
+      "primaryGroup": "academic-board",
       "memberships": [
         {
           "group": "academic-board",
           "designation": [
             "HoD"
           ],
-          "subject": [],
-          "qualification": [],
-          "responsibilities": []
+          "subject": []
         },
         {
           "group": "english",
@@ -576,51 +431,29 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "English"
-          ],
-          "qualification": [
-            "BE.d Primary"
-          ],
-          "responsibilities": [
-            "Adult Leader",
-            "Head of Department",
-            "Class Teacher of class IV B",
-            "House Master of Tsundue House",
-            "DIBELs focal"
           ]
         }
-      ],
-      "designation": [
-        "HoD",
-        "senior Teacher I"
-      ],
-      "subject": [
-        "English"
-      ],
-      "qualification": [
-        "BE.d Primary"
-      ],
-      "responsibilities": [
-        "Adult Leader",
-        "Head of Department",
-        "Class Teacher of class IV B",
-        "House Master of Tsundue House",
-        "DIBELs focal"
-      ],
-      "primaryGroup": "academic-board"
+      ]
     },
     {
       "id": "sonam-phuntsho",
       "name": "Sonam Phuntsho",
       "photo": "assets/images/staff/photos/sonam-phuntsho.jpg",
+      "designation": [
+        "HoD",
+        "Teacher"
+      ],
+      "subject": [
+        "Physics"
+      ],
+      "primaryGroup": "academic-board",
       "memberships": [
         {
           "group": "academic-board",
           "designation": [
             "HoD"
           ],
-          "subject": [],
-          "qualification": [],
-          "responsibilities": []
+          "subject": []
         },
         {
           "group": "science",
@@ -629,49 +462,29 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "Physics"
-          ],
-          "qualification": [
-            "B.Ed Secondary Science (Math/Physics)"
-          ],
-          "responsibilities": [
-            "HoD",
-            "STEM Focal",
-            "STEM Club coordinator",
-            "House Master"
           ]
         }
-      ],
-      "designation": [
-        "HoD",
-        "Teacher"
-      ],
-      "subject": [
-        "Physics"
-      ],
-      "qualification": [
-        "B.Ed Secondary Science (Math/Physics)"
-      ],
-      "responsibilities": [
-        "HoD",
-        "STEM Focal",
-        "STEM Club coordinator",
-        "House Master"
-      ],
-      "primaryGroup": "academic-board"
+      ]
     },
     {
       "id": "passang-tshechu",
       "name": "Passang Tshechu",
       "photo": "assets/images/staff/photos/passang-tshechu.jpg",
+      "designation": [
+        "HoD",
+        "Teacher"
+      ],
+      "subject": [
+        "Dzongkha"
+      ],
+      "primaryGroup": "academic-board",
       "memberships": [
         {
           "group": "academic-board",
           "designation": [
             "HoD"
           ],
-          "subject": [],
-          "qualification": [],
-          "responsibilities": []
+          "subject": []
         },
         {
           "group": "dzongkha",
@@ -680,51 +493,29 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "Dzongkha"
-          ],
-          "qualification": [
-            "BA in Language and Literature",
-            "PGDE in Dzongkha"
-          ],
-          "responsibilities": [
-            "Dzongkha HOD",
-            "Class Teacher",
-            "Lamsoel Coordinator",
-            "School Media Focal"
           ]
         }
-      ],
-      "designation": [
-        "HoD",
-        "Teacher"
-      ],
-      "subject": [
-        "Dzongkha"
-      ],
-      "qualification": [
-        "BA in Language and Literature",
-        "PGDE in Dzongkha"
-      ],
-      "responsibilities": [
-        "Dzongkha HOD",
-        "Class Teacher",
-        "Lamsoel Coordinator",
-        "School Media Focal"
-      ],
-      "primaryGroup": "academic-board"
+      ]
     },
     {
       "id": "cheten-tshering",
       "name": "Cheten Tshering",
       "photo": "assets/images/staff/photos/cheten-tshering.jpg",
+      "designation": [
+        "HoD",
+        "Teacher II"
+      ],
+      "subject": [
+        "Mathematics"
+      ],
+      "primaryGroup": "academic-board",
       "memberships": [
         {
           "group": "academic-board",
           "designation": [
             "HoD"
           ],
-          "subject": [],
-          "qualification": [],
-          "responsibilities": []
+          "subject": []
         },
         {
           "group": "maths-ict",
@@ -733,51 +524,29 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "Mathematics"
-          ],
-          "qualification": [
-            "Mathematics",
-            "Physics"
-          ],
-          "responsibilities": [
-            "Head of department",
-            "Eduten focal",
-            "Gyelsay Mathematics focal",
-            "Compulsory Scouting tutor of class vii"
           ]
         }
-      ],
-      "designation": [
-        "HoD",
-        "Teacher II"
-      ],
-      "subject": [
-        "Mathematics"
-      ],
-      "qualification": [
-        "Mathematics",
-        "Physics"
-      ],
-      "responsibilities": [
-        "Head of department",
-        "Eduten focal",
-        "Gyelsay Mathematics focal",
-        "Compulsory Scouting tutor of class vii"
-      ],
-      "primaryGroup": "academic-board"
+      ]
     },
     {
       "id": "tandin-om",
       "name": "Tandin Om",
       "photo": "assets/images/staff/photos/tandin-om.jpg",
+      "designation": [
+        "HoD",
+        "TeacherII"
+      ],
+      "subject": [
+        "General"
+      ],
+      "primaryGroup": "academic-board",
       "memberships": [
         {
           "group": "academic-board",
           "designation": [
             "HoD"
           ],
-          "subject": [],
-          "qualification": [],
-          "responsibilities": []
+          "subject": []
         },
         {
           "group": "elementary",
@@ -786,40 +555,21 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "General"
-          ],
-          "qualification": [
-            "B.Ed Primary"
-          ],
-          "responsibilities": [
-            "HoD",
-            "Class teacher",
-            "Disaster Focal",
-            "Tarayana club coordinator"
           ]
         }
-      ],
-      "designation": [
-        "HoD",
-        "TeacherII"
-      ],
-      "subject": [
-        "General"
-      ],
-      "qualification": [
-        "B.Ed Primary"
-      ],
-      "responsibilities": [
-        "HoD",
-        "Class teacher",
-        "Disaster Focal",
-        "Tarayana club coordinator"
-      ],
-      "primaryGroup": "academic-board"
+      ]
     },
     {
       "id": "tshering-deki",
       "name": "Tshering Deki",
       "photo": "assets/images/staff/photos/tshering-deki.jpg",
+      "designation": [
+        "Teacher"
+      ],
+      "subject": [
+        "Economics"
+      ],
+      "primaryGroup": "humanities",
       "memberships": [
         {
           "group": "humanities",
@@ -828,39 +578,21 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "Economics"
-          ],
-          "qualification": [
-            "BBA International Business Management",
-            "PGDE in economics"
-          ],
-          "responsibilities": [
-            "Class teacher",
-            "Tarayana club coordinator",
-            "Disaster management focal"
           ]
         }
-      ],
-      "designation": [
-        "Teacher"
-      ],
-      "subject": [
-        "Economics"
-      ],
-      "qualification": [
-        "BBA International Business Management",
-        "PGDE in economics"
-      ],
-      "responsibilities": [
-        "Class teacher",
-        "Tarayana club coordinator",
-        "Disaster management focal"
-      ],
-      "primaryGroup": "humanities"
+      ]
     },
     {
       "id": "sarita-ghalley",
       "name": "Sarita Ghalley",
       "photo": "assets/images/staff/photos/sarita-ghalley.jpg",
+      "designation": [
+        "Teacher"
+      ],
+      "subject": [
+        "Economics"
+      ],
+      "primaryGroup": "humanities",
       "memberships": [
         {
           "group": "humanities",
@@ -869,37 +601,21 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "Economics"
-          ],
-          "qualification": [
-            "PgDE in Economics",
-            "BA. in Development Economics"
-          ],
-          "responsibilities": [
-            "Class Teacher",
-            "Health Coordinator"
           ]
         }
-      ],
-      "designation": [
-        "Teacher"
-      ],
-      "subject": [
-        "Economics"
-      ],
-      "qualification": [
-        "PgDE in Economics",
-        "BA. in Development Economics"
-      ],
-      "responsibilities": [
-        "Class Teacher",
-        "Health Coordinator"
-      ],
-      "primaryGroup": "humanities"
+      ]
     },
     {
       "id": "deki-wangmo",
       "name": "Deki Wangmo",
       "photo": "assets/images/staff/photos/deki-wangmo.png",
+      "designation": [
+        "Teacher II"
+      ],
+      "subject": [
+        "English"
+      ],
+      "primaryGroup": "english",
       "memberships": [
         {
           "group": "english",
@@ -908,39 +624,21 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "English"
-          ],
-          "qualification": [
-            "BE.d Secondary"
-          ],
-          "responsibilities": [
-            "Class Teacher",
-            "Nazhoen Scout Focal",
-            "Upshift Focal",
-            "Tarayana Coordinator"
           ]
         }
-      ],
-      "designation": [
-        "Teacher II"
-      ],
-      "subject": [
-        "English"
-      ],
-      "qualification": [
-        "BE.d Secondary"
-      ],
-      "responsibilities": [
-        "Class Teacher",
-        "Nazhoen Scout Focal",
-        "Upshift Focal",
-        "Tarayana Coordinator"
-      ],
-      "primaryGroup": "english"
+      ]
     },
     {
       "id": "pem-choki",
       "name": "Pem Choki",
       "photo": "assets/images/staff/photos/pem-choki.png",
+      "designation": [
+        "Teacher III"
+      ],
+      "subject": [
+        "Primary science"
+      ],
+      "primaryGroup": "science",
       "memberships": [
         {
           "group": "science",
@@ -949,43 +647,21 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "Primary science"
-          ],
-          "qualification": [
-            "Bachelor degree",
-            "Higher Secondary"
-          ],
-          "responsibilities": [
-            "Class teacher",
-            "House master",
-            "Scout Focal",
-            "club coordinator",
-            "Subject teacher"
           ]
         }
-      ],
-      "designation": [
-        "Teacher III"
-      ],
-      "subject": [
-        "Primary science"
-      ],
-      "qualification": [
-        "Bachelor degree",
-        "Higher Secondary"
-      ],
-      "responsibilities": [
-        "Class teacher",
-        "House master",
-        "Scout Focal",
-        "club coordinator",
-        "Subject teacher"
-      ],
-      "primaryGroup": "science"
+      ]
     },
     {
       "id": "bala-ram-chapagai",
       "name": "Bala Ram Chapagai",
       "photo": "assets/images/staff/photos/bala-ram-chapagai.jpg",
+      "designation": [
+        "Teacher"
+      ],
+      "subject": [
+        "Chemistry 9&10 Science 7"
+      ],
+      "primaryGroup": "science",
       "memberships": [
         {
           "group": "science",
@@ -994,43 +670,21 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "Chemistry 9&10 Science 7"
-          ],
-          "qualification": [
-            "Class 12",
-            "BEd.secondary biology and chemistry"
-          ],
-          "responsibilities": [
-            "Class teacher",
-            "House master",
-            "Club in-charge",
-            "Audio visual in-charge",
-            "Scout adult leader"
           ]
         }
-      ],
-      "designation": [
-        "Teacher"
-      ],
-      "subject": [
-        "Chemistry 9&10 Science 7"
-      ],
-      "qualification": [
-        "Class 12",
-        "BEd.secondary biology and chemistry"
-      ],
-      "responsibilities": [
-        "Class teacher",
-        "House master",
-        "Club in-charge",
-        "Audio visual in-charge",
-        "Scout adult leader"
-      ],
-      "primaryGroup": "science"
+      ]
     },
     {
       "id": "sonam-yangzom",
       "name": "Sonam Yangzom",
       "photo": "assets/images/staff/photos/sonam-yangzom.jpg",
+      "designation": [
+        "Teacher"
+      ],
+      "subject": [
+        "Science"
+      ],
+      "primaryGroup": "science",
       "memberships": [
         {
           "group": "science",
@@ -1039,35 +693,21 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "Science"
-          ],
-          "qualification": [
-            "Bachelor's degree"
-          ],
-          "responsibilities": [
-            "Health",
-            "Patrol leader"
           ]
         }
-      ],
-      "designation": [
-        "Teacher"
-      ],
-      "subject": [
-        "Science"
-      ],
-      "qualification": [
-        "Bachelor's degree"
-      ],
-      "responsibilities": [
-        "Health",
-        "Patrol leader"
-      ],
-      "primaryGroup": "science"
+      ]
     },
     {
       "id": "wangchuk-namgyel",
       "name": "Wangchuk Namgyel",
       "photo": "assets/images/staff/photos/wangchuk-namgyel.jpg",
+      "designation": [
+        "Teacher"
+      ],
+      "subject": [
+        "Dzongkha"
+      ],
+      "primaryGroup": "dzongkha",
       "memberships": [
         {
           "group": "dzongkha",
@@ -1076,84 +716,40 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "Dzongkha"
-          ],
-          "qualification": [
-            "BA in Language and Literature",
-            "PGDE in Dzongkha"
-          ],
-          "responsibilities": [
-            "Culture club coordinator",
-            "Jinpa House master",
-            "Class V B class Teacher",
-            "Adult leader of Nachung Scouts",
-            "Mentor"
           ]
         }
-      ],
-      "designation": [
-        "Teacher"
-      ],
-      "subject": [
-        "Dzongkha"
-      ],
-      "qualification": [
-        "BA in Language and Literature",
-        "PGDE in Dzongkha"
-      ],
-      "responsibilities": [
-        "Culture club coordinator",
-        "Jinpa House master",
-        "Class V B class Teacher",
-        "Adult leader of Nachung Scouts",
-        "Mentor"
-      ],
-      "primaryGroup": "dzongkha"
+      ]
     },
     {
       "id": "tshering-yangzom",
       "name": "Tshering Yangzom",
       "photo": "assets/images/staff/photos/tshering-yangzom.jpg",
+      "designation": [],
+      "subject": [
+        "Dzongkha"
+      ],
+      "primaryGroup": "dzongkha",
       "memberships": [
         {
           "group": "dzongkha",
           "designation": [],
           "subject": [
             "Dzongkha"
-          ],
-          "qualification": [
-            "BA in Language and Literature",
-            "PGDE in Dzongkha"
-          ],
-          "responsibilities": [
-            "Class Teacher",
-            "House Master",
-            "Club Coordinator",
-            "Adult Leader",
-            "Subject Teacher"
           ]
         }
-      ],
-      "designation": [],
-      "subject": [
-        "Dzongkha"
-      ],
-      "qualification": [
-        "BA in Language and Literature",
-        "PGDE in Dzongkha"
-      ],
-      "responsibilities": [
-        "Class Teacher",
-        "House Master",
-        "Club Coordinator",
-        "Adult Leader",
-        "Subject Teacher"
-      ],
-      "primaryGroup": "dzongkha"
+      ]
     },
     {
       "id": "sonam-yangchen",
       "name": "Sonam Yangchen",
       "photo": "assets/images/staff/photos/sonam-yangchen.jpg",
+      "designation": [
+        "Teacher II (P4A)"
+      ],
+      "subject": [
+        "Math"
+      ],
+      "primaryGroup": "maths-ict",
       "memberships": [
         {
           "group": "maths-ict",
@@ -1162,41 +758,21 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "Math"
-          ],
-          "qualification": [
-            "B.ed"
-          ],
-          "responsibilities": [
-            "Class teacher",
-            "club coordinator ( beautification club)",
-            "Ye-focal",
-            "Tsheltrium house master",
-            "Award committee"
           ]
         }
-      ],
-      "designation": [
-        "Teacher II (P4A)"
-      ],
-      "subject": [
-        "Math"
-      ],
-      "qualification": [
-        "B.ed"
-      ],
-      "responsibilities": [
-        "Class teacher",
-        "club coordinator ( beautification club)",
-        "Ye-focal",
-        "Tsheltrium house master",
-        "Award committee"
-      ],
-      "primaryGroup": "maths-ict"
+      ]
     },
     {
       "id": "dhan-kumar-rai",
       "name": "Dhan Kumar Rai",
       "photo": "assets/images/staff/photos/dhan-kumar-rai.jpg",
+      "designation": [
+        "Teacher"
+      ],
+      "subject": [
+        "Mathematics"
+      ],
+      "primaryGroup": "maths-ict",
       "memberships": [
         {
           "group": "maths-ict",
@@ -1205,41 +781,21 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "Mathematics"
-          ],
-          "qualification": [
-            "Class 12",
-            "Bed Primary"
-          ],
-          "responsibilities": [
-            "Class Teacher",
-            "Assistant Health Coordinator",
-            "Disaster Management Committee",
-            "Health Club Coordinator"
           ]
         }
-      ],
-      "designation": [
-        "Teacher"
-      ],
-      "subject": [
-        "Mathematics"
-      ],
-      "qualification": [
-        "Class 12",
-        "Bed Primary"
-      ],
-      "responsibilities": [
-        "Class Teacher",
-        "Assistant Health Coordinator",
-        "Disaster Management Committee",
-        "Health Club Coordinator"
-      ],
-      "primaryGroup": "maths-ict"
+      ]
     },
     {
       "id": "tashi-lungmo",
       "name": "Tashi Lungmo",
       "photo": "assets/images/staff/photos/tashi-lungmo.jpg",
+      "designation": [
+        "Teacher"
+      ],
+      "subject": [
+        "DTI"
+      ],
+      "primaryGroup": "maths-ict",
       "memberships": [
         {
           "group": "maths-ict",
@@ -1248,16 +804,6 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "DTI"
-          ],
-          "qualification": [
-            "B.Ed (primary)"
-          ],
-          "responsibilities": [
-            "Subject Teacher",
-            "Wellbeing Focal",
-            "Peer helper club coordinator",
-            "Nachung scout adult leader",
-            "Mentor"
           ]
         },
         {
@@ -1267,41 +813,21 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "DTI"
-          ],
-          "qualification": [
-            "B.Ed (primary)"
-          ],
-          "responsibilities": [
-            "Subject Teacher",
-            "Wellbeing Focal",
-            "Peer helper club coordinator",
-            "Nachung scout adult leader",
-            "Mentor"
           ]
         }
-      ],
-      "designation": [
-        "Teacher"
-      ],
-      "subject": [
-        "DTI"
-      ],
-      "qualification": [
-        "B.Ed (primary)"
-      ],
-      "responsibilities": [
-        "Subject Teacher",
-        "Wellbeing Focal",
-        "Peer helper club coordinator",
-        "Nachung scout adult leader",
-        "Mentor"
-      ],
-      "primaryGroup": "maths-ict"
+      ]
     },
     {
       "id": "sonam-choki",
       "name": "Sonam Choki",
       "photo": "assets/images/staff/photos/sonam-choki.jpg",
+      "designation": [
+        "Teacher"
+      ],
+      "subject": [
+        "Mathematics & ICT"
+      ],
+      "primaryGroup": "maths-ict",
       "memberships": [
         {
           "group": "maths-ict",
@@ -1310,41 +836,21 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "Mathematics & ICT"
-          ],
-          "qualification": [
-            "ICT and DTI",
-            "B.Ed Secondary in Maths and IT"
-          ],
-          "responsibilities": [
-            "Media focal",
-            "Timetable coordinator",
-            "Club master",
-            "Edtech focal"
           ]
         }
-      ],
-      "designation": [
-        "Teacher"
-      ],
-      "subject": [
-        "Mathematics & ICT"
-      ],
-      "qualification": [
-        "ICT and DTI",
-        "B.Ed Secondary in Maths and IT"
-      ],
-      "responsibilities": [
-        "Media focal",
-        "Timetable coordinator",
-        "Club master",
-        "Edtech focal"
-      ],
-      "primaryGroup": "maths-ict"
+      ]
     },
     {
       "id": "sangay-dema",
       "name": "Sangay Dema",
       "photo": "assets/images/staff/photos/sangay-dema.jpg",
+      "designation": [
+        "Teacher"
+      ],
+      "subject": [
+        "Dzongkha and SaT"
+      ],
+      "primaryGroup": "elementary",
       "memberships": [
         {
           "group": "elementary",
@@ -1353,41 +859,21 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "Dzongkha and SaT"
-          ],
-          "qualification": [
-            "Degree",
-            "PgDE"
-          ],
-          "responsibilities": [
-            "Class Teacher of 1B",
-            "Lamsoel program and club coordinator",
-            "Chey chey scout adult leader",
-            "Mentor to class 1 B"
           ]
         }
-      ],
-      "designation": [
-        "Teacher"
-      ],
-      "subject": [
-        "Dzongkha and SaT"
-      ],
-      "qualification": [
-        "Degree",
-        "PgDE"
-      ],
-      "responsibilities": [
-        "Class Teacher of 1B",
-        "Lamsoel program and club coordinator",
-        "Chey chey scout adult leader",
-        "Mentor to class 1 B"
-      ],
-      "primaryGroup": "elementary"
+      ]
     },
     {
       "id": "goma-devi-sunar",
       "name": "Goma Devi Sunar",
       "photo": "assets/images/staff/photos/goma-devi-sunar.jpg",
+      "designation": [
+        "Teacher"
+      ],
+      "subject": [
+        "General"
+      ],
+      "primaryGroup": "elementary",
       "memberships": [
         {
           "group": "elementary",
@@ -1396,43 +882,21 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "General"
-          ],
-          "qualification": [
-            "PTC",
-            "B.ed primary"
-          ],
-          "responsibilities": [
-            "Class Teacher",
-            "Club co-ordinator",
-            "Health member",
-            "Subject teacher",
-            "Scout"
           ]
         }
-      ],
-      "designation": [
-        "Teacher"
-      ],
-      "subject": [
-        "General"
-      ],
-      "qualification": [
-        "PTC",
-        "B.ed primary"
-      ],
-      "responsibilities": [
-        "Class Teacher",
-        "Club co-ordinator",
-        "Health member",
-        "Subject teacher",
-        "Scout"
-      ],
-      "primaryGroup": "elementary"
+      ]
     },
     {
       "id": "dechen-tshomo",
       "name": "Dechen Tshomo",
       "photo": "assets/images/staff/photos/dechen-tshomo.jpg",
+      "designation": [
+        "Teacher"
+      ],
+      "subject": [
+        "Mathematics and ICT"
+      ],
+      "primaryGroup": "elementary",
       "memberships": [
         {
           "group": "elementary",
@@ -1441,37 +905,21 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "Mathematics and ICT"
-          ],
-          "qualification": [
-            "Bachelors Degree"
-          ],
-          "responsibilities": [
-            "Class Teacher",
-            "House Master",
-            "Club Coordinator"
           ]
         }
-      ],
-      "designation": [
-        "Teacher"
-      ],
-      "subject": [
-        "Mathematics and ICT"
-      ],
-      "qualification": [
-        "Bachelors Degree"
-      ],
-      "responsibilities": [
-        "Class Teacher",
-        "House Master",
-        "Club Coordinator"
-      ],
-      "primaryGroup": "elementary"
+      ]
     },
     {
       "id": "dechen-yangzom",
       "name": "Dechen Yangzom",
       "photo": "assets/images/staff/photos/dechen-yangzom.jpg",
+      "designation": [
+        "Teacher"
+      ],
+      "subject": [
+        "Mathematics and science and Technology"
+      ],
+      "primaryGroup": "elementary",
       "memberships": [
         {
           "group": "elementary",
@@ -1480,259 +928,135 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "Mathematics and science and Technology"
-          ],
-          "qualification": [
-            "Degree"
-          ],
-          "responsibilities": [
-            "Class Teacher",
-            "Club Coordinator",
-            "House master",
-            "Search and rescue team",
-            "Mentor and chey chey scout leader"
           ]
         }
-      ],
-      "designation": [
-        "Teacher"
-      ],
-      "subject": [
-        "Mathematics and science and Technology"
-      ],
-      "qualification": [
-        "Degree"
-      ],
-      "responsibilities": [
-        "Class Teacher",
-        "Club Coordinator",
-        "House master",
-        "Search and rescue team",
-        "Mentor and chey chey scout leader"
-      ],
-      "primaryGroup": "elementary"
+      ]
     },
     {
       "id": "tashi-tshomo",
       "name": "Tashi Tshomo",
       "photo": "assets/images/staff/photos/tashi-tshomo.jpg",
+      "designation": [
+        "SSI (S5)"
+      ],
+      "subject": [],
+      "primaryGroup": "support-staff",
       "memberships": [
         {
           "group": "support-staff",
           "designation": [
             "SSI (S5)"
           ],
-          "subject": [],
-          "qualification": [
-            "Diploma in Physical Education and Sports Coaching"
-          ],
-          "responsibilities": [
-            "School Games and Sports Focal",
-            "Taekwondo Program Assistant Coordinator",
-            "Basketball Club Coordinator",
-            "Nachung Patrol Assistant adult leader",
-            "School games and sports coach"
-          ]
+          "subject": []
         }
-      ],
-      "designation": [
-        "SSI (S5)"
-      ],
-      "subject": [],
-      "qualification": [
-        "Diploma in Physical Education and Sports Coaching"
-      ],
-      "responsibilities": [
-        "School Games and Sports Focal",
-        "Taekwondo Program Assistant Coordinator",
-        "Basketball Club Coordinator",
-        "Nachung Patrol Assistant adult leader",
-        "School games and sports coach"
-      ],
-      "primaryGroup": "support-staff"
+      ]
     },
     {
       "id": "madhu-nepal",
       "name": "Madhu Nepal",
       "photo": "assets/images/staff/photos/madhu-nepal.jpg",
+      "designation": [
+        "Jr Librarian V"
+      ],
+      "subject": [],
+      "primaryGroup": "support-staff",
       "memberships": [
         {
           "group": "support-staff",
           "designation": [
             "Jr Librarian V"
           ],
-          "subject": [],
-          "qualification": [
-            "XII"
-          ],
-          "responsibilities": [
-            "Librarian",
-            "Mess incharge",
-            "Maintenance Club coordinator",
-            "Games and sports coordinator",
-            "Treasurer"
-          ]
+          "subject": []
         }
-      ],
-      "designation": [
-        "Jr Librarian V"
-      ],
-      "subject": [],
-      "qualification": [
-        "XII"
-      ],
-      "responsibilities": [
-        "Librarian",
-        "Mess incharge",
-        "Maintenance Club coordinator",
-        "Games and sports coordinator",
-        "Treasurer"
-      ],
-      "primaryGroup": "support-staff"
+      ]
     },
     {
       "id": "durba-kumar-chhetri",
       "name": "Durba Kumar Chhetri",
       "photo": "assets/images/staff/photos/durba-kumar-chhetri.jpg",
+      "designation": [
+        "Jr. Librarian"
+      ],
+      "subject": [],
+      "primaryGroup": "support-staff",
       "memberships": [
         {
           "group": "support-staff",
           "designation": [
             "Jr. Librarian"
           ],
-          "subject": [],
-          "qualification": [
-            "XII"
-          ],
-          "responsibilities": [
-            "Library",
-            "Club",
-            "SMT member",
-            "Exam cell member",
-            "Store incharge"
-          ]
+          "subject": []
         }
-      ],
-      "designation": [
-        "Jr. Librarian"
-      ],
-      "subject": [],
-      "qualification": [
-        "XII"
-      ],
-      "responsibilities": [
-        "Library",
-        "Club",
-        "SMT member",
-        "Exam cell member",
-        "Store incharge"
-      ],
-      "primaryGroup": "support-staff"
+      ]
     },
     {
       "id": "kinga-lhamo",
       "name": "Kinga Lhamo",
       "photo": "assets/images/staff/photos/kinga-lhamo.png",
+      "designation": [
+        "ICT Lab Assistant"
+      ],
+      "subject": [],
+      "primaryGroup": "support-staff",
       "memberships": [
         {
           "group": "support-staff",
           "designation": [
             "ICT Lab Assistant"
           ],
-          "subject": [],
-          "qualification": [
-            "XII"
-          ],
-          "responsibilities": [
-            "ICT lab assistant",
-            "Exam cell assistant",
-            "Health coordinator",
-            "Award committee",
-            "Adult leader"
-          ]
+          "subject": []
         }
-      ],
-      "designation": [
-        "ICT Lab Assistant"
-      ],
-      "subject": [],
-      "qualification": [
-        "XII"
-      ],
-      "responsibilities": [
-        "ICT lab assistant",
-        "Exam cell assistant",
-        "Health coordinator",
-        "Award committee",
-        "Adult leader"
-      ],
-      "primaryGroup": "support-staff"
+      ]
     },
     {
       "id": "kinley-dema",
       "name": "Kinley Dema",
       "photo": "assets/images/staff/photos/kinley-dema.png",
+      "designation": [
+        "Science Lab Assistant"
+      ],
+      "subject": [],
+      "primaryGroup": "support-staff",
       "memberships": [
         {
           "group": "support-staff",
           "designation": [
             "Science Lab Assistant"
           ],
-          "subject": [],
-          "qualification": [
-            "XII"
-          ],
-          "responsibilities": [
-            "Lab Assistant (science)"
-          ]
+          "subject": []
         }
-      ],
-      "designation": [
-        "Science Lab Assistant"
-      ],
-      "subject": [],
-      "qualification": [
-        "XII"
-      ],
-      "responsibilities": [
-        "Lab Assistant (science)"
-      ],
-      "primaryGroup": "support-staff"
+      ]
     },
     {
       "id": "rinzin-lhamo",
       "name": "Rinzin Lhamo",
       "photo": "assets/images/staff/photos/rinzin-lhamo.jpg",
+      "designation": [
+        "Administrative Assistant"
+      ],
+      "subject": [],
+      "primaryGroup": "support-staff",
       "memberships": [
         {
           "group": "support-staff",
           "designation": [
             "Administrative Assistant"
           ],
-          "subject": [],
-          "qualification": [
-            "XII"
-          ],
-          "responsibilities": [
-            "ADM"
-          ]
+          "subject": []
         }
-      ],
-      "designation": [
-        "Administrative Assistant"
-      ],
-      "subject": [],
-      "qualification": [
-        "XII"
-      ],
-      "responsibilities": [
-        "ADM"
-      ],
-      "primaryGroup": "support-staff"
+      ]
     },
     {
       "id": "migma-dolma-moktan",
       "name": "Migma Dolma Moktan",
       "photo": "assets/images/staff/photos/migma-dolma-moktan.jpg",
+      "designation": [
+        "Asst.Counsellor"
+      ],
+      "subject": [
+        "Counselling"
+      ],
+      "primaryGroup": "wellbeing",
       "memberships": [
         {
           "group": "wellbeing",
@@ -1741,193 +1065,142 @@ window.AMSS_STAFF_DIRECTORY = {
           ],
           "subject": [
             "Counselling"
-          ],
-          "qualification": [
-            "B.A in media Studies",
-            "PgDCCP"
-          ],
-          "responsibilities": [
-            "Individual Counselling",
-            "Career and Guidance class"
           ]
         }
-      ],
-      "designation": [
-        "Asst.Counsellor"
-      ],
-      "subject": [
-        "Counselling"
-      ],
-      "qualification": [
-        "B.A in media Studies",
-        "PgDCCP"
-      ],
-      "responsibilities": [
-        "Individual Counselling",
-        "Career and Guidance class"
-      ],
-      "primaryGroup": "wellbeing"
+      ]
     },
     {
       "id": "pem-dorji",
       "name": "Pem Dorji",
       "photo": "assets/images/staff/photos/pem-dorji.png",
+      "designation": [
+        "Head Cook"
+      ],
+      "subject": [],
+      "primaryGroup": "esp-gsp",
       "memberships": [
         {
           "group": "esp-gsp",
           "designation": [
             "Head Cook"
           ],
-          "subject": [],
-          "qualification": [],
-          "responsibilities": []
+          "subject": []
         }
-      ],
-      "designation": [
-        "Head Cook"
-      ],
-      "subject": [],
-      "qualification": [],
-      "responsibilities": [],
-      "primaryGroup": "esp-gsp"
+      ]
     },
     {
       "id": "nalem",
       "name": "Nalem",
       "photo": "assets/images/staff/photos/nalem.png",
+      "designation": [
+        "Cook"
+      ],
+      "subject": [],
+      "primaryGroup": "esp-gsp",
       "memberships": [
         {
           "group": "esp-gsp",
           "designation": [
             "Cook"
           ],
-          "subject": [],
-          "qualification": [],
-          "responsibilities": []
+          "subject": []
         }
-      ],
-      "designation": [
-        "Cook"
-      ],
-      "subject": [],
-      "qualification": [],
-      "responsibilities": [],
-      "primaryGroup": "esp-gsp"
+      ]
     },
     {
       "id": "dawa-dem",
       "name": "Dawa Dem",
       "photo": "assets/images/staff/photos/dawa-dem.png",
+      "designation": [
+        "Cook"
+      ],
+      "subject": [],
+      "primaryGroup": "esp-gsp",
       "memberships": [
         {
           "group": "esp-gsp",
           "designation": [
             "Cook"
           ],
-          "subject": [],
-          "qualification": [],
-          "responsibilities": []
+          "subject": []
         }
-      ],
-      "designation": [
-        "Cook"
-      ],
-      "subject": [],
-      "qualification": [],
-      "responsibilities": [],
-      "primaryGroup": "esp-gsp"
+      ]
     },
     {
       "id": "nim-pem",
       "name": "Nim Pem",
       "photo": "assets/images/staff/photos/nim-pem.png",
+      "designation": [
+        "Sweeper"
+      ],
+      "subject": [],
+      "primaryGroup": "esp-gsp",
       "memberships": [
         {
           "group": "esp-gsp",
           "designation": [
             "Sweeper"
           ],
-          "subject": [],
-          "qualification": [],
-          "responsibilities": []
+          "subject": []
         }
-      ],
-      "designation": [
-        "Sweeper"
-      ],
-      "subject": [],
-      "qualification": [],
-      "responsibilities": [],
-      "primaryGroup": "esp-gsp"
+      ]
     },
     {
       "id": "sonam-deki",
       "name": "Sonam Deki",
       "photo": "assets/images/staff/photos/sonam-deki.png",
+      "designation": [
+        "Sweeper"
+      ],
+      "subject": [],
+      "primaryGroup": "esp-gsp",
       "memberships": [
         {
           "group": "esp-gsp",
           "designation": [
             "Sweeper"
           ],
-          "subject": [],
-          "qualification": [],
-          "responsibilities": []
+          "subject": []
         }
-      ],
-      "designation": [
-        "Sweeper"
-      ],
-      "subject": [],
-      "qualification": [],
-      "responsibilities": [],
-      "primaryGroup": "esp-gsp"
+      ]
     },
     {
       "id": "tashi-peday",
       "name": "Tashi Peday",
       "photo": "assets/images/staff/photos/tashi-peday.png",
+      "designation": [
+        "Caretaker"
+      ],
+      "subject": [],
+      "primaryGroup": "esp-gsp",
       "memberships": [
         {
           "group": "esp-gsp",
           "designation": [
             "Caretaker"
           ],
-          "subject": [],
-          "qualification": [],
-          "responsibilities": []
+          "subject": []
         }
-      ],
-      "designation": [
-        "Caretaker"
-      ],
-      "subject": [],
-      "qualification": [],
-      "responsibilities": [],
-      "primaryGroup": "esp-gsp"
+      ]
     },
     {
       "id": "sancha",
       "name": "Sancha",
       "photo": "assets/images/staff/photos/sancha.png",
+      "designation": [
+        "Caretaker"
+      ],
+      "subject": [],
+      "primaryGroup": "esp-gsp",
       "memberships": [
         {
           "group": "esp-gsp",
           "designation": [
             "Caretaker"
           ],
-          "subject": [],
-          "qualification": [],
-          "responsibilities": []
+          "subject": []
         }
-      ],
-      "designation": [
-        "Caretaker"
-      ],
-      "subject": [],
-      "qualification": [],
-      "responsibilities": [],
-      "primaryGroup": "esp-gsp"
+      ]
     }
   ]
 };

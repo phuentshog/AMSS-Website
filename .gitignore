@@ -12,3 +12,44 @@ service-account*.json
 apps-script-gateway/appsscript.json
 /PLC.xlsx
 /AMSS_Past_Question_Papers.xlsx
+/private-data/
+
+# Original school records and working copies. Keep local originals outside the
+# public Git tree; .gitignore does not untrack files already in the index.
+**/*.xlsx
+**/*.xls
+**/*.xlsm
+**/*.xlsb
+**/*.ods
+**/*.gsheet
+**/*.gdoc
+**/*.gslides
+**/*.doc
+**/*.docx
+**/*.docm
+**/*.ppt
+**/*.pptx
+**/*.heic
+**/*.HEIC
+**/~$*
+/Academic target for 2026/
+/exam information 2026/
+/Examination */
+/SPMS/
+/Log in */
+/notes/
+/Student leaders_2026/
+/organogram.xlsx
+
+# Private or unapproved data exports and internal review material.
+/assets/data/academic-target-2026.json
+/assets/data/annual-exam-2026.json
+/assets/data/dibels-assessments.json
+/assets/data/plc-data.json
+/assets/data/trial-exam-2026.json
+/assets/js/staff/staff-data.js
+/data/reading-data.js
+/examination/data/toppers.json
+/examination/data/papers-review.json
+/examination/data/papers-access-audit.md
+/examination/data/papers-access-review.md

@@ -5,17 +5,30 @@ if (thisYear) thisYear.textContent = String(new Date().getFullYear());
 
 const menuToggle = document.querySelector(".dashboard-menu-toggle");
 const dashboardNavigation = document.querySelector("#dashboard-navigation");
-const mobileNavigation = window.matchMedia("(max-width: 760px)");
+const dashboardSidebar = document.querySelector(".dashboard-sidebar");
+const sidebarBackdrop = document.querySelector(".dashboard-sidebar-backdrop");
+const mobileNavigation = window.matchMedia("(max-width: 900px)");
+const tabletNavigation = window.matchMedia("(min-width: 901px) and (max-width: 1050px)");
+const listenForMediaQueryChange = (mediaQuery, listener) => {
+  if (typeof mediaQuery.addEventListener === "function") {
+    mediaQuery.addEventListener("change", listener);
+  } else if (typeof mediaQuery.addListener === "function") {
+    mediaQuery.addListener(listener);
+  }
+};
 
 function setNavigationOpen(isOpen) {
-  if (!menuToggle || !dashboardNavigation) return;
-  dashboardNavigation.classList.toggle("is-open", isOpen);
-  dashboardNavigation.classList.toggle("is-collapsed", mobileNavigation.matches && !isOpen);
+  if (!menuToggle || !dashboardNavigation || !dashboardSidebar) return;
+  dashboardSidebar.classList.toggle("is-open", mobileNavigation.matches && isOpen);
+  dashboardSidebar.classList.toggle("is-compact", tabletNavigation.matches && !isOpen);
+  if (sidebarBackdrop) sidebarBackdrop.hidden = !mobileNavigation.matches || !isOpen;
   menuToggle.setAttribute("aria-expanded", String(isOpen));
-  menuToggle.setAttribute("aria-label", isOpen ? "Close dashboard navigation" : "Open dashboard navigation");
+  menuToggle.setAttribute("aria-label", mobileNavigation.matches
+    ? (isOpen ? "Close dashboard navigation" : "Open dashboard navigation")
+    : (isOpen ? "Collapse dashboard sidebar" : "Expand dashboard sidebar"));
 }
 
-setNavigationOpen(false);
+setNavigationOpen(!mobileNavigation.matches && !tabletNavigation.matches);
 
 menuToggle?.addEventListener("click", () => {
   setNavigationOpen(menuToggle.getAttribute("aria-expanded") !== "true");
@@ -24,6 +37,7 @@ menuToggle?.addEventListener("click", () => {
 dashboardNavigation?.addEventListener("click", (event) => {
   if (mobileNavigation.matches && event.target.closest("a")) setNavigationOpen(false);
 });
+sidebarBackdrop?.addEventListener("click", () => setNavigationOpen(false));
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && menuToggle?.getAttribute("aria-expanded") === "true") {
@@ -32,7 +46,37 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-mobileNavigation.addEventListener("change", () => setNavigationOpen(false));
+listenForMediaQueryChange(mobileNavigation, () => setNavigationOpen(!mobileNavigation.matches && !tabletNavigation.matches));
+listenForMediaQueryChange(tabletNavigation, () => setNavigationOpen(!mobileNavigation.matches && !tabletNavigation.matches));
+
+// Reuse the sidebar's native hash links to show one dashboard view at a time.
+const dashboardSections = [...document.querySelectorAll(".dashboard-content [data-dashboard-section]")];
+const dashboardSectionIds = new Set(dashboardSections.map((section) => section.id).filter(Boolean));
+const dashboardNavigationLinks = [...(dashboardNavigation?.querySelectorAll('a[href^="#"]') ?? [])];
+
+function selectedDashboardSection() {
+  let sectionId = "";
+  try {
+    sectionId = decodeURIComponent(window.location.hash.slice(1));
+  } catch {
+    // Malformed hashes fall back to the dashboard's existing welcome view.
+  }
+  return dashboardSectionIds.has(sectionId) ? sectionId : "dashboard-overview";
+}
+
+function updateDashboardSection() {
+  const activeSectionId = selectedDashboardSection();
+  for (const section of dashboardSections) section.hidden = section.id !== activeSectionId;
+
+  for (const link of dashboardNavigationLinks) {
+    const linkSectionId = link.hash.slice(1);
+    if (linkSectionId === activeSectionId) link.setAttribute("aria-current", "page");
+    else link.removeAttribute("aria-current");
+  }
+}
+
+updateDashboardSection();
+window.addEventListener("hashchange", updateDashboardSection);
 
 function safeDestination(value) {
   if (typeof value !== "string" || !value.trim()) return null;

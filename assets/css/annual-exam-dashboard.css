@@ -1,0 +1,349 @@
+body.staff-dashboard-page #examination-information{grid-column:1/-1}
+body.staff-dashboard-page #annual-exam-content{display:grid;gap:16px;color:var(--ink)}
+body.staff-dashboard-page .annual-exam-panel{display:grid;gap:14px;min-width:0}
+body.staff-dashboard-page .annual-exam-panel[hidden]{display:none!important}
+body.staff-dashboard-page .annual-timeline-list{display:grid;gap:0;margin:0;padding:0 0 0 8px;list-style:none}
+body.staff-dashboard-page .annual-timeline-item{position:relative;display:grid;grid-template-columns:minmax(100px,150px) minmax(0,1fr);gap:14px;padding:0 0 18px 22px;border-left:2px solid var(--line)}
+body.staff-dashboard-page .annual-timeline-item::before{content:"";position:absolute;left:-7px;top:3px;width:10px;height:10px;border:2px solid var(--card);border-radius:50%;background:var(--saf);box-shadow:0 0 0 1px var(--saf)}
+body.staff-dashboard-page .annual-timeline-item time{color:var(--ind);font-size:14px;font-weight:700}
+body.staff-dashboard-page .annual-timeline-item h3{margin:0;color:var(--ink);font-size:15px;line-height:1.35}
+body.staff-dashboard-page .annual-timeline-item p{margin:4px 0 0;color:var(--mut);font-size:13px}
+body.staff-dashboard-page .annual-intro{margin:0;color:var(--mut);font-size:14px;line-height:1.55}
+body.staff-dashboard-page .annual-page-title{margin:0;font-size:clamp(20px,3vw,25px);line-height:1.2;color:var(--ink)}
+body.staff-dashboard-page .annual-card{min-width:0;padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--card);box-shadow:0 4px 14px rgba(15,23,42,.04)}
+body.staff-dashboard-page .annual-card h3{margin:0 0 12px;font-size:17px;color:var(--ink)}
+body.staff-dashboard-page .annual-card p{margin:8px 0;color:var(--mut);font-size:13px;line-height:1.5}
+body.staff-dashboard-page .annual-source-note{color:var(--mut);font-size:13px;line-height:1.5}
+body.staff-dashboard-page .annual-table-wrap{width:100%;overflow:auto;border:1px solid var(--line);border-radius:10px;background:var(--card);-webkit-overflow-scrolling:touch}
+body.staff-dashboard-page .annual-table-wrap table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.45}
+body.staff-dashboard-page .annual-table-wrap th,body.staff-dashboard-page .annual-table-wrap td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;white-space:nowrap}
+body.staff-dashboard-page .annual-table-wrap th{position:sticky;top:0;background:var(--bg);font-weight:700;color:var(--ink)}
+body.staff-dashboard-page .annual-table-wrap tbody tr:last-child td{border-bottom:0}
+body.staff-dashboard-page .annual-table-wrap tbody tr:hover{background:color-mix(in srgb,var(--saf-s) 45%,var(--card))}
+body.staff-dashboard-page .annual-timing-variants{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+body.staff-dashboard-page .annual-duty-filters{display:grid;grid-template-columns:repeat(4,minmax(150px,1fr));gap:10px;margin-bottom:12px}
+body.staff-dashboard-page .annual-duty-filters label{display:grid;gap:5px;color:var(--mut);font-size:12px;font-weight:650}
+body.staff-dashboard-page .annual-duty-filters select,body.staff-dashboard-page .annual-duty-filters input{width:100%;min-height:40px;padding:8px 10px;border:1px solid var(--line);border-radius:9px;background:var(--card);color:var(--ink);font:inherit;font-size:14px}
+body.staff-dashboard-page .annual-duty-filters :focus-visible{outline:3px solid var(--saf);outline-offset:1px}
+body.staff-dashboard-page .annual-duty-summary{margin:0 0 9px;color:var(--mut);font-size:13px}
+body.staff-dashboard-page .annual-exam-submenu-trigger{width:100%;min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px;border:0;border-radius:8px;background:transparent;color:var(--ink);text-align:left;font-size:16px;font-weight:600;line-height:1.35;font-family:inherit;cursor:pointer}
+body.staff-dashboard-page .annual-exam-submenu-trigger:hover,body.staff-dashboard-page .annual-exam-submenu-trigger:focus-visible,body.staff-dashboard-page .annual-exam-submenu-trigger[aria-expanded=true]{background:var(--saf-s);color:var(--ind)}
+body.staff-dashboard-page .annual-exam-submenu-trigger:focus-visible{outline:3px solid var(--saf);outline-offset:1px}
+body.staff-dashboard-page #dashboard-exam-info-trigger[aria-expanded=true],body.staff-dashboard-page #dashboard-exam-info-trigger[aria-current=page]{background:var(--saf-s);color:var(--ind)}
+body.staff-dashboard-page #dashboard-exam-info-trigger[aria-current=page]{box-shadow:inset 0 -3px 0 var(--saf)}
+body.staff-dashboard-page #dashboard-exam-info-menu{min-width:245px}
+@media(max-width:980px){body.staff-dashboard-page .annual-duty-filters{grid-template-columns:repeat(2,minmax(120px,1fr))}body.staff-dashboard-page #dashboard-exam-info-menu{margin-left:12px}}
+@media(max-width:600px){body.staff-dashboard-page .annual-timing-variants{grid-template-columns:1fr}body.staff-dashboard-page .annual-duty-filters{grid-template-columns:1fr}body.staff-dashboard-page .annual-card{padding:12px}body.staff-dashboard-page .annual-table-wrap th,body.staff-dashboard-page .annual-table-wrap td{padding:8px;font-size:12px}body.staff-dashboard-page .annual-timeline-item{grid-template-columns:1fr;gap:4px;padding-bottom:15px}}
+
+/* Exam Information visual refresh; navigation changes are confined to the shared dashboard bar. */
+body.staff-dashboard-page #dashboard-navigation{
+ position:sticky;top:0;z-index:40;width:100%;height:60px;min-height:60px;display:flex;flex-wrap:nowrap;align-items:stretch;gap:2px;
+ padding:4px 12px;border:0;border-bottom:1px solid #e2e8f0;border-radius:0;background:var(--card);box-shadow:0 2px 8px rgba(15,23,42,.04);
+ overflow-x:auto;overflow-y:hidden;white-space:nowrap
+}
+body.staff-dashboard-page #dashboard-navigation:has(.dashboard-nav-submenu:not([hidden])){overflow:visible}
+body.staff-dashboard-page #dashboard-navigation .dashboard-nav-menu-toggle{display:none}
+body.staff-dashboard-page #dashboard-navigation .dashboard-nav-links{display:flex!important;flex:1 1 auto;min-width:0;align-items:stretch;justify-content:space-between;gap:2px;overflow:visible}
+body.staff-dashboard-page #dashboard-navigation a{flex:0 0 auto;min-height:50px;display:inline-flex;align-items:center;gap:7px;padding:8px 8px;border-radius:8px;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:14px;font-weight:500;line-height:1.2;white-space:nowrap}
+body.staff-dashboard-page #dashboard-navigation a svg{width:17px;height:17px;flex:0 0 17px}
+body.staff-dashboard-page #dashboard-navigation a[aria-current="page"]{background:#eff6ff;color:#2563eb;box-shadow:inset 0 -2px 0 #2563eb}
+body.staff-dashboard-page #dashboard-navigation .dashboard-nav-group{flex:0 0 auto}
+body.staff-dashboard-page #dashboard-navigation .dashboard-nav-submenu{white-space:normal}
+body.staff-dashboard-page #dashboard-navigation :focus-visible{outline:3px solid #2563eb;outline-offset:1px}
+@media(min-width:981px) and (max-width:1180px){
+ body.staff-dashboard-page #dashboard-navigation{gap:0;padding-inline:6px}
+ body.staff-dashboard-page #dashboard-navigation a{gap:5px;padding-inline:5px;font-size:12.5px}
+ body.staff-dashboard-page #dashboard-navigation a svg{width:16px;height:16px;flex-basis:16px}
+}
+@media(max-width:980px){
+ body.staff-dashboard-page #dashboard-navigation{position:relative;top:auto;height:auto;min-height:56px;display:grid;grid-template-columns:minmax(0,1fr);gap:5px;padding:8px;border:0;border-radius:14px;overflow:visible;white-space:normal}
+ body.staff-dashboard-page #dashboard-navigation .dashboard-nav-menu-toggle{display:flex;width:100%;min-height:44px}
+ body.staff-dashboard-page #dashboard-navigation .dashboard-nav-links{display:none!important;min-width:0;overflow:visible}
+ body.staff-dashboard-page #dashboard-navigation.is-open .dashboard-nav-links{display:grid!important;gap:3px}
+ body.staff-dashboard-page #dashboard-navigation.is-collapsed .dashboard-nav-links{display:none!important}
+ body.staff-dashboard-page #dashboard-navigation a{width:100%;min-height:44px;padding:9px 10px;font-size:14px}
+ body.staff-dashboard-page #dashboard-navigation .dashboard-nav-group{display:grid;align-items:stretch}
+ body.staff-dashboard-page #dashboard-navigation .dashboard-nav-submenu,
+ body.staff-dashboard-page #dashboard-navigation .dashboard-nav-submenu.nested{position:static;max-width:100%;min-width:0;margin:2px 0 2px 12px;padding:5px;border-radius:10px;box-shadow:none}
+}
+
+body.staff-dashboard-page #examination-information{
+ max-width:1200px;margin:24px auto 40px;padding:28px 24px 36px;border:0;border-radius:0;background:var(--card);box-shadow:none;
+ color:#334155;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif
+}
+body.staff-dashboard-page #examination-information h2,
+body.staff-dashboard-page #examination-information h3{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:0}
+body.staff-dashboard-page #examination-information>.k{align-items:flex-start;gap:12px;margin:0 0 26px}
+body.staff-dashboard-page #examination-information>.k>.ic{width:36px;height:36px;flex:0 0 36px;border-radius:10px;background:#eff6ff}
+body.staff-dashboard-page #examination-information>.k>.ic svg{width:18px;height:18px;stroke:#2563eb}
+body.staff-dashboard-page #examination-information>.k .eb{margin:0 0 3px;color:#64748b;font:600 12px/1.3 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.08em}
+body.staff-dashboard-page #examination-information>.k h2{color:#0f172a;font:600 28px/1.2 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body.staff-dashboard-page #annual-exam-content{display:block;max-width:1200px;margin:0 auto;color:#334155}
+body.staff-dashboard-page #annual-exam-content .annual-page-title,
+body.staff-dashboard-page #annual-exam-content .annual-intro{display:inline;margin:0;color:#64748b;font:400 15px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body.staff-dashboard-page #annual-exam-content .annual-page-title{font-weight:600;color:#334155}
+body.staff-dashboard-page #annual-exam-content .annual-page-title::after{content:" · ";font-weight:400;color:#94a3b8}
+body.staff-dashboard-page .annual-exam-panel{gap:32px;margin-top:24px;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body.staff-dashboard-page .annual-exam-panel[data-annual-panel="invigilation"]{gap:32px}
+body.staff-dashboard-page .annual-card{min-width:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none}
+body.staff-dashboard-page .annual-card h3{margin:0 0 18px;color:#0f172a;font:600 18px/1.35 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body.staff-dashboard-page .annual-card p{margin:8px 0;color:#64748b;font:400 13px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body.staff-dashboard-page .annual-table-wrap{width:100%;max-width:100%;overflow:auto;border:1px solid #e2e8f0;border-radius:12px;background:#fff;box-shadow:none;-webkit-overflow-scrolling:touch}
+body.staff-dashboard-page .annual-table-wrap table{width:100%;border-collapse:separate;border-spacing:0;font:400 14px/1.45 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#334155}
+body.staff-dashboard-page .annual-table-wrap th,
+body.staff-dashboard-page .annual-table-wrap td{padding:12px 16px;border:0;border-bottom:1px solid #f1f5f9;text-align:left;vertical-align:middle;white-space:normal;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+body.staff-dashboard-page .annual-table-wrap th{z-index:2;background:#f8fafc;color:#64748b;font:600 12px/1.35 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.055em;text-transform:uppercase}
+body.staff-dashboard-page .annual-table-wrap tbody tr:last-child td{border-bottom:0}
+body.staff-dashboard-page .annual-table-wrap tbody tr:hover{background:#f8fafc}
+body.staff-dashboard-page .annual-table-wrap tbody tr:nth-child(even){background:transparent}
+body.staff-dashboard-page .annual-table-wrap tbody tr:nth-child(even):hover{background:#f8fafc}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual examination timetable"] td:first-child{background:#f8fafc;color:#0f172a;font-weight:600}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual examination timetable"] td:nth-child(2){color:#64748b}
+body.staff-dashboard-page .annual-timing-variants{gap:32px}
+body.staff-dashboard-page .annual-duty-filters{grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:0 0 12px;padding:0}
+body.staff-dashboard-page .annual-exam-panel[data-annual-panel="invigilation"]>.annual-card:first-child>h3{display:none}
+body.staff-dashboard-page .annual-duty-filters label{gap:6px;color:#64748b;font:500 12px/1.3 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body.staff-dashboard-page .annual-duty-filters select,
+body.staff-dashboard-page .annual-duty-filters input{height:40px;min-height:40px;padding:8px 30px 8px 10px;border:1px solid #e2e8f0;border-radius:8px;background-color:#fff;color:#334155;font:400 14px/1.3 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body.staff-dashboard-page .annual-duty-filters select{-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2364758b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center}
+body.staff-dashboard-page .annual-duty-filters input[type="search"]{padding-right:10px}
+body.staff-dashboard-page .annual-duty-filters :focus-visible{outline:3px solid #2563eb;outline-offset:1px;border-color:#2563eb}
+body.staff-dashboard-page .annual-duty-summary{margin:0 0 8px;color:#64748b;font:400 12px/1.4 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-align:right;user-select:none}
+body.staff-dashboard-page .annual-exam-panel[data-annual-panel="invigilation"] .annual-duty-summary::selection{background:transparent}
+
+/* Compact visual grouping of date/day and session/time in the existing duty table. */
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"]{display:block;min-width:980px}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] thead,
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] tbody{display:block}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] thead tr,
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] tbody tr{display:grid;grid-template-columns:minmax(112px,.9fr) minmax(128px,1fr) minmax(84px,.62fr) minmax(160px,1.35fr) minmax(76px,.55fr) minmax(150px,1.15fr) minmax(82px,.62fr);grid-template-rows:minmax(26px,auto) minmax(22px,auto);column-gap:8px;align-items:center;padding:7px 10px;border-bottom:1px solid #f1f5f9}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] tbody tr:last-child{border-bottom:0}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] th,
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] td{min-width:0;padding:3px 6px;border:0;align-self:center}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] th:nth-child(1){grid-area:1/1}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] th:nth-child(2){grid-area:2/1}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] th:nth-child(3){grid-area:1/2}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] th:nth-child(4){grid-area:2/2}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] th:nth-child(5){grid-area:1/3/3/4}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] th:nth-child(6){grid-area:1/4/3/5}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] th:nth-child(7){grid-area:1/5/3/6}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] th:nth-child(8){grid-area:1/6}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] th:nth-child(9){grid-area:2/6}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] th:nth-child(10){grid-area:1/7/3/8}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] td:nth-child(1){grid-area:1/1;color:#0f172a;font-weight:600}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] td:nth-child(2){grid-area:2/1;color:#64748b;font-size:12px}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] td:nth-child(3){grid-area:1/2;justify-self:start;padding:4px 9px;border-radius:999px;background:#eff6ff;color:#1d4ed8;font-size:12px;font-weight:600;white-space:nowrap}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] td:nth-child(4){grid-area:2/2;color:#64748b;font-size:12px}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] td:nth-child(5){grid-area:1/3/3/4}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] td:nth-child(6){grid-area:1/4/3/5}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] td:nth-child(7){grid-area:1/5/3/6;font-weight:600}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] td:nth-child(8){grid-area:1/6;font-weight:600}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] td:nth-child(9){grid-area:2/6;color:#64748b;font-size:12px}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] td:nth-child(10){grid-area:1/7/3/8;white-space:nowrap}
+
+/* Class IX paper-time table: Paper sits beside the subject and both endpoints share Time. */
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"]{display:block;min-width:720px}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] thead,
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody{display:block}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] thead tr,
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr{display:grid;grid-template-columns:minmax(125px,.8fr) minmax(88px,.55fr) minmax(190px,1.3fr) minmax(78px,.48fr) minmax(170px,1fr);grid-template-rows:minmax(26px,auto) minmax(22px,auto);column-gap:8px;align-items:center;padding:6px 10px;border-bottom:1px solid #f1f5f9}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] th,
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] td{min-width:0;padding:3px 6px;border:0;align-self:center}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] th:nth-child(1),body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] td:nth-child(1){grid-area:1/1}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] th:nth-child(2),body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] td:nth-child(2){grid-area:2/1;color:#64748b;font-size:12px}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] th:nth-child(3),body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] td:nth-child(3){grid-area:1/2/3/3}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] td:nth-child(3){justify-self:start;padding:4px 8px;border-radius:999px;background:#f1f5f9;color:#475569;font-size:12px;font-weight:600}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] th:nth-child(4),body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] td:nth-child(4){grid-area:1/4/3/5}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] td:nth-child(4){justify-self:start;padding:3px 7px;border-radius:999px;background:#f1f5f9;color:#475569;font-size:12px;white-space:nowrap}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] th:nth-child(5),body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] td:nth-child(5){grid-area:1/3/3/4}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] th:nth-child(6){grid-area:1/5;font-size:0}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] th:nth-child(6)::after{content:"TIME";font:600 12px/1.35 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.055em}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] th:nth-child(7){display:none}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] td:nth-child(6){grid-area:1/5;font-weight:600;white-space:nowrap}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] td:nth-child(7){grid-area:2/5;color:#64748b;font-size:12px;white-space:nowrap}
+
+@media(max-width:900px){body.staff-dashboard-page .annual-duty-filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){
+ body.staff-dashboard-page #examination-information{margin:12px auto 24px;padding:20px 14px 28px}
+ body.staff-dashboard-page #examination-information>.k{margin-bottom:20px}
+ body.staff-dashboard-page #examination-information>.k h2{font-size:25px}
+ body.staff-dashboard-page #annual-exam-content .annual-page-title,
+ body.staff-dashboard-page #annual-exam-content .annual-intro{font-size:14px}
+ body.staff-dashboard-page .annual-exam-panel{gap:26px;margin-top:20px}
+ body.staff-dashboard-page .annual-duty-filters{grid-template-columns:minmax(0,1fr)}
+ body.staff-dashboard-page .annual-timing-variants{grid-template-columns:minmax(0,1fr);gap:26px}
+ body.staff-dashboard-page .annual-timeline-item{grid-template-columns:minmax(0,1fr);gap:4px}
+}
+
+/* Keep the palette local to Exam Information and its top-level navigation. */
+body.staff-dashboard-page #dashboard-navigation,
+body.staff-dashboard-page #examination-information{
+ --surface:#fff;--surface-hover:#f8fafc;--border:#e2e8f0;--text:#334155;--text-muted:#64748b;--accent:#2563eb;--accent-bg:#eff6ff
+}
+:root[data-theme="dark"] body.staff-dashboard-page #dashboard-navigation,
+:root[data-theme="dark"] body.staff-dashboard-page #examination-information{
+ --bg:#0B1220;--surface:#111827;--surface-hover:#1F2937;--border:#1F2A3A;--text:#E5E7EB;--text-muted:#94A3B8;--accent:#60A5FA;--accent-bg:rgba(96,165,250,.12)
+}
+
+/* Harmonize the workspace bar without changing its existing destinations or controls. */
+body.staff-dashboard-page #dashboard-navigation{padding-inline:20px;scrollbar-color:var(--border) transparent}
+body.staff-dashboard-page #dashboard-navigation a{font-size:14px;font-weight:500;color:var(--text);padding-inline:10px}
+body.staff-dashboard-page #dashboard-navigation a[aria-current="page"],
+body.staff-dashboard-page #dashboard-exam-info-trigger[aria-expanded="true"]{background:var(--accent-bg);color:var(--accent);box-shadow:inset 0 -2px 0 var(--accent)}
+body.staff-dashboard-page #dashboard-exam-info-menu,
+body.staff-dashboard-page #dashboard-annual-exam-menu{
+ min-width:224px;max-width:calc(100vw - 24px);max-height:calc(100vh - 96px);overflow:auto;padding:7px;
+ border:1px solid var(--border);border-radius:12px;background:var(--surface);box-shadow:0 8px 20px rgba(15,23,42,.12);animation:none
+}
+/* The first-level menu must allow the positioned Annual Exam submenu to extend beside it. */
+body.staff-dashboard-page #dashboard-exam-info-menu{max-height:none;overflow:visible}
+body.staff-dashboard-page #dashboard-exam-info-menu::before,
+body.staff-dashboard-page #dashboard-annual-exam-menu::before{top:-8px;height:9px}
+body.staff-dashboard-page #dashboard-annual-exam-menu{top:0;left:calc(100% - 1px);border-radius:12px}
+body.staff-dashboard-page #dashboard-exam-info-menu .dashboard-nav-submenu-trigger,
+body.staff-dashboard-page #dashboard-annual-exam-menu .dashboard-nav-submenu-trigger,
+body.staff-dashboard-page #dashboard-navigation .annual-exam-submenu-trigger{
+ min-height:40px;justify-content:flex-start;gap:10px;padding:8px 10px;border-radius:8px;background:transparent;color:var(--text);font:500 14px/1.35 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-align:left
+}
+body.staff-dashboard-page #dashboard-navigation #dashboard-annual-exam-trigger{justify-content:space-between}
+body.staff-dashboard-page #dashboard-exam-info-menu .dashboard-nav-submenu-trigger:hover,
+body.staff-dashboard-page #dashboard-annual-exam-menu .dashboard-nav-submenu-trigger:hover,
+body.staff-dashboard-page #dashboard-navigation .annual-exam-submenu-trigger:hover{background:var(--surface-hover);color:var(--text)}
+body.staff-dashboard-page #dashboard-exam-info-menu .dashboard-nav-submenu-trigger[aria-current="page"],
+body.staff-dashboard-page #dashboard-annual-exam-menu .dashboard-nav-submenu-trigger[aria-current="page"],
+body.staff-dashboard-page #dashboard-exam-info-menu .dashboard-nav-submenu-trigger[aria-expanded="true"],
+body.staff-dashboard-page #dashboard-annual-exam-menu .dashboard-nav-submenu-trigger[aria-expanded="true"],
+body.staff-dashboard-page #dashboard-navigation .annual-exam-submenu-trigger[aria-expanded="true"]{background:var(--accent-bg);color:var(--accent);box-shadow:none;border-left:0}
+body.staff-dashboard-page #dashboard-annual-exam-trigger[aria-current="page"]{background:var(--accent-bg);color:var(--accent)}
+body.staff-dashboard-page #dashboard-exam-info-menu .dashboard-nav-submenu-trigger:focus-visible,
+body.staff-dashboard-page #dashboard-annual-exam-menu .dashboard-nav-submenu-trigger:focus-visible,
+body.staff-dashboard-page #dashboard-navigation .annual-exam-submenu-trigger:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+body.staff-dashboard-page #dashboard-navigation :focus-visible{outline-color:var(--accent)}
+body.staff-dashboard-page #dashboard-navigation .dashboard-nav-menu-toggle{color:var(--text);background:var(--surface);border-color:var(--border)}
+@media(min-width:981px) and (max-width:1180px){body.staff-dashboard-page #dashboard-navigation{padding-inline:14px}}
+@media(max-width:980px){
+ body.staff-dashboard-page #dashboard-navigation{padding:8px}
+ body.staff-dashboard-page #dashboard-navigation .dashboard-nav-menu-toggle{min-height:44px}
+ body.staff-dashboard-page #dashboard-exam-info-menu,
+ body.staff-dashboard-page #dashboard-annual-exam-menu{min-width:0;max-width:100%;max-height:none;overflow:visible;margin:2px 0 2px 12px;padding:5px;border-radius:12px;box-shadow:none}
+}
+
+/* One baseline and five visible columns for the dynamically rendered Class IX timings. */
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"]{display:block;min-width:720px;table-layout:fixed}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] thead,
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody{display:block}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] thead tr{display:grid;grid-template-columns:130px 100px minmax(190px,1fr) 84px 190px;grid-template-rows:minmax(40px,auto);align-items:stretch;padding:0 10px;border-bottom:1px solid var(--border)}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] thead th{display:block;position:sticky;top:0;grid-row:1;padding:12px 8px;align-self:stretch;background:var(--surface-hover);color:var(--text-muted);font:600 12px/1.35 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.055em;text-align:left;text-transform:uppercase}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] thead th:nth-child(1){grid-column:1}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] thead th:nth-child(2),
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] thead th:nth-child(7){display:none}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] thead th:nth-child(3){grid-column:2}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] thead th:nth-child(4){grid-column:4}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] thead th:nth-child(5){grid-column:3}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] thead th:nth-child(6){grid-column:5;font-size:0}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] thead th:nth-child(6)::after{content:"TIME";font:600 12px/1.35 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.055em}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr{display:grid;grid-template-columns:130px 100px minmax(190px,1fr) 84px 190px;grid-template-rows:minmax(26px,auto) minmax(22px,auto);column-gap:0;align-items:center;padding:7px 10px;border-bottom:0}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr:nth-child(odd):not(:first-child){padding-top:20px}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr:nth-child(even){border-bottom:1px solid var(--border);padding-bottom:12px}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody td{display:block;min-width:0;padding:3px 8px;border:0;color:var(--text);font:400 14px/1.4 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-wrap:anywhere}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody td:nth-child(1){grid-area:1/1;color:var(--text);font-weight:600;font-variant-numeric:tabular-nums}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody td:nth-child(2){grid-area:2/1;color:var(--text-muted);font-size:12px}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody td:nth-child(3){grid-area:1/2/3/3;justify-self:start;padding:4px 8px;border-radius:999px;background:var(--accent-bg);color:var(--accent);font-size:12px;font-weight:600;white-space:nowrap}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr:nth-child(even) td:nth-child(3){background:var(--surface-hover);color:var(--text-muted)}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody td:nth-child(4){grid-area:1/4/3/5;justify-self:start;padding:3px 7px;border-radius:999px;background:var(--surface-hover);color:var(--text-muted);font-size:12px;white-space:nowrap}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody td:nth-child(5){grid-area:1/3/3/4}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody td:nth-child(6){grid-area:1/5;color:var(--text);font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody td:nth-child(7){grid-area:2/5;color:var(--text-muted);font-size:12px;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* Existing timetable rows already contain one record per date; keep that order and emphasize its date cell. */
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual examination timetable"]{table-layout:fixed}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual examination timetable"] th{white-space:nowrap}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual examination timetable"] td:first-child{background:var(--surface-hover);color:var(--text);font-weight:600;font-variant-numeric:tabular-nums}
+body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual examination timetable"] td:nth-child(2){color:var(--text-muted)}
+
+/* Local dark palette: tables, controls, text, active states, dropdowns and borders share the same tokens. */
+:root[data-theme="dark"] body.staff-dashboard-page #dashboard-navigation,
+:root[data-theme="dark"] body.staff-dashboard-page #dashboard-exam-info-menu,
+:root[data-theme="dark"] body.staff-dashboard-page #dashboard-annual-exam-menu{background:var(--surface);border-color:var(--border);box-shadow:0 8px 20px rgba(0,0,0,.22)}
+:root[data-theme="dark"] body.staff-dashboard-page #dashboard-navigation a{color:var(--text)}
+:root[data-theme="dark"] body.staff-dashboard-page #dashboard-navigation a[aria-current="page"],
+:root[data-theme="dark"] body.staff-dashboard-page #dashboard-exam-info-trigger[aria-expanded="true"]{background:var(--accent-bg);color:var(--accent);box-shadow:inset 0 -2px 0 var(--accent)}
+:root[data-theme="dark"] body.staff-dashboard-page #dashboard-exam-info-menu .dashboard-nav-submenu-trigger,
+:root[data-theme="dark"] body.staff-dashboard-page #dashboard-annual-exam-menu .dashboard-nav-submenu-trigger,
+:root[data-theme="dark"] body.staff-dashboard-page #dashboard-navigation .annual-exam-submenu-trigger{color:var(--text)}
+:root[data-theme="dark"] body.staff-dashboard-page #dashboard-exam-info-menu .dashboard-nav-submenu-trigger:hover,
+:root[data-theme="dark"] body.staff-dashboard-page #dashboard-annual-exam-menu .dashboard-nav-submenu-trigger:hover,
+:root[data-theme="dark"] body.staff-dashboard-page #dashboard-navigation .annual-exam-submenu-trigger:hover{background:var(--surface-hover);color:var(--text)}
+:root[data-theme="dark"] body.staff-dashboard-page #dashboard-exam-info-menu .dashboard-nav-submenu-trigger[aria-current="page"],
+:root[data-theme="dark"] body.staff-dashboard-page #dashboard-annual-exam-menu .dashboard-nav-submenu-trigger[aria-current="page"],
+:root[data-theme="dark"] body.staff-dashboard-page #dashboard-exam-info-menu .dashboard-nav-submenu-trigger[aria-expanded="true"],
+:root[data-theme="dark"] body.staff-dashboard-page #dashboard-annual-exam-menu .dashboard-nav-submenu-trigger[aria-expanded="true"],
+:root[data-theme="dark"] body.staff-dashboard-page #dashboard-navigation .annual-exam-submenu-trigger[aria-expanded="true"]{background:var(--accent-bg);color:var(--accent);box-shadow:none;border-left:0}
+:root[data-theme="dark"] body.staff-dashboard-page #dashboard-navigation :focus-visible{outline-color:var(--accent)}
+:root[data-theme="dark"] body.staff-dashboard-page #examination-information{background:var(--bg);color:var(--text)}
+:root[data-theme="dark"] body.staff-dashboard-page #examination-information>.k h2,
+:root[data-theme="dark"] body.staff-dashboard-page #examination-information .annual-card h3{color:var(--text)}
+:root[data-theme="dark"] body.staff-dashboard-page #examination-information>.k .eb,
+:root[data-theme="dark"] body.staff-dashboard-page #annual-exam-content .annual-intro,
+:root[data-theme="dark"] body.staff-dashboard-page #annual-exam-content .annual-page-title{color:var(--text-muted)}
+:root[data-theme="dark"] body.staff-dashboard-page #annual-exam-content .annual-page-title::after{color:var(--text-muted)}
+:root[data-theme="dark"] body.staff-dashboard-page #examination-information>.k>.ic{background:var(--accent-bg)}
+:root[data-theme="dark"] body.staff-dashboard-page #examination-information>.k>.ic svg{stroke:var(--accent)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-timeline-item{border-color:var(--border)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-timeline-item::before{border-color:var(--surface);background:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-timeline-item time{color:var(--accent)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-timeline-item h3{color:var(--text)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-timeline-item p,
+:root[data-theme="dark"] body.staff-dashboard-page .annual-card p,
+:root[data-theme="dark"] body.staff-dashboard-page .annual-source-note{color:var(--text-muted)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-table-wrap{border-color:var(--border);background:var(--surface)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-table-wrap table{background:var(--surface);color:var(--text)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-table-wrap th{background:var(--surface-hover);color:var(--text-muted);border-color:var(--border)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-table-wrap td{background:var(--surface);color:var(--text);border-color:var(--border)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-table-wrap tbody tr:hover,
+:root[data-theme="dark"] body.staff-dashboard-page .annual-table-wrap tbody tr:nth-child(even):hover{background:var(--surface-hover)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-table-wrap tbody tr:hover td{background:var(--surface-hover)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual examination timetable"] td:first-child{background:var(--surface-hover);color:var(--text)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual examination timetable"] td:nth-child(2){color:var(--text-muted)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] tbody tr{border-color:var(--border)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] td:nth-child(3){background:var(--accent-bg);color:var(--accent)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] td:nth-child(2),
+:root[data-theme="dark"] body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] td:nth-child(4),
+:root[data-theme="dark"] body.staff-dashboard-page .annual-table-wrap table[aria-label="Annual exam invigilation assignments"] td:nth-child(9){color:var(--text-muted)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr{border-color:var(--border)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody td:nth-child(2),
+:root[data-theme="dark"] body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody td:nth-child(7){color:var(--text-muted)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody td:nth-child(3){background:var(--accent-bg);color:var(--accent)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr:nth-child(even) td:nth-child(3){background:var(--surface-hover);color:var(--text-muted)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody td:nth-child(4){background:var(--surface-hover);color:var(--text-muted)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-duty-filters label,
+:root[data-theme="dark"] body.staff-dashboard-page .annual-duty-summary{color:var(--text-muted)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-duty-filters select,
+:root[data-theme="dark"] body.staff-dashboard-page .annual-duty-filters input{background-color:var(--surface);border-color:var(--border);color:var(--text)}
+:root[data-theme="dark"] body.staff-dashboard-page .annual-duty-filters :focus-visible{outline-color:var(--accent);border-color:var(--accent)}
+
+@media(max-width:639px){
+ body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"]{min-width:0}
+ body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] thead{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+ body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto auto auto auto;gap:4px 12px;padding:12px;border:1px solid var(--border);border-bottom:0;background:var(--surface)}
+ body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr:nth-child(odd){margin-top:18px;border-radius:12px 12px 0 0}
+ body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr:nth-child(even){padding-top:8px;padding-bottom:12px;border-top:0;border-bottom:1px solid var(--border);border-radius:0 0 12px 12px}
+ body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr:nth-child(even) td:nth-child(1),
+ body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr:nth-child(even) td:nth-child(2){display:none}
+ body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr:nth-child(odd) td:nth-child(1){grid-area:1/1/2/3;font-weight:600}
+ body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr:nth-child(odd) td:nth-child(2){grid-area:2/1/3/3;color:var(--text-muted);font-size:12px}
+ body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr:nth-child(odd) td:nth-child(3){grid-area:3/1;justify-self:start}
+ body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr:nth-child(odd) td:nth-child(4){grid-area:3/2;justify-self:start}
+ body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr:nth-child(odd) td:nth-child(5){grid-area:4/1/5/3}
+ body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr:nth-child(odd) td:nth-child(6){grid-area:5/1;white-space:normal}
+ body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr:nth-child(odd) td:nth-child(7){grid-area:5/2;white-space:normal}
+ body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr:nth-child(even) td:nth-child(3){grid-area:1/1;justify-self:start}
+ body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr:nth-child(even) td:nth-child(4){grid-area:1/2;justify-self:start}
+ body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr:nth-child(even) td:nth-child(5){grid-area:2/1/3/3}
+ body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr:nth-child(even) td:nth-child(6){grid-area:3/1;white-space:normal}
+ body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody tr:nth-child(even) td:nth-child(7){grid-area:3/2;white-space:normal}
+ body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody td:nth-child(3)::before{content:"SESSION · ";font-size:10px;font-weight:500;letter-spacing:.04em;color:var(--text-muted)}
+ body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody td:nth-child(5)::before{content:"SUBJECT · ";font-size:10px;font-weight:600;letter-spacing:.04em;color:var(--text-muted)}
+ body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody td:nth-child(6)::before{content:"START · ";font-size:10px;font-weight:500;letter-spacing:.04em;color:var(--text-muted)}
+ body.staff-dashboard-page .annual-table-wrap table[aria-label="Class IX paper timings"] tbody td:nth-child(7)::before{content:"END · ";font-size:10px;font-weight:500;letter-spacing:.04em;color:var(--text-muted)}
+}
