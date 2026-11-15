@@ -54,14 +54,6 @@
       "cohortSizeBand": "10+"
     },
     {
-      "class": "VI",
-      "subject": "SS",
-      "department": null,
-      "targetMean": 88.4152,
-      "midtermMean": null,
-      "cohortSizeBand": "10+"
-    },
-    {
       "class": "VIII",
       "subject": "English",
       "department": "English",
